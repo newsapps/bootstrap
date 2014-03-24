@@ -1,4 +1,4 @@
-<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+<header class="navbar navbar-inverse navbar-static-top bs-docs-nav" id="top" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -23,13 +23,6 @@
         <li{% if page.slug == "js" %} class="active"{% endif %}>
           <a href="../javascript">JavaScript</a>
         </li>
-        <li{% if page.slug == "customize" %} class="active"{% endif %}>
-          <a href="../customize">Customize</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ site.expo }}" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);">Expo</a></li>
-        <li><a href="{{ site.blog }}" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);">Blog</a></li>
       </ul>
     </nav>
   </div>

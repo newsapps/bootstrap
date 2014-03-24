@@ -1,0 +1,258 @@
+// NGUX styles
+body {
+  font-family: @font-family-serif;
+  background-color: @white;
+}
+
+.page-header {
+  position:relative;
+  text-align: center;
+  border-bottom: none;
+  margin: @line-height-computed 0 (@line-height-computed * 1.5);
+  h1 {
+    display:inline;
+    background-color:@white;
+    font-size: 36px;
+    line-height: 1.1em;
+    padding: 20px;
+    span:before, span:after {
+      content:"";
+      display:inline-block;
+      width:20px;
+    }
+    small {
+      display:block;
+      line-height:1.2em;
+    }
+  }
+
+  margin: 45px 0 30px 0;
+  &:before {
+    margin-bottom:-25px;
+    content:"";
+    display:block;
+    height:6px;
+    border-top: 3px solid #555;
+    border-bottom: 1px solid #999;
+  }
+}
+
+//Navbars, etc.
+.navbar {
+  font-family: @font-family-sans-serif;
+  font-size: 12px;
+  .nav {
+    li a {
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 #eeeeee;
+    }
+  }
+  .navbar-brand {
+    font-size: 22px;
+    text-shadow: 0 1px 0 #eeeeee;
+  }
+
+  &.navbar-inverse {
+    .navbar-brand,
+    .nav > li > a {
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.nav-pills > li > a {
+  padding: 8px 12px;
+}
+
+//Dropdowns
+.dropdown-menu {
+  margin-top: 0;
+  font-family: @font-family-sans-serif;
+  background-color: @gray-very-light;
+  box-shadow: none;
+  li > a { padding: 10px; }
+  li > a:hover,
+  li > a:focus { background-color: @gray-lighter; }
+}
+
+.nav .open > a {
+  &:hover,
+  &:focus {
+    background-color: @gray-light;
+    color: @white;
+  }
+}
+
+.dropdown-header {
+  font-size: @font-size-base;
+  text-transform: uppercase;
+  padding: 3px 10px;
+}
+
+//Buttons
+.btn {
+  font-family: @font-family-sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 @white;
+  color: @black;
+}
+
+.btn-primary,
+.btn-info,
+.btn-success,
+.btn-warning,
+.btn-danger,
+.btn-inverse {
+  color: @white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-group > .btn + .btn,
+.btn-group > .dropdown-toggle {
+  margin-left: -1px;
+  border-left-style: solid;
+  border-left-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-group-vertical > .btn + .btn,
+.btn-group-vertical .btn-group > .btn,
+.btn-group-vertical > .btn-group + .btn {
+  margin-left: 0;
+  margin-top: -1px;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-group-justified > .btn + .btn,
+.btn-group-justified > .btn-group > .btn,
+.btn-group-justified > .btn-group + .btn {
+  margin-left: -1px;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-link { color: @blue-light; }
+
+//Forms
+.form-control,
+.input-group,
+.input-group-addon,
+.input-group-lg > .input-group-addon,
+.input-group-sm > .input-group-addon {
+  font-family: @font-family-sans-serif;
+}
+
+.input-group-addon {
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 @white;
+  color: @black;
+}
+
+.search-query {
+  margin-bottom: 0;
+  padding: 4px 14px;
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  border-radius: 15px;
+}
+
+// Pagination
+.pagination {
+  font-family: @font-family-sans-serif;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+//Labels
+.label {
+  border-radius: 0;
+  font-family: @font-family-sans-serif;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.badge {
+  font-family: @font-family-sans-serif;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+//Jumbotron
+.jumbotron {
+  border-radius: 6px;
+}
+
+//Page headers
+.page-header {
+  h1 { background-color: transparent; }
+  h1 span { background-color: @white; }
+}
+
+//Thumbnails
+.thumbnail {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+}
+
+//Alerts
+.alert {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+//Progress bars
+.progress {
+  font-family: @font-family-sans-serif;
+}
+
+//Typography
+.lead { font-size: floor((@font-size-base * 1.6)); }
+small,
+.small { font-size: 90%; }
+.help-block,
+.help-inline { font-family: @font-family-sans-serif; }
+
+//Javascript components
+.modal-footer { background-color: @gray-very-light; }
+
+.carousel-indicators {
+  top: 15px;
+  right: 15px;
+  left: auto;
+  width: auto;
+  height: 20px;
+}
+
+.carousel-control .glyphicon {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  width: 46px;
+  height: 46px;
+  margin-top: -20px;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #fbfcfc;
+  text-align: center;
+  background: #2b2b2b;
+  border: 3px solid #fbfcfc;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.carousel-control.right .glyphicon.glyphicon-chevron-right {
+  padding-right: 1px;
+  padding-top: 3px;
+}
+.carousel-control.left .glyphicon.glyphicon-chevron-left {
+  left: auto;
+  right: 20px;
+  padding-right: 2px;
+  padding-top: 5px;
+}
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  background: #333333;
+  background: rgba(0, 0, 0, 0.75);
+  text-align: left;
+}
