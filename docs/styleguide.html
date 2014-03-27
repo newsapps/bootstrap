@@ -2,94 +2,144 @@
 layout: styleguide
 title: Style Guide
 slug: styleguide
-lead: "All the bits and pieces that go into making a Tribune news app, that aren't already part of Bootstrap."
+lead: "All the bits and pieces that go into making a Tribune news app that aren't already part of Bootstrap."
 ---
 
 
-<!-- Intro
+<!-- Headings
 ================================================== -->
-<div class="bs-docs-section">
+<section class="bs-docs-section">
   <div class="page-header">
-    <h1 id="template"><span>Intro</span></h1>
+    <h1 id="headings"><span>Headings</span></h1>
   </div>
+  <h2>Section header</h2>
+  <p>Add <code>.section-header</code> to any heading and wrap the content in a <code>span</code>.</p>
+  <div class="bs-example">
+    <h2 class="section-header">
+      <span>section headline</span>
+    </h2>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;h2 class="section-header"&gt;
+  &lt;span&gt;Example section heading&lt;/span&gt;
+&lt;/h2&gt;
+      </code>
+    </pre>
+  </div>
+  <h2>Add a publication date</h2>
+  <p>Add a publication date to the section header by wrapping the date in a <code>small</code> element after the <code>span</code>.</p>
+  <div class="bs-example">
+    <h2 class="section-header">
+      <span>section headline</span>
+      <small>Published on a date with a time</small>
+    </h2>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;h2 class="section-header"&gt;
+  &lt;span&gt;Example section heading&lt;/span&gt;
+  &lt;small&gt;Example publication date&lt;/small&gt;
+&lt;/h2&gt;
+      </code>
+    </pre>
+  </div>
+  <h2>Chapter headings</h2>
+  <p>Use <code>.chapter-head</code> on any heading, but start with <code>h4</code> and work from there.</p>
+  <div class="bs-example">
+<h4 class="chapter-head">H4 chapter heading</h4>
+<h3 class="chapter-head">H3 chapter heading</h3>
+<h5 class="chapter-head">H5 chapter heading</h5>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;h4 class="chapter-head"&gt;...&lt;h4&gt;
+      </code>
+    </pre>
+  </div>
+</section>
 
-  <p class="lead">Meet Phteven.</p>
-  <p>Bacon ipsum dolor sit amet frankfurter shank meatball spare ribs ribeye turkey doner ground
-  round pork loin chicken. Pork bacon beef, strip steak capicola leberkas landjaeger. Prosciutto
-  capicola pork tongue pastrami fatback sirloin strip steak chuck frankfurter spare ribs pig ball
-  tip. Kielbasa shoulder biltong tri-tip, t-bone tail leberkas pork belly ribeye swine flank short
-  ribs hamburger. Chuck flank brisket cow pork belly ground round shoulder beef ribs leberkas t-bone
-  pork loin kielbasa. Bresaola beef ribs tail shankle.</p>
-
-  <p>Jerky hamburger shoulder ham tenderloin corned beef, beef ribs biltong pork loin pork chop tail.
-  Fatback ground round pork belly salami. Ground round kevin hamburger rump bresaola tri-tip pancetta
-  brisket prosciutto shank swine. Rump cow strip steak, t-bone chicken beef ribs brisket tri-tip
-  leberkas turducken turkey ham. Beef ribs jowl cow ham kielbasa tongue, pig biltong. Landjaeger
-  frankfurter meatball tenderloin, short ribs pork chop kielbasa bacon kevin sausage beef.</p> 
-</div>
-
-<!-- Ads
+<!-- Bylines
 ================================================== -->
-<div class="bs-docs-section">
+<section id="credits-bylines">
   <div class="page-header">
-    <h1 id="styleguide-ads"><span>Ads</span></h1>
+    <h1 id="bylines"><span>Bylines, credits and sourcing</span></h1>
   </div>
+  <h2>Bylines</h2>
+  <p>Add a <code>byline</code> class to a <code>div</code> element and give the authors name(s) a class of <code>author</code>. Add the class <code>organization</code> to a <code>p</code>element to style the author's organization. Add a <code>pub-date</code> class to a <code>p</code> element to style the publication date and time. Bylines on apps projects will have an increased <code>font-size</code>.</p>
+  <div class="bs-example">
+    <div class="byline">
+      <p class="author">By <span>First Last</span></p>
+      <p class="organization">Chicago Tribune</p>
+      <p class="pub-date">September 19, 2013</p>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;div class="byline"&gt;
+  &lt;p class="author"&gt;By &lt;span&gt;First Last&lt;/span&gt;&lt;/p&gt;
+  &lt;p class="organization"&gt;Chicago Tribune&lt;/p&gt;
+  &lt;p class="pub-date"&gt;September 19, 2013&lt;/p&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+  <h2>Source and credits</h2>
+  <p></p>
+  <div class="bs-example">
+    <div class="credits">
+      <p>Source: Where did the information come from?</p>
+      <p>By First Last, First Last and First Last - Chicago Tribune</p>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;div class="credits"&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+  </div>
+  <h2>Project credits box</h2>
+  <p>Use a project credits box at the bottom of the page before the footer when bylines from multiple departments should appear. This style of credit box should be reserved for larger projects.</p>
+  <div class="bs-example">
+    <div class="credits-wrapper">
+      <div class="credits-inner">
+        <p>Reporting by <span>First Last and First Last</span></p>
+        <p>Photography by <span>First Last and First Last</span></p>
+        <p>Graphics by <span>First Last and First Last</span></p>
+        <p>Applications and design by <span>First Last and First Last</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;div class="credits-wrapper"&gt;
+  &lt;div class="credits-inner"&gt;
+    &lt;p&gt;Reporting by &lt;span&gt;First Last and First Last&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Photography by &lt;span&gt;First Last and First Last&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Graphics by &lt;span&gt;First Last and First Last&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Applications and design by &lt;span&gt;First Last and First Last&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</section>
 
-  <p class="lead">Phteven likes ads.</p>
-  <p>Bacon ipsum dolor sit amet frankfurter shank meatball spare ribs ribeye turkey doner ground
-  round pork loin chicken. Pork bacon beef, strip steak capicola leberkas landjaeger. Prosciutto
-  capicola pork tongue pastrami fatback sirloin strip steak chuck frankfurter spare ribs pig ball
-  tip. Kielbasa shoulder biltong tri-tip, t-bone tail leberkas pork belly ribeye swine flank short
-  ribs hamburger. Chuck flank brisket cow pork belly ground round shoulder beef ribs leberkas t-bone
-  pork loin kielbasa. Bresaola beef ribs tail shankle.</p>
 
-  <p>Jerky hamburger shoulder ham tenderloin corned beef, beef ribs biltong pork loin pork chop tail.
-  Fatback ground round pork belly salami. Ground round kevin hamburger rump bresaola tri-tip pancetta
-  brisket prosciutto shank swine. Rump cow strip steak, t-bone chicken beef ribs brisket tri-tip
-  leberkas turducken turkey ham. Beef ribs jowl cow ham kielbasa tongue, pig biltong. Landjaeger
-  frankfurter meatball tenderloin, short ribs pork chop kielbasa bacon kevin sausage beef.</p>
-</div>
-
-<!-- Analytics
+<!-- Body copy
 ================================================== -->
-<div class="bs-docs-section">
-  <div class="page-header">
-    <h1 id="styleguide-analytics"><span>Analytics</span></h1>
-  </div>
 
-  <p class="lead">Phteven likes data.</p>
-  <p>Bacon ipsum dolor sit amet frankfurter shank meatball spare ribs ribeye turkey doner ground
-  round pork loin chicken. Pork bacon beef, strip steak capicola leberkas landjaeger. Prosciutto
-  capicola pork tongue pastrami fatback sirloin strip steak chuck frankfurter spare ribs pig ball
-  tip. Kielbasa shoulder biltong tri-tip, t-bone tail leberkas pork belly ribeye swine flank short
-  ribs hamburger. Chuck flank brisket cow pork belly ground round shoulder beef ribs leberkas t-bone
-  pork loin kielbasa. Bresaola beef ribs tail shankle.</p>
 
-  <p>Jerky hamburger shoulder ham tenderloin corned beef, beef ribs biltong pork loin pork chop tail.
-  Fatback ground round pork belly salami. Ground round kevin hamburger rump bresaola tri-tip pancetta
-  brisket prosciutto shank swine. Rump cow strip steak, t-bone chicken beef ribs brisket tri-tip
-  leberkas turducken turkey ham. Beef ribs jowl cow ham kielbasa tongue, pig biltong. Landjaeger
-  frankfurter meatball tenderloin, short ribs pork chop kielbasa bacon kevin sausage beef.</p>
-</div>
 
-<!-- Paywall
+<!-- Layout
 ================================================== -->
-<div class="bs-docs-section">
-  <div class="page-header">
-    <h1 id="styleguide-paywall"><span>Paywall</span></h1>
-  </div>
 
-  <p class="lead">Phteven likes paywalls.</p>
-  <p>Bacon ipsum dolor sit amet frankfurter shank meatball spare ribs ribeye turkey doner ground
-  round pork loin chicken. Pork bacon beef, strip steak capicola leberkas landjaeger. Prosciutto
-  capicola pork tongue pastrami fatback sirloin strip steak chuck frankfurter spare ribs pig ball
-  tip. Kielbasa shoulder biltong tri-tip, t-bone tail leberkas pork belly ribeye swine flank short
-  ribs hamburger. Chuck flank brisket cow pork belly ground round shoulder beef ribs leberkas t-bone
-  pork loin kielbasa. Bresaola beef ribs tail shankle.</p>
-
-  <p>Jerky hamburger shoulder ham tenderloin corned beef, beef ribs biltong pork loin pork chop tail.
-  Fatback ground round pork belly salami. Ground round kevin hamburger rump bresaola tri-tip pancetta
-  brisket prosciutto shank swine. Rump cow strip steak, t-bone chicken beef ribs brisket tri-tip
-  leberkas turducken turkey ham. Beef ribs jowl cow ham kielbasa tongue, pig biltong. Landjaeger
-  frankfurter meatball tenderloin, short ribs pork chop kielbasa bacon kevin sausage beef.</p>
-</div>

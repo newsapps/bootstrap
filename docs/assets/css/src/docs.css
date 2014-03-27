@@ -498,23 +498,30 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #fff;
-  box-shadow:0 1px 4px rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.1);
+          box-shadow: 0 1px 4px rgba(0,0,0,.1);
 }
 
-.bs-docs-sidenav .glyphicon-chevron-left { opacity: 0.25; }
+.bs-docs-sidenav .glyphicon-chevron-left {
+  opacity: .25;
+}
 
-.bs-docs-sidenav a:hover .glyphicon-chevron-left { opacity: 0.5; }
+.bs-docs-sidenav a:hover .glyphicon-chevron-left {
+  opacity: .5;
+}
 
 .bs-docs-sidenav .active .glyphicon-chevron-left,
-.bs-docs-sidenav .active a:hover .glyphicon-chevron-left { opacity: 1; }
+.bs-docs-sidenav .active a:hover .glyphicon-chevron-left {
+  opacity: 1;
+}
 
 /* All levels of nav */
 .bs-docs-sidebar .nav > li > a {
   display: block;
-  margin: 0 0 -1px;
   padding: 8px 14px;
+  margin: 0 0 -1px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
   border: 1px solid #e5e5e5;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .bs-docs-sidebar .nav > li > a:hover,
 .bs-docs-sidebar .nav > li > a:focus {
@@ -525,17 +532,17 @@ body {
 .bs-docs-sidebar .nav > .active:focus > a {
   position: relative;
   z-index: 2;
+  color: #fff;
   text-shadow: 0 1px 0 rgba(0,0,0,.15);
   background: #144a7c;
-  color: #fff;
 }
 
 /* Nav: second level (shown on .active) */
 .bs-docs-sidebar .nav .nav {
   display: none; /* Hide by default, but at >768px, show it */
-  padding-bottom: 0px;
-  border-left: 1px solid #e5e5e5;
+  padding-bottom: 0;
   border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
 }
 .bs-docs-sidebar .nav .nav > li > a {
   padding-top: 4px;
@@ -548,9 +555,8 @@ body {
 .bs-docs-sidebar .nav .nav > .active:hover > a,
 .bs-docs-sidebar .nav .nav > .active:focus > a {
   font-weight: 500;
-  background: #144a7c;
   color: #fff;
-
+  background: #144a7c;
 }
 
 /* Back to top (hidden on mobile) */
@@ -564,7 +570,7 @@ body {
   color: #999;
 }
 .back-to-top:hover {
-  color: #144A7C;
+  color: #144a7c;
   text-decoration: none;
 }
 
@@ -1217,7 +1223,7 @@ h1[id] {
 }
 .bs-glyphicons li:hover {
   color: #fff;
-  background-color: #144A7C;
+  background-color: #144a7c;
 }
 
 @media (min-width: 768px) {
