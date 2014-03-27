@@ -1,5 +1,5 @@
 ---
-layout: styleguide
+layout: default
 title: Style Guide
 slug: styleguide
 lead: "All the bits and pieces that go into making a Tribune news app that aren't already part of Bootstrap."
@@ -143,3 +143,43 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
 <!-- Layout
 ================================================== -->
 
+
+
+<!-- Tarbell
+================================================== -->
+<div class="bs-docs-section">
+  <div class="page-header">
+    <h1 id="styleguide-tarbell"><span>Tarbell</span></h1>
+  </div>
+
+  <p class="lead">Starting a Chicago Tribune Tarbell project</p>
+  <p>Comprehensive documentation for Tarbell, including 
+  <a href="https://tarbell.readthedocs.org/en/latest/tutorial.html">a getting-started tutorial</a>,
+  is <a href="https://tarbell.readthedocs.org/en/latest/index.html">available here</a>. This section
+  will outline what you need to know that's specific to the Chicago Tribune, but it's a good idea to
+  familiarize yourself with the above documentation if you haven't already.</p>
+
+  <p>Begin by installing Tarbell, as outlined
+  <a href="https://tarbell.readthedocs.org/en/latest/install.html">here</a>. For most users, it's as 
+  simple as running <code>pip install tarbell</code>. Once Tarbell is installed, install the Tribune
+  Tarbell templates: <code>tarbell install-template 
+  https://github.com/newsapps/tarbell-template.git</code>. Finally, to create the project itself,
+  run <code>tarbell newproject</code> and follow the prompts, as described in more detail
+  <a href="https://tarbell.readthedocs.org/en/latest/tutorial.html">here</a>.</p>
+  
+  <p>Most of the process involved in setting up a Chicago Tribune Tarbell project is exactly the
+  same as a normal Tarbell project, with only a few key differences:</p>
+
+  <p>
+    <ul>
+      <li><b>Publishing location</b>: You still want to publish to S3, but the buckets to use depend
+      on the specific project. For most projects, <code>apps.beta.tribapps.com</code> is the staging
+      bucket, and <code>apps.chicagotribune.com</code> is the production bucket, but this varies
+      widely from project to project. <a href="https://tarbell.readthedocs.org/en/latest/publish.html#configuring-s3-buckets-for-a-project">Read more about setting up your S3 buckets here.</a></li>
+      <li><b>Templates</b>: When running the newproject command, you almost certainly want to use
+      the Tribune templates, as described in more detail in the next section. They should have been
+      installed when you ran <code>tarbell install-template 
+      https://github.com/newsapps/tarbell-template.git</code> above.</li>
+    </ul>
+  </p>
+</div>
