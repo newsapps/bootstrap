@@ -185,7 +185,7 @@ module.exports = function (grunt) {
           },
           files: {
               // Add more files here to create new styles for other markets
-             'dist/css/chicago-bootstrap.css': 'less/tribune/ngux.less'
+             'dist/css/chicago-bootstrap.css': 'less/tribune/chicago/chicagotribune.less'
           }
        },
 
@@ -317,6 +317,7 @@ module.exports = function (grunt) {
         cwd: './dist',
         src: [
           '{css,js}/*.min.*',
+          'css/chicago-bootstrap.css',
           'css/*.map',
           'fonts/*'
         ],
@@ -449,7 +450,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileTribune']);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer', 'cssflip', 'usebanner', 'csscomb', 'less:minify', 'cssmin']);
 
   // Docs distribution task.
