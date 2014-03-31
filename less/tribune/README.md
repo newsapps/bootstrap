@@ -7,6 +7,7 @@ This folder contains all of the LESS files that modify Bootstrap's core styles. 
 
 When creating a new market-specific LESS file, be sure to include these statements at the top:
 `@import '../../variables.less';`
+
 `@import '../ngux-variables.less';`
 
 To define variables with market-specific styles, create a file like this and import it after the other variable files:
@@ -16,4 +17,20 @@ Note that variables with the same name will overwrite each other. The values in 
 
 
 ##Grunt tasks
-Gruntfile.js has been modified to compile the files and folders in the `/tribune/` folder. You can find this under `less` task, subtask `compileTribune`. To add files for a new market, just copy and edit one of the existing rules under `files`. Note that you must create an empty file in `dist/css` for the task to compile correctly.
+Gruntfile.js has been modified to compile the files and folders in the `/tribune/` folder. You can find this under `less` task, subtask `compileTribune`. It looks like this: 
+
+`/* Compile separate CSS for Tribune markets */
+compileTribune: {
+   options: {
+     strictMath: true,
+     outputSourceFiles: true,
+     paths: 'less'
+    },
+    files: {
+        // Add more files here to create new styles for other markets
+       'dist/css/chicago-bootstrap.css': 'less/tribune/chicago/chicagotribune.less'
+    }
+ },`
+To add files for a new market, just copy one of the existing rules under `files`. Edit it to match the path of your desired CSS file (which should be in `dist/css/marketname`) and the path of your LESS file (which should be in `less/tribune/marketname`).
+
+Run `grunt dist` to compile your new LESS files into CSS. Note that you must create an empty file in `dist/css` for the task to compile correctly.
