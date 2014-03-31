@@ -176,6 +176,19 @@ module.exports = function (grunt) {
           'dist/css/<%= pkg.name %>-theme.css': 'less/theme.less'
         }
       },
+      /* Compile separate CSS for Tribune markets */
+      compileTribune: {
+         options: {
+           strictMath: true,
+           outputSourceFiles: true,
+           paths: 'less'
+          },
+          files: {
+              // Add more files here to create new styles for other markets
+             'dist/css/chicago-bootstrap.css': 'less/tribune/ngux.less'
+          }
+       },
+
       minify: {
         options: {
           cleancss: true,
@@ -454,6 +467,9 @@ module.exports = function (grunt) {
   grunt.registerTask('change-version-number', 'sed');
 
   grunt.registerTask('build-glyphicons-data', generateGlyphiconsData);
+
+  // Register Tribune CSS
+  grunt.registerTask('chicago', 'Compile CSS for Tribune markets', ['less:compileTribune']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', ['build-customizer-html', 'build-raw-files']);
