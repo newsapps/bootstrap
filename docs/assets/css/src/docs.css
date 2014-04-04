@@ -249,15 +249,6 @@ body {
     font-size: 24px;
   }
 }
-
-@media (min-width: 992px) {
-  .bs-docs-masthead .lead {
-    width: 80%;
-    font-size: 30px;
-  }
-}
-
-
 /*
  * Page headers
  *
@@ -282,6 +273,28 @@ body {
   position: relative;
 }
 
+/* Icons
+------------------------- */
+.the-icons {
+  margin-left: 0;
+  list-style: none;
+}
+.the-icons li {
+  float: left;
+  width: 25%;
+  line-height: 25px;
+}
+.the-icons i:hover {
+  background-color: rgba(255,0,0,.25);
+}
+
+@media (min-width: 992px) {
+  .bs-docs-masthead .lead {
+    width: 80%;
+    font-size: 30px;
+  }
+}
+
 @media (min-width: 768px) {
   .bs-docs-header {
     padding-top: 60px;
@@ -299,6 +312,16 @@ body {
   .bs-docs-featurette .bs-docs-header h1 {
     text-align: center;
   }
+}
+
+/* ct colors */
+.swatch {
+  padding: 8px 15px 8px 15px;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid white;
 }
 
 

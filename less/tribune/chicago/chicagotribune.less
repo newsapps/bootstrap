@@ -60,7 +60,8 @@ div.byline {
     font-family: @font-family-sans-serif;
   }
 }
-.credits {
+.credits,
+figcaption {
   color: @gray;
   font-family: @font-family-sans-serif;
   font-size: 14px;
@@ -87,11 +88,257 @@ div.byline {
 
 /* Body copy
 ================================================== */
-.narrow-river {
-  color: red;
-  p, h1, h2, h3, h4, h5, h6 { max-width: 680px; }
+article {
+  &.narrow-river {
+    p, h1, h2, h3, h4, h5, h6 {
+      width: 73%; //taken from ct-article
+      max-width: 680px;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.8em;
+    margin-bottom: 22px;
+    &.lead {
+      font-size: 19px;
+      line-height: 1.7em;
+      &.drop-cap:first-letter {
+        margin: 0 12px -10px 0;
+        font-size: 550%;
+        line-height: 100%;
+      }
+    }
+  }
+  a.media-link { font-size: 15px; }
+  .pull-out {
+    padding: 0 20px;
+    border-left: 2px solid #666666;
+    margin: 35px 0;
+    max-width: 640px;
+    font-style: italic;
+    p:last-child { margin-bottom: 0; }
+    strong { color: #666; }
+  }
 }
 
+.drop-cap:first-letter {
+  margin: 0 7px -5px 0;
+  font-size: 335%;
+  line-height: 100%;
+  float: left;
+}
+
+/* Layout
+================================================== */
+
+.media-info {
+  font-family: @font-family-sans-serif;
+  line-height: 17px;
+  margin: 0;
+  color: @gray;
+  width: 100%;
+}
+
+
+/* Video
+================================================== */
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 50.7%;
+  padding-top: 30px;
+  z-index: 1;
+  margin-bottom: 30px;
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+  }
+}
+
+
+/* Related items
+================================================== */
+/* was .trib-media */
+.media-holder {
+  float: right;
+  width: 66%;
+  margin: 0 0 24px 40px;
+  p { width: 100%; }
+}
+
+figcaption { line-height: 17px; margin: 10px 0; }
+
+.media-credit { text-align: right; margin-bottom: 0; }
+
+.small-photo { max-width: 320px; }
+.medium-photo { max-width: 500px; }
+.large-photo { max-width: 620px; }
+
+figure,
+aside {
+  margin: 0;
+  padding: 15px 0;
+  border-top: 1px solid @gray-lighter;
+  border-bottom: 1px solid @gray-lighter;
+}
+
+figure.left-rule {
+  padding: 5px 0 5px 15px;
+  border-left: 2px solid @gray-dark;
+  border-bottom: none;
+  border-top: none;
+}
+
+blockquote {
+  p { margin: 10px 0; font-size: 23px; line-height: 1.4em; }
+}
+.nav-related {
+  border-top: 2px solid #333;
+   p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 5px;
+  }
+  li {
+    border-top: 1px solid #ddd;
+    a {
+      margin: 0;
+      line-height: 28px;
+      padding: 10px 5px;
+      font-size: 22.75px;
+      color: @gray-dark;
+      img { max-width: 100%; }
+    }
+    p { margin-bottom: 10px; }
+  }
+}
+
+a.media-link {
+  display: inline-block;
+  margin-bottom: 0;
+  font-family: @font-family-sans-serif;
+  vertical-align: middle;
+  cursor: pointer;
+  color: @brand-primary;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.digital-plus-icon:after {
+  position:relative;
+  content:url('//members.chicagotribune.com/static/images/plus-icon.gif');
+  top:-5px;
+  margin-left:4px;
+}
+
+aside {
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    color: @gray;
+  }
+  .subhead {
+    font-size: 15px;
+    font-family: @font-family-sans-serif;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: @black;
+  }
+}
+
+/* Social media
+================================================== */
+.twitter-follow-button { margin: 0 8px -5px 4px; }
+.twitter-first { margin-right: 1px; }
+
+.social-wrapper {
+  small {
+    font-family: @font-family-sans-serif;
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    li {
+      display: inline-block;
+      font-size: 42px;
+      line-height: 57px;
+      margin-bottom: 2px;
+      height: 42px;
+      width: 42px;
+      a { color: @brand-primary; }
+      a:hover { text-decoration: none; }
+    }
+  }
+}
+.social-wrapper-vertical {
+  float: left;
+  text-align: center;
+  width: 42px;
+  small { margin-left: 8px; }
+  ul li {
+    display: block;
+    font-size: 40px;
+    width: auto;
+    line-height: 36px;
+  }
+}
+
+li [class^="icon-"],
+.nav li [class^="icon-"],
+li [class*=" icon-"],
+.nav li [class*=" icon-"] {
+  width: 1em;
+}
+
+
+/* Colors
+================================================== */
+.swatch {
+  &.blue-darkest { background: @blue-darkest; }
+  &.blue-darker { background: @blue-darker; }
+  &.blue-dark { background: @blue-dark; }
+  &.blue { background: @blue; }
+  &.blue-light { background: @blue-light; }
+  &.blue-lighter { background: @blue-lighter; }
+  &.blue-lightest { background: @blue-lightest; color: @black; }
+  &.red-dark { background: @trib-red-dark; }
+  &.red { background: @trib-red; }
+  &.red-light { background: @trib-red-lite; }
+  &.green-dark { background: @trib-green-dark; }
+  &.green { background: @trib-green; }
+  &.green-light { background: @trib-green-lite; }
+  &.yellow { background: @trib-yellow; }
+  &.yellow-light { background: @trib-yellow-lite; color: @black;  }
+  &.purple { background: @trib-purple; }
+  &.black { background: @black; }
+  &.gray-darker { background: @gray-darker; }
+  &.gray-dark { background: @gray-dark; }
+  &.gray { background: @gray; }
+  &.gray-light { background: @gray-light; }
+  &.gray-lighter { background: @gray-lighter; color: @black;  }
+  &.gray-very-light { background: @gray-very-light; color: @black;  }
+  &.white { background: @white; color: @black;  }
+}
+
+tr { border-bottom: 1px dotted #999999; }
+td.sublabel { padding-left: 15px; }
+.sublabel {
+  font-size: 15px;
+  font-family: @font-family-sans-serif;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
 
 /* Responsive magicks
 ================================================== */
@@ -102,4 +349,22 @@ div.byline {
     margin-bottom: 10px;
     padding-bottom: 25px;
   }
+  .lead { font-size: 15px; line-height: 22px; }
+  .lead.drop-cap:first-letter { font-size: 475%; }
+  article p { font-size: 15px; line-height: 22px; }
+  .nav-related { margin-left: 0; }
+  .nav-related > li > a {
+    line-height: 22px;
+    font-size: 17.75px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  article.narrow-river p { width: 100%; }
+  .drop-cap:first-letter { font-size: 300%; }
+  .small-photo,
+  .media-holder.flush,
+  .media-holder { width: 100%; }
+  .media-holder.flush figure { margin-left: 0; float: none; }
 }

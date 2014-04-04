@@ -12,7 +12,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   <div class="page-header">
     <h1 id="headings"><span>Headings</span></h1>
   </div>
-  <h2>Section header</h2>
+  <h2 id="section-headers">Section header</h2>
   <p>Add <code>.section-header</code> to any heading and wrap the content in a <code>span</code>.</p>
   <div class="bs-example">
     <h2 class="section-header">
@@ -28,7 +28,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
-  <h2>Add a publication date</h2>
+  <h3>Add a publication date</h3>
   <p>Add a publication date to the section header by wrapping the date in a <code>small</code> element after the <code>span</code>.</p>
   <div class="bs-example">
     <h2 class="section-header">
@@ -46,7 +46,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
-  <h2>Chapter headings</h2>
+  <h2 id="chapter-headings">Chapter headings</h2>
   <p>Use <code>.chapter-head</code> on any heading, but start with <code>h4</code> and work from there.</p>
   <div class="bs-example">
 <h4 class="chapter-head">H4 chapter heading</h4>
@@ -68,7 +68,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   <div class="page-header">
     <h1 id="bylines"><span>Bylines, credits and sourcing</span></h1>
   </div>
-  <h2>Bylines</h2>
+  <h2 id="byline-styles">Bylines</h2>
   <p>Add a <code>byline</code> class to a <code>div</code> element and give the authors name(s) a class of <code>author</code>. Add the class <code>organization</code> to a <code>p</code>element to style the author's organization. Add a <code>pub-date</code> class to a <code>p</code> element to style the publication date and time. Bylines on apps projects will have an increased <code>font-size</code>.</p>
   <div class="bs-example">
     <div class="byline">
@@ -88,7 +88,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
-  <h2>Source and credits</h2>
+  <h2 id="credits">Source and credits</h2>
   <p></p>
   <div class="bs-example">
     <div class="credits">
@@ -106,7 +106,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
         </code>
     </pre>
   </div>
-  <h2>Project credits box</h2>
+  <h2 id="credit-box">Project credits box</h2>
   <p>Use a project credits box at the bottom of the page before the footer when bylines from multiple departments should appear. This style of credit box should be reserved for larger projects.</p>
   <div class="bs-example">
     <div class="credits-wrapper">
@@ -139,7 +139,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
 ================================================== -->
  <section id="body-copy">
   <div class="page-header">
-      <h1>Body copy</h1>
+      <h1><span>Body copy</span></h1>
   </div>
   <h2>Article copy</h2>
   <p>Place headlines, decks, bylines, and story copy within an <code>article</code> element. Use the class <code>.narrow-river</code> on an <code>article</code>to limit <code>p</code> elements and all headings <code>h1</code> through <code>h6</code> to a <code>max-width</code> of <strong>680px</strong>.</p>
@@ -152,20 +152,748 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   <div class="highlight">
     <pre>
         <code class="html">
-&lt;article&gt;
+&lt;article class="narrow-river"&gt;
   &lt;h1&gt;...&lt;/h1&gt;
   &lt;p&gt;...&lt;/p&gt;
 &lt;/article&gt; 
         </code>
     </pre>
   </div>
+
+  <h2>Drop caps</h2>
+  <p>A drop cap can be used at a start of a section or chapter by including <code>.drop-cap</code> on a <code>p</code> element.</p>
+  <div class="bs-example">
+    <article>
+      <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci sapien, ullamcorper at blandit vitae, viverra sed diam. Sed id neque purus. Suspendisse potenti. Donec pretium, nunc quis cursus euismod, nibh lectus luctus sapien, vitae viverra tellus est eget enim. Nulla eu porttitor nulla. Maecenas sed dui et elit commodo interdum. Aliquam consequat ipsum ac lacus venenatis at tincidunt nunc aliquam.</p>
+    </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p class="drop-cap"&gt;
+    ...
+  &lt;/p&gt; 
+&lt;/article&gt; 
+      </code>
+    </pre>
+  </div>
+  <h2>Story intro</h2>
+  <p>Add <code>.lead</code> to a <code>p</code> element to increase <strong>font-size</strong> for paragraphs and drop caps.</p>
+  <div class="bs-example">
+    <article>
+      <p class="drop-cap lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci sapien, ullamcorper at blandit vitae, viverra sed diam. Sed id neque purus. Suspendisse potenti. Donec pretium, nunc quis cursus euismod, nibh lectus luctus sapien, vitae viverra tellus est eget enim. Nulla eu porttitor nulla. Maecenas sed dui et elit commodo interdum. Aliquam consequat ipsum ac lacus venenatis at tincidunt nunc aliquam.</p>
+      <p>Aliquam ac augue ac nisi ullamcorper vehicula vel eget tellus. Proin venenatis ullamcorper magna, eget rutrum nunc imperdiet nec. Donec et leo mauris. Pellentesque risus felis, mollis id facilisis at, sollicitudin sit amet augue. Phasellus lobortis ullamcorper odio, eget pharetra neque dictum eget. Morbi dignissim dictum posuere. Aliquam erat volutpat. Nam at massa turpis, et aliquet urna.</p>
+                  </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p class="drop-cap lead"&gt;
+    ...
+  &lt;/p&gt; 
+&lt;/article&gt; 
+      </code>
+    </pre>
+  </div>
+
+  <h2>Breakout/bullet lists within the narrative</h2>
+  <p>To separate sections of the narrative that are lists or bullets, wrap <code>p</code> element(s) in a <code>div</code> with a <code>.pull-out</code> class.</p>
+  <div class="bs-example">
+    <article>
+      <p>Aliquam ac augue ac nisi ullamcorper vehicula vel eget tellus. Proin venenatis ullamcorper magna, eget rutrum nunc imperdiet nec. Donec et leo mauris. Pellentesque risus felis, mollis id facilisis at, sollicitudin sit amet augue. Phasellus lobortis ullamcorper odio, eget pharetra neque dictum eget. Morbi dignissim dictum posuere. Aliquam erat volutpat. Nam at massa turpis, et aliquet urna.</p>
+      <div class="pull-out">
+        <p><strong>Nunc diam lectus</strong>. molestie sit amet ultricies sed, molestie ac quam.</p> 
+        <p><strong>Sed et aliquam eros</strong>. Etiam non urna in lorem vehicula interdum eu ac erat. 
+        <p><strong>Sed mauris massa</strong>. elementum sit amet imperdiet non, suscipit id magna. </p>
+        <p><strong>Pellentesque habitant morbi</strong>. tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      </div>
+      <p>Duis scelerisque, felis in pretium sollicitudin, ligula nibh gravida odio, sit amet pretium lorem justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam non magna metus. Sed auctor tristique condimentum. Ut non elit eget tellus vestibulum mattis.</p>
+    </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;p&gt;&lt;/p&gt;
+  &lt;div class="pull-out"&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;/p&gt; 
+&lt;/article&gt;
+      </code>
+    </pre>
+  </div>
 </section>
 
 <!-- Layout
 ================================================== -->
+<section id="layout">
+  <div class="page-header">
+    <h1><span>Layout of stories and media</span></h1>
+  </div>
+  <h2>Notched media</h2>
+  <p>To notch related media items into the main narrative, use <code>div.media-holder</code> to contain each item's <code>figure</code>. The story's <code>p</code> elements and <code>.media-holder</code> content should be within an <code>article</code> with a class of <code>.narrow-river</code>.</p>
+  <div class="bs-example">
+    <article class="narrow-river">
+        <p>Morbi iaculis erat egestas turpis rhoncus pharetra. Suspendisse potenti. Nunc bibendum fringilla mi, sed suscipit mi feugiat a. Vestibulum tincidunt congue ornare. Proin sit amet mi nunc. Quisque tellus quam, faucibus vitae sagittis sit amet, consequat ut quam. Vestibulum sodales lacus in ligula aliquet congue. Ut dictum, enim at consectetur ullamcorper, tellus leo convallis odio, ut tempor sem nisi at ante.</p>
+        <div class="media-holder">
+          <figure class="small-photo">
+            <img src="http://fillmurray.com/g/500/325">
+            <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+            <figcaption class="media-credit">First Last - Organization</figcaption>
+          </figure>
+        </div>
+        <p>Aliquam ac augue ac nisi ullamcorper vehicula vel eget tellus. Proin venenatis ullamcorper magna, eget rutrum nunc imperdiet nec. Donec et leo mauris. Pellentesque risus felis, mollis id facilisis at, sollicitudin sit amet augue. Phasellus lobortis ullamcorper odio, eget pharetra neque dictum eget. Morbi dignissim dictum posuere. Aliquam erat volutpat. Nam at massa turpis, et aliquet urna.</p>
+        <p>Duis scelerisque, felis in pretium sollicitudin, ligula nibh gravida odio, sit amet pretium lorem justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam non magna metus. Sed auctor tristique condimentum. Ut non elit eget tellus vestibulum mattis.</p>
+    </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p class="byline"&gt;...&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;div class="media-holder"&gt;
+      &lt;figure class="small-photo"&gt;
+        &lt;img src="..."&gt;
+        &lt;figcaption&gt;...&lt;/figcaption&gt;
+        &lt;figcaption class="media-credit"&gt;...&lt;/figcaption&gt;
+      &lt;/figure&gt;
+    &lt;/div&gt;
+    &lt;p&gt;...&lt;/p&gt;
+&lt;/article&gt;
+      </code>
+    </pre>
+  </div>
+</section>
 
+<!-- Video
+================================================== -->
+<section id="video">
+  <div class="page-header">
+    <h1><span>Responsive video container</span></h1>
+  </div>
+  <p>Wrap the <strong>embedded</strong> video with <code>.video-wrapper</code> to apply a responsive container to the video. To adjust aspect ratio, increase or decrease the <code>margin-bottom</code> applied to the video's containing <code>iframe</code>, <code>object</code> or <code>embed</code>.</p>
+  <div class="bs-example">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="http://www.youtube.com/embed/rnvGWHbPtZ0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;div class="video-wrapper"&gt;
+  &lt;iframe&gt;...&lt;/iframe&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</section>
 
+<!-- Related items
+================================================== -->
+<section id="related-items">
+  <div class="page-header">
+    <h1><span>Related items</span></h1>
+  </div>
+  <h2>Photo, caption, credit layout</h2>
+  <p>A <code>figure</code> element with an <code>img</code>, a caption <code>figcaption</code> and a credit line <code>.media-credit</code>. Photos are available in three sizes, outlined below.</p>
+  <h3><code>.small-photo</code></h3>
+  <p>320 x 200</p>
+  <div class="bs-example">
+    <figure class="small-photo">
+      <img src="http://fillmurray.com/g/320/200">
+      <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+      <figcaption class="media-credit">First Last - Organization</figcaption>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure class="small-photo"&gt;
+...
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+  <h3><code>.medium-photo</code></h3>
+  <p>500 x 325</p>
+  <div class="bs-example">
+    <figure class="medium-photo">
+      <img src="http://fillmurray.com/g/500/325">
+      <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra. </figcaption>
+      <figcaption class="media-credit">First Last - Organization</figcaption>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure class="medium-photo"&gt;
+  ...
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+  <h3><code>.large-photo</code></h3>
+  <p>620 x 450</p>
+  <div class="bs-example">
+    <figure class="large-photo">
+      <img src="http://fillmurray.com/g/620/450">
+      <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+      <figcaption class="media-credit">First Last - Organization</figcaption>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure class="large-photo"&gt;
+  ...
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+  <h2>Pull quotes</h2>
+  <p>Use <code>blockquote</code> tags to denote pull quotes.</p>
+  <div class="bs-example">
+    <blockquote>
+      <p>This is a pull quote. Morbi iaculis erat egestas turpis rhoncus pharetra.</p>
+      <small> First Name Last Name, Title and Organization</small>
+    </blockquote>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;blockquote&gt;
+  &lt;p&gt;...&lt;p&gt;
+  &lt;small&gt;...&lt;small&gt;
+&lt;/blockquote&gt;
+      </code>
+    </pre>
+  </div>
 
+  <h2>The <code>figure</code> element</h2>
+  <p>Not just for photos and videos, <code>figure</code> elements will apply top and bottom rules to any self-contained content.</p>
+  <div class="bs-example">
+    <figure>
+      <h4>This is media content</h4>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure&gt;
+  &lt;h4&gt;...&lt;/h4&gt;
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+  <p><code>figure</code> can also be styled with the class <code>.left-rule</code> when it's necessary to separate similar fonts placed next to each other.</p>
+  <div class="bs-example">
+    <figure class="left-rule">
+      <h4>This is media content</h4>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure class="left-rule"&gt;
+  &lt;h4&gt;...&lt;/h4&gt;
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+
+  <h2>Linking to sidebar or other related content</h2>
+  <p>Use <code>aside</code> for content that is related to the main article, such as a sidebar. This will display notched in the article. The <code>.subhead</code> class can be used for additional description of the sidebar copy block.</p>
+  <div class="bs-example">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-8">
+          <aside>
+            <h3>Related headline</h3>
+            <p class="subhead">Optional subject description sublabel</p>
+            <p>This is information related to the story with more detailed information available elsewhere and that we can link to</p>
+            <p class="text-right"><a href="#" class="media-link digital-plus-icon">This link goes elsewhere</a></p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;aside&gt;
+  &lt;h3&gt;Related headline&lt;h3&gt;
+  &lt;p class="subhead"&gt;Optional subject description sublabel&lt;/p&gt;
+  &lt;p&gt;This is information ...&lt;/p&gt;
+  &lt;p class="text-right"&gt;&lt;a href="#" class="media-link digital-plus-icon"&gt;THIS LINK GOES ELSEWHERE&lt;/a&gt;&lt;/p&gt;
+&lt;/aside&gt;
+      </code>
+    </pre>
+  </div>
+
+  <h2>Links</h2>
+  <p>Add the <code>.media-link</code> class to a <code>a</code> element to apply the link styles. </p>
+  <div class="bs-example">
+    <p><a href="" class="media-link">This link goes elsewhere</a></p>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;a href="..." class="media-link"&gt;...&lt;/a&gt;
+      </code>
+    </pre>
+  </div>
+  <h2>Digital Plus icon</h2>
+  <p>If the content is part of Digital Plus, use the <code>digital-plus-icon</code> class to add the plus icon to the end of the link.</p>
+  <div class="bs-example">
+    <p><a href="" class="media-link digital-plus-icon">This link goes elsewhere</a></p>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;a href="..." class="media-link digital-plus-icon"&gt;...&lt;/a&gt;
+      </code>
+    </pre>
+  </div>
+
+  <h2>Related headlines as navigation</h2>
+  <p>For a list of related headlines, apply a <code>.nav-related</code> class to a <code>ul</code> element.</p>
+  <div class="bs-example">
+    <div class="container-fluid">
+      <div class="row">
+        <ul class="nav nav-related col-xs-4">
+          <li><a href="#">Related content</a></li>
+          <li><a href="#">Related content</a></li>
+          <li><a href="#">Related content</a></li>
+          <li><a href="#">Related content</a></li>
+          <li><a href="#">Related content</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;ul class="nav nav-related"&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+      </code>
+    </pre>
+  </div>
+  <h3>Add a descriptions and image</h3>
+  <div class="bs-example">
+    <div class="container-fluid">
+      <div class="row">
+        <ul class="nav nav-related col-xs-4">
+          <li>
+            <a href="">
+              Related content
+              <p>Content description</p>
+              <img src="http://fillmurray.com/325/200">
+            </a>
+          </li>
+          <li><a href="#">Related content</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;ul class="nav nav-related"&gt;
+  &lt;li&gt;
+    &lt;a href=""&gt;
+      Related content
+      &lt;p&gt;Content description&lt;/p&gt;
+      &lt;img src="..." /&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="..."&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+      </code>
+    </pre>
+  </div>
+
+</section>
+<!-- Icons
+================================================== -->
+<section id="icons">
+  <div class="page-header">
+      <h1><span>Iconography</span></h1>
+  </div>
+  <ul class="the-icons clearfix">
+    <li><i class="nguxicon-edit"></i> nguxicon-edit</li>
+    <li><i class="nguxicon-pintrest"></i> nguxicon-pintrest</li>
+    <li><i class="nguxicon-comment"></i> nguxicon-comment</li>
+    <li><i class="nguxicon-refresh"></i> nguxicon-refresh</li>
+    <li><i class="nguxicon-back"></i> nguxicon-back</li>
+    <li><i class="nguxicon-facebook"></i> nguxicon-facebook</li>
+    <li><i class="nguxicon-gplus"></i> nguxicon-gplus</li>
+    <li><i class="nguxicon-linkedin"></i> nguxicon-linkedin</li>
+    <li><i class="nguxicon-gear"></i> nguxicon-gear</li>
+    <li><i class="nguxicon-check"></i> nguxicon-check</li>
+    <li><i class="nguxicon-link"></i> nguxicon-link</li>
+    <li><i class="nguxicon-mail"></i> nguxicon-mail</li>
+    <li><i class="nguxicon-starburst"></i> nguxicon-starburst</li>
+    <li><i class="nguxicon-print"></i> nguxicon-print</li>
+    <li><i class="nguxicon-plusone"></i> nguxicon-plusone</li>
+    <li><i class="nguxicon-rss"></i> nguxicon-rss</li>
+    <li><i class="nguxicon-share"></i> nguxicon-share</li>
+    <li><i class="nguxicon-twitter"></i> nguxicon-twitter</li>
+    <li><i class="nguxicon-stumble"></i> nguxicon-stumble</li>
+    <li><i class="nguxicon-user"></i> nguxicon-user</li>
+    <li><i class="nguxicon-flag"></i> nguxicon-flag</li>
+    <li><i class="nguxicon-grid"></i> nguxicon-grid</li>
+    <li><i class="nguxicon-linkout"></i> nguxicon-linkout</li>
+    <li><i class="nguxicon-fullscreen"></i> nguxicon-fullscreen</li>
+    <li><i class="nguxicon-video"></i> nguxicon-video</li>
+    <li><i class="nguxicon-gallery"></i> nguxicon-gallery</li>
+    <li><i class="nguxicon-file"></i> nguxicon-file</li>
+    <li><i class="nguxicon-broadcast"></i> nguxicon-broadcast</li>
+    <li><i class="nguxicon-camera"></i> nguxicon-camera</li>
+    <li><i class="nguxicon-reddit"></i> nguxicon-reddit</li>
+    <li><i class="nguxicon-digg"></i> nguxicon-digg</li>
+    <li><i class="nguxicon-menu"></i> nguxicon-menu</li>
+    <li><i class="nguxicon-lock"></i> nguxicon-lock</li>
+    <li><i class="nguxicon-bull"></i> nguxicon-bull</li>
+
+    <li><i class="nguxicon-chevron-left"></i> nguxicon-chevron-left</li>
+    <li><i class="nguxicon-chevron-right"></i> nguxicon-chevron-right</li>
+    <li><i class="nguxicon-chevron-med-left"></i> nguxicon-chevron-med-left</li>
+    <li><i class="nguxicon-chevron-med-right"></i> nguxicon-chevron-med-right</li>
+    <li><i class="nguxicon-chevron-hair-left"></i> nguxicon-chevron-hair-left</li>
+    <li><i class="nguxicon-chevron-hair-right"></i> nguxicon-chevron-hair-right</li>
+
+    <li><i class="nguxicon-left"></i> nguxicon-left</li>
+    <li><i class="nguxicon-right"></i> nguxicon-right</li>
+    <li><i class="nguxicon-up"></i> nguxicon-up</li>
+    <li><i class="nguxicon-down"></i> nguxicon-down</li>
+
+    <li><i class="nguxicon-search"></i> nguxicon-search</li>
+    <li><i class="nguxicon-search-med"></i> nguxicon-search-med</li>
+    <li><i class="nguxicon-search-hair"></i> nguxicon-search-hair</li>
+
+    <li><i class="nguxicon-close"></i> nguxicon-close</li>
+    <li><i class="nguxicon-close-med"></i> nguxicon-close-med</li>
+    <li><i class="nguxicon-close-hair"></i> nguxicon-close-hair</li>
+
+    <li><i class="nguxicon-triangle-down"></i> nguxicon-triangle-down</li>
+    <li><i class="nguxicon-triangle-up"></i> nguxicon-triangle-up</li>
+    <li><i class="nguxicon-triangle-left"></i> nguxicon-triangle-left</li>
+    <li><i class="nguxicon-triangle-right"></i> nguxicon-triangle-right</li>
+
+    <li><i class="nguxicon-thumbs-up"></i> nguxicon-thumbs-up</li>
+    <li><i class="nguxicon-thumbs-down"></i> nguxicon-thumbs-down</li>
+
+    <li><i class="nguxicon-circle-left"></i> nguxicon-circle-left</li>
+    <li><i class="nguxicon-circle-right"></i> nguxicon-circle-right</li>
+  </ul>
+</section>
+
+<!-- Social media
+================================================== -->
+<section id="social-media">
+  <div class="page-header">
+    <h1><span>Social media buttons</span></h1>
+  </div>
+  <h2>Horizontal social media group</h2>
+  <p>First, make sure Font Awesome is included in your project by adding a link in the <code>head</code> to <code>//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css</code>. (Font Awesome is included by default with the base Tribune template.) Put a <code>ul</code> within a <code>div</code> with class <code>.social-wrapper</code>. Use a <code>small</code> element for the buttons label and <code>.text-center</code> on the wrapping <code>div</code> to center the label and buttons.</p>
+  <div class="bs-example">
+    <div class="social-wrapper text-center">
+      <small>Share this page</small>
+      <ul>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-twitter-sign"></i> <span class="hidden">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-facebook-sign"></i> <span class="hidden">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-google-plus-sign"></i> <span class="hidden">Google+</span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-pinterest-sign"></i> <span class="hidden">Pinterest</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;div class="social-wrapper text-center"&gt;
+  &lt;small&gt;...&lt;/small&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-twitter-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Twitter&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-facebook-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Facebook&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-google-plus-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Google+&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-pinterest-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Pinterest&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+  <h2>Vertical social media group</h2>
+  <p>Add <code>.social-wrapper-vertical</code> to the wrapping <code>div</code> to align the buttons vertically and center the text. Shorten the label to "Share" so it fits neatly above the buttons.</p>
+  <div class="bs-example">
+    <div class="social-wrapper social-wrapper-vertical" style="float: none; ">
+      <small>Share</small>
+      <ul>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-twitter-sign"></i> <span class="hidden">Twitter</span>
+          </a>  
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-facebook-sign"></i> <span class="hidden">Facebook</span>
+          </a>  
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-google-plus-sign"></i> <span class="hidden">Google+</span>
+          </a>  
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-pinterest-sign"></i> <span class="hidden">Pinterest</span>
+          </a>  
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;div class="social-wrapper social-wrapper-vertical"&gt;
+  &lt;small&gt;...&lt;/small&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-twitter-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Twitter&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-facebook-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Facebook&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-google-plus-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Google+&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-pinterest-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Pinterest&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</section>
+
+<!-- Colors
+================================================== -->
+<section id="color">
+  <div class="page-header">
+    <h1><span>Colors</span></h1>
+  </div>
+  <h2>NGUX blues and grays</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6">
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch blue-darkest">#0D1123</td>
+              <td class="sublabel">Darkest blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-darker">#12182D</td>
+              <td class="sublabel">Darker blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-dark">#17274A</td>
+              <td class="sublabel">Dark blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue">#0D3058</td>
+              <td class="sublabel">Trib Blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-light">#144A7C</td>
+              <td class="sublabel">Light blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-lighter">#549ac4</td>
+              <td class="sublabel">Lighter blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-lightest">#C7D9E9</td>
+              <td class="sublabel">Lightest blue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-6">
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch black">#1A1A1A</td>
+              <td class="sublabel">Black</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-darker">#2b2b2b</td>
+              <td class="sublabel">Darker Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-dark">#333333</td>
+              <td class="sublabel">Dark Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray">#666666</td>
+              <td class="sublabel">Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-light">#999999</td>
+              <td class="sublabel">Light Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-lighter">#D0D0D0</td>
+              <td class="sublabel">Lighter Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-very-light">#EEEEEE</td>
+              <td class="sublabel">Very Light Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch white">#fbfcfc</td>
+              <td class="sublabel">White</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </div>
+  </div>
+  <h2>For information</h2>
+  <p>Use these color ramps for displaying/keying data or other information</p>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-xs-3">
+        <h4>Blues</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch blue-light">#144a7c</td>
+              <td class="sublabel">Dark Blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-lighter">#549ac4</td>
+              <td class="sublabel">Blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-lightest">#C7D9E9</td>
+              <td class="sublabel">Light Blue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-3">
+        <h4>Greens</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch green-dark">#285014</td>
+              <td class="sublabel">Dark Green</td>
+            </tr>
+            <tr>
+              <td class="swatch green">#347235</td>
+              <td class="sublabel">Green</td>
+            </tr>
+            <tr>
+              <td class="swatch green-light">#8BB381</td>
+              <td class="sublabel">Light Green</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-3">
+        <h4>Reds</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch red-dark">#8c001a</td>
+              <td class="sublabel">Dark red</td>
+            </tr>
+            <tr>
+              <td class="swatch red">#c11b17</td>
+              <td class="sublabel">Red</td>
+            </tr>
+            <tr>
+              <td class="swatch red-light">#E8adaa</td>
+              <td class="sublabel">Light Red</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-3">
+        <h4>Other</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch yellow">#eac117</td>
+              <td class="sublabel">Yellow</td>
+            </tr>
+            <tr>
+              <td class="swatch yellow-light">#ffdb58</td>
+              <td class="sublabel">Light Yellow</td>
+            </tr>
+            <tr>
+              <td class="swatch purple">#7E587E</td>
+              <td class="sublabel">Purple</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Tarbell
 ================================================== -->
