@@ -46,7 +46,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
-  <h2 id="chapter-headings">Chapter headings</h2>
+  <h2 id="chapter-headers">Chapter headings</h2>
   <p>Use <code>.chapter-head</code> on any heading, but start with <code>h4</code> and work from there.</p>
   <div class="bs-example">
 <h4 class="chapter-head">H4 chapter heading</h4>
@@ -141,7 +141,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   <div class="page-header">
       <h1><span>Body copy</span></h1>
   </div>
-  <h2>Article copy</h2>
+  <h2 id="article-copy">Article copy</h2>
   <p>Place headlines, decks, bylines, and story copy within an <code>article</code> element. Use the class <code>.narrow-river</code> on an <code>article</code>to limit <code>p</code> elements and all headings <code>h1</code> through <code>h6</code> to a <code>max-width</code> of <strong>680px</strong>.</p>
   <div class="bs-example">
     <article class="narrow-river">
@@ -160,7 +160,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
     </pre>
   </div>
 
-  <h2>Drop caps</h2>
+  <h2 id="drop-caps">Drop caps</h2>
   <p>A drop cap can be used at a start of a section or chapter by including <code>.drop-cap</code> on a <code>p</code> element.</p>
   <div class="bs-example">
     <article>
@@ -179,7 +179,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
-  <h2>Story intro</h2>
+  <h2 id="story-intro">Story intro</h2>
   <p>Add <code>.lead</code> to a <code>p</code> element to increase <strong>font-size</strong> for paragraphs and drop caps.</p>
   <div class="bs-example">
     <article>
@@ -200,7 +200,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
     </pre>
   </div>
 
-  <h2>Breakout/bullet lists within the narrative</h2>
+  <h2 id="breakout-bullets">Breakout/bullet lists within the narrative</h2>
   <p>To separate sections of the narrative that are lists or bullets, wrap <code>p</code> element(s) in a <code>div</code> with a <code>.pull-out</code> class.</p>
   <div class="bs-example">
     <article>
@@ -301,7 +301,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   <div class="page-header">
     <h1><span>Related items</span></h1>
   </div>
-  <h2>Photo, caption, credit layout</h2>
+  <h2 id="photo-layout">Photo, caption, credit layout</h2>
   <p>A <code>figure</code> element with an <code>img</code>, a caption <code>figcaption</code> and a credit line <code>.media-credit</code>. Photos are available in three sizes, outlined below.</p>
   <h3><code>.small-photo</code></h3>
   <p>320 x 200</p>
@@ -357,24 +357,6 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
-  <h2>Pull quotes</h2>
-  <p>Use <code>blockquote</code> tags to denote pull quotes.</p>
-  <div class="bs-example">
-    <blockquote>
-      <p>This is a pull quote. Morbi iaculis erat egestas turpis rhoncus pharetra.</p>
-      <small> First Name Last Name, Title and Organization</small>
-    </blockquote>
-  </div>
-  <div class="highlight">
-    <pre>
-      <code>
-&lt;blockquote&gt;
-  &lt;p&gt;...&lt;p&gt;
-  &lt;small&gt;...&lt;small&gt;
-&lt;/blockquote&gt;
-      </code>
-    </pre>
-  </div>
 
   <h2>The <code>figure</code> element</h2>
   <p>Not just for photos and videos, <code>figure</code> elements will apply top and bottom rules to any self-contained content.</p>
@@ -408,7 +390,25 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
     </pre>
   </div>
 
-  <h2>Linking to sidebar or other related content</h2>
+  <h2 id="pull-quotes">Pull quotes</h2>
+  <p>Use <code>blockquote</code> tags to denote pull quotes.</p>
+  <div class="bs-example">
+    <blockquote>
+      <p>This is a pull quote. Morbi iaculis erat egestas turpis rhoncus pharetra.</p>
+      <small> First Name Last Name, Title and Organization</small>
+    </blockquote>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;blockquote&gt;
+  &lt;p&gt;...&lt;p&gt;
+  &lt;small&gt;...&lt;small&gt;
+&lt;/blockquote&gt;
+      </code>
+    </pre>
+  </div>
+  <h2 id="sidebars">Sidebars and other related content</h2>
   <p>Use <code>aside</code> for content that is related to the main article, such as a sidebar. This will display notched in the article. The <code>.subhead</code> class can be used for additional description of the sidebar copy block.</p>
   <div class="bs-example">
     <div class="container-fluid">
@@ -436,33 +436,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
-
-  <h2>Links</h2>
-  <p>Add the <code>.media-link</code> class to a <code>a</code> element to apply the link styles. </p>
-  <div class="bs-example">
-    <p><a href="" class="media-link">This link goes elsewhere</a></p>
-  </div>
-  <div class="highlight">
-    <pre>
-      <code>
-&lt;a href="..." class="media-link"&gt;...&lt;/a&gt;
-      </code>
-    </pre>
-  </div>
-  <h2>Digital Plus icon</h2>
-  <p>If the content is part of Digital Plus, use the <code>digital-plus-icon</code> class to add the plus icon to the end of the link.</p>
-  <div class="bs-example">
-    <p><a href="" class="media-link digital-plus-icon">This link goes elsewhere</a></p>
-  </div>
-  <div class="highlight">
-    <pre>
-      <code>
-&lt;a href="..." class="media-link digital-plus-icon"&gt;...&lt;/a&gt;
-      </code>
-    </pre>
-  </div>
-
-  <h2>Related headlines as navigation</h2>
+  <h2 id="related-headlines">Related headlines</h2>
   <p>For a list of related headlines, apply a <code>.nav-related</code> class to a <code>ul</code> element.</p>
   <div class="bs-example">
     <div class="container-fluid">
@@ -523,6 +497,32 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
+
+  <h2 id="links">Standalone inks</h2>
+  <p>Add the <code>.media-link</code> class to a <code>a</code> element to apply the link styles. </p>
+  <div class="bs-example">
+    <p><a href="" class="media-link">This link goes elsewhere</a></p>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;a href="..." class="media-link"&gt;...&lt;/a&gt;
+      </code>
+    </pre>
+  </div>
+  <h2 id="digital-plus-icon">Digital Plus icon</h2>
+  <p>If the content is part of Digital Plus, use the <code>digital-plus-icon</code> class to add the plus icon to the end of the link.</p>
+  <div class="bs-example">
+    <p><a href="" class="media-link digital-plus-icon">This link goes elsewhere</a></p>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;a href="..." class="media-link digital-plus-icon"&gt;...&lt;/a&gt;
+      </code>
+    </pre>
+  </div>
+
 
 </section>
 <!-- Icons
@@ -606,7 +606,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   <div class="page-header">
     <h1><span>Social media buttons</span></h1>
   </div>
-  <h2>Horizontal social media group</h2>
+  <h2 id="horizontal-social">Horizontal social media group</h2>
   <p>First, make sure Font Awesome is included in your project by adding a link in the <code>head</code> to <code>//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css</code>. (Font Awesome is included by default with the base Tribune template.) Put a <code>ul</code> within a <code>div</code> with class <code>.social-wrapper</code>. Use a <code>small</code> element for the buttons label and <code>.text-center</code> on the wrapping <code>div</code> to center the label and buttons.</p>
   <div class="bs-example">
     <div class="social-wrapper text-center">
@@ -666,7 +666,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       </code>
     </pre>
   </div>
-  <h2>Vertical social media group</h2>
+  <h2 id="vertical-social">Vertical social media group</h2>
   <p>Add <code>.social-wrapper-vertical</code> to the wrapping <code>div</code> to align the buttons vertically and center the text. Shorten the label to "Share" so it fits neatly above the buttons.</p>
   <div class="bs-example">
     <div class="social-wrapper social-wrapper-vertical" style="float: none; ">
@@ -899,7 +899,7 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
 ================================================== -->
 <div class="bs-docs-section">
   <div class="page-header">
-    <h1 id="styleguide-tarbell"><span>Tarbell</span></h1>
+    <h1 id="tarbell"><span>Tarbell</span></h1>
   </div>
 
   <p class="lead">Starting a Chicago Tribune Tarbell project</p>
