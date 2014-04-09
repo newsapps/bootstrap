@@ -114,18 +114,10 @@ article p.lead.drop-cap:first-letter {
 article a.media-link {
   font-size: 15px;
 }
-article .pull-out {
-  max-width: 640px;
+article .left-rule {
   padding: 0 20px;
   margin: 35px 0;
-  font-style: italic;
-  border-left: 2px solid #666;
-}
-article .pull-out p:last-child {
-  margin-bottom: 0;
-}
-article .pull-out strong {
-  color: #666;
+  border-left: 2px solid #333;
 }
 .drop-cap:first-letter {
   float: left;
@@ -196,12 +188,6 @@ aside {
   margin: 0;
   border-top: 1px solid #d0d0d0;
   border-bottom: 1px solid #d0d0d0;
-}
-figure.left-rule {
-  padding: 5px 0 5px 15px;
-  border-top: none;
-  border-bottom: none;
-  border-left: 2px solid #333;
 }
 blockquote p {
   margin: 10px 0;

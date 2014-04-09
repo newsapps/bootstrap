@@ -201,15 +201,15 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   </div>
 
   <h2 id="breakout-bullets">Breakout/bullet lists within the narrative</h2>
-  <p>To separate sections of the narrative that are lists or bullets, wrap <code>p</code> element(s) in a <code>div</code> with a <code>.pull-out</code> class.</p>
+  <p>To separate sections of the narrative that are lists or bullets, wrap <code>p</code> element(s) in a <code>div</code> with a <code>.left-rule</code> class.</p>
   <div class="bs-example">
     <article>
       <p>Aliquam ac augue ac nisi ullamcorper vehicula vel eget tellus. Proin venenatis ullamcorper magna, eget rutrum nunc imperdiet nec. Donec et leo mauris. Pellentesque risus felis, mollis id facilisis at, sollicitudin sit amet augue. Phasellus lobortis ullamcorper odio, eget pharetra neque dictum eget. Morbi dignissim dictum posuere. Aliquam erat volutpat. Nam at massa turpis, et aliquet urna.</p>
-      <div class="pull-out">
-        <p><strong>Nunc diam lectus</strong>. molestie sit amet ultricies sed, molestie ac quam.</p> 
-        <p><strong>Sed et aliquam eros</strong>. Etiam non urna in lorem vehicula interdum eu ac erat. 
-        <p><strong>Sed mauris massa</strong>. elementum sit amet imperdiet non, suscipit id magna. </p>
-        <p><strong>Pellentesque habitant morbi</strong>. tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      <div class="left-rule">
+        <p>Nunc diam lectus. molestie sit amet ultricies sed, molestie ac quam.</p> 
+        <p>Sed et aliquam eros. Etiam non urna in lorem vehicula interdum eu ac erat. 
+        <p>Sed mauris massa. elementum sit amet imperdiet non, suscipit id magna. </p>
+        <p>Pellentesque habitant morbi. tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
       <p>Duis scelerisque, felis in pretium sollicitudin, ligula nibh gravida odio, sit amet pretium lorem justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam non magna metus. Sed auctor tristique condimentum. Ut non elit eget tellus vestibulum mattis.</p>
     </article>
@@ -219,8 +219,8 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
       <code>
 &lt;article&gt;
   &lt;p&gt;&lt;/p&gt;
-  &lt;div class="pull-out"&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+  &lt;div class="left-rule"&gt;
+    &lt;p&gt;&lt;/p&gt;
   &lt;/div&gt;
   &lt;p&gt;&lt;/p&gt; 
 &lt;/article&gt;
@@ -369,21 +369,6 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
     <pre>
       <code>
 &lt;figure&gt;
-  &lt;h4&gt;...&lt;/h4&gt;
-&lt;/figure&gt;
-      </code>
-    </pre>
-  </div>
-  <p><code>figure</code> can also be styled with the class <code>.left-rule</code> when it's necessary to separate similar fonts placed next to each other.</p>
-  <div class="bs-example">
-    <figure class="left-rule">
-      <h4>This is media content</h4>
-    </figure>
-  </div>
-  <div class="highlight">
-    <pre>
-      <code>
-&lt;figure class="left-rule"&gt;
   &lt;h4&gt;...&lt;/h4&gt;
 &lt;/figure&gt;
       </code>

@@ -110,14 +110,12 @@ article {
     }
   }
   a.media-link { font-size: 15px; }
-  .pull-out {
+
+  // replaces .pull-out
+  .left-rule {
     padding: 0 20px;
-    border-left: 2px solid #666666;
     margin: 35px 0;
-    max-width: 640px;
-    font-style: italic;
-    p:last-child { margin-bottom: 0; }
-    strong { color: #666; }
+    border-left: 2px solid @gray-dark;
   }
 }
 
@@ -188,12 +186,6 @@ aside {
   border-bottom: 1px solid @gray-lighter;
 }
 
-figure.left-rule {
-  padding: 5px 0 5px 15px;
-  border-left: 2px solid @gray-dark;
-  border-bottom: none;
-  border-top: none;
-}
 
 blockquote {
   p { margin: 10px 0; font-size: 23px; line-height: 1.4em; }
