@@ -111,13 +111,21 @@ article p.lead.drop-cap:first-letter {
   font-size: 550%;
   line-height: 100%;
 }
+article ul li {
+  font-size: 16px;
+  line-height: 1.8em;
+}
 article a.media-link {
   font-size: 15px;
 }
 article .left-rule {
   padding: 0 20px;
   margin: 35px 0;
-  border-left: 2px solid #333;
+  border-left: 3px solid #666;
+}
+ul {
+  margin-left: 0;
+  list-style-type: square;
 }
 .drop-cap:first-letter {
   float: left;
