@@ -16,12 +16,13 @@
 </title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="/bootstrap/dist/css/chicago-bootstrap.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/chicago-bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="//s3.amazonaws.com/media.apps.chicagotribune.com/bootstrap-lightbox/v1.0.0/style.css"/>
 <!-- Documentation extras -->
-<link href="/bootstrap/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,7 +47,7 @@
 </script>
 
   </head>
-  <body class="bs-docs-home">
+  <body>
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
     <!-- Docs master nav -->
@@ -64,24 +65,25 @@
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
-          <a href="/bootstrap/getting-started">Getting started</a>
+          <a href="../getting-started">Getting started</a>
         </li>
         <li>
-          <a href="/bootstrap/css">CSS</a>
+          <a href="../css">CSS</a>
         </li>
         <li>
-          <a href="/bootstrap/components">Components</a>
+          <a href="../components">Components</a>
         </li>
         <li>
-          <a href="/bootstrap/javascript">JavaScript</a>
+          <a href="../javascript">JavaScript</a>
         </li>
-        <li>
-          <a href="/bootstrap/styleguide">Chicago Tribune Style Guide</a>
+        <li class="active">
+          <a href="../styleguide">Chicago Tribune Style Guide</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
+
 
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content">
@@ -346,7 +348,6 @@
     </pre>
   </div>
 
-
 </section>
 
 <!-- Layout
@@ -477,6 +478,61 @@
       </code>
     </pre>
   </div>
+<!-- This is here for reference, but the below does not work with bootstrap 3. See https://tribune.unfuddle.com/a#/projects/6/tickets/by_number/616 -->
+<!--  <h3>Lightboxing large photos</h3>
+  <p>When you want to allow a user to enlarge a photo, use the <code>bootstrap-lightbox</code> JavaScript library. You will need to include the Bootstrap Lightbox library from cdnjs.</p>
+  <div class="bs-example">
+    <div class="trib-media">
+				<!-- Lightbox example -->
+				<figure class="small-photo">
+					<a data-toggle="lightbox" href="#photo1">
+						<div class="fullscreen-button-wrapper">
+              <img src="http://fillmurray.com/g/620/450">
+						  <div class="fullscreen" style="width: 40px;"></div>
+            </div>
+            <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+					</a>
+				</figure>
+				<div id="photo1" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="lightbox-dialog">
+            <div class="lightbox-content">
+              <img src="http://fillmurray.com/g/620/450">
+              <figcaption class="lightbox-caption">This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+            </div>
+          </div>
+				</div>
+			</div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;head&gt;
+&lt;script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.6.1/bootstrap-lightbox.min.js"&gt;&lt;/script&gt;
+...
+&lt;/head&gt;
+&lt;div class="trib-media"&gt;
+  &lt;figure class="small-photo"&gt;
+    &lt;a data-toggle="lightbox" href="#photo1"&gt;
+      &lt;div class="fullscreen-button-wrapper"&gt;
+        &lt;img src="http://fillmurray.com/g/620/450"&gt;
+        &lt;div class="fullscreen" style="width: 40px;"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;figcaption&gt;This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.&lt;/figcaption&gt;
+      &lt;figcaption class="media-credit"&gt;First Last - Organization&lt;/figcaption&gt;
+    &lt;/a&gt;
+  &lt;/figure&gt;
+  &lt;div id="photo1" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true"&gt;
+    &lt;div class="lightbox-content"&gt;&lt;a data-toggle="lightbox" href="#photo1" class="close"&gt;&lt;i class="ngux-icon-close"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;img src="http://fillmurray.com/g/620/450"&gt;
+      &lt;figcaption&gt;This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.&lt;/figcaption&gt;
+      &lt;figcaption class="media-credit"&gt;First Last - Organization&lt;/figcaption&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div> -->
+
 
   <h2>The <code>figure</code> element</h2>
   <p>Not just for photos and videos, <code>figure</code> elements will apply top and bottom rules to any self-contained content.</p>
@@ -489,21 +545,6 @@
     <pre>
       <code>
 &lt;figure&gt;
-  &lt;h4&gt;...&lt;/h4&gt;
-&lt;/figure&gt;
-      </code>
-    </pre>
-  </div>
-  <p><code>figure</code> can also be styled with the class <code>.left-rule</code> when it's necessary to separate similar fonts placed next to each other.</p>
-  <div class="bs-example">
-    <figure class="left-rule">
-      <h4>This is media content</h4>
-    </figure>
-  </div>
-  <div class="highlight">
-    <pre>
-      <code>
-&lt;figure class="left-rule"&gt;
   &lt;h4&gt;...&lt;/h4&gt;
 &lt;/figure&gt;
       </code>
@@ -1187,6 +1228,8 @@
 <script src="../assets/js/docs.min.js"></script>
 
 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.6.1/bootstrap-lightbox.js"></script>
+<script type="text/javascript" src="//s3.amazonaws.com/media.apps.chicagotribune.com/bootstrap-lightbox/v1.0.0/bootstrap-lightbox-addons.js"></script>
 
 <script>
   window.twttr = (function (d,s,id) {
