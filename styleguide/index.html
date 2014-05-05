@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<title>
+  
+    Style Guide &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/chicago-bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css">
+<!-- Documentation extras -->
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+                               <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-146052-10']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">Bootstrap</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../getting-started">Getting started</a>
+        </li>
+        <li>
+          <a href="../css">CSS</a>
+        </li>
+        <li>
+          <a href="../components">Components</a>
+        </li>
+        <li>
+          <a href="../javascript">JavaScript</a>
+        </li>
+        <li class="active">
+          <a href="../styleguide">Chicago Tribune Style Guide</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="content">
+      <div class="container">
+        <h1>Style Guide</h1>
+        <p>All the bits and pieces that go into making a Tribune news app that aren't already part of Bootstrap.</p>
+        
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+      <div class="row">
+        <div class="col-md-9" role="main">
+          <!-- Headings
+================================================== -->
+<section class="bs-docs-section">
+  <div class="page-header">
+    <h1 id="headings"><span>Headings</span></h1>
+  </div>
+  <h2 id="section-headers">Section header</h2>
+  <p>Add <code>.section-header</code> to any heading and wrap the content in a <code>span</code>.</p>
+  <div class="bs-example">
+    <h2 class="section-header">
+      <span>section headline</span>
+    </h2>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;h2 class="section-header"&gt;
+  &lt;span&gt;Example section heading&lt;/span&gt;
+&lt;/h2&gt;
+      </code>
+    </pre>
+  </div>
+  <h3>Add a publication date</h3>
+  <p>Add a publication date to the section header by wrapping the date in a <code>small</code> element after the <code>span</code>.</p>
+  <div class="bs-example">
+    <h2 class="section-header">
+      <span>section headline</span>
+      <small>Published on a date with a time</small>
+    </h2>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;h2 class="section-header"&gt;
+  &lt;span&gt;Example section heading&lt;/span&gt;
+  &lt;small&gt;Example publication date&lt;/small&gt;
+&lt;/h2&gt;
+      </code>
+    </pre>
+  </div>
+  <h2 id="chapter-headers">Chapter headings</h2>
+  <p>Use <code>.chapter-head</code> on any heading, but start with <code>h4</code> and work from there.</p>
+  <div class="bs-example">
+<h4 class="chapter-head">H4 chapter heading</h4>
+<h3 class="chapter-head">H3 chapter heading</h3>
+<h5 class="chapter-head">H5 chapter heading</h5>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;h4 class="chapter-head"&gt;...&lt;h4&gt;
+      </code>
+    </pre>
+  </div>
+</section>
+
+<!-- Bylines
+================================================== -->
+<section id="credits-bylines">
+  <div class="page-header">
+    <h1 id="bylines"><span>Bylines, credits and sourcing</span></h1>
+  </div>
+  <h2 id="byline-styles">Bylines</h2>
+  <p>Add a <code>byline</code> class to a <code>div</code> element and give the authors name(s) a class of <code>author</code>. Add the class <code>organization</code> to a <code>p</code>element to style the author's organization. Add a <code>pub-date</code> class to a <code>p</code> element to style the publication date and time. Bylines on apps projects will have an increased <code>font-size</code>.</p>
+  <div class="bs-example">
+    <div class="byline">
+      <p class="author">By <span>First Last</span></p>
+      <p class="organization">Chicago Tribune</p>
+      <p class="pub-date">September 19, 2013</p>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;div class="byline"&gt;
+  &lt;p class="author"&gt;By &lt;span&gt;First Last&lt;/span&gt;&lt;/p&gt;
+  &lt;p class="organization"&gt;Chicago Tribune&lt;/p&gt;
+  &lt;p class="pub-date"&gt;September 19, 2013&lt;/p&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+  <h2 id="credits">Source and credits</h2>
+  <p></p>
+  <div class="bs-example">
+    <div class="credits">
+      <p>Source: Where did the information come from?</p>
+      <p>By First Last, First Last and First Last - Chicago Tribune</p>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;div class="credits"&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+  </div>
+  <h2 id="credit-box">Project credits box</h2>
+  <p>Use a project credits box at the bottom of the page before the footer when bylines from multiple departments should appear. This style of credit box should be reserved for larger projects.</p>
+  <div class="bs-example">
+    <div class="credits-wrapper">
+      <div class="credits-inner">
+        <p>Reporting by <span>First Last and First Last</span></p>
+        <p>Photography by <span>First Last and First Last</span></p>
+        <p>Graphics by <span>First Last and First Last</span></p>
+        <p>Applications and design by <span>First Last and First Last</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+&lt;div class="credits-wrapper"&gt;
+  &lt;div class="credits-inner"&gt;
+    &lt;p&gt;Reporting by &lt;span&gt;First Last and First Last&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Photography by &lt;span&gt;First Last and First Last&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Graphics by &lt;span&gt;First Last and First Last&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Applications and design by &lt;span&gt;First Last and First Last&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</section>
+
+
+<!-- Body copy
+================================================== -->
+ <section id="body-copy">
+  <div class="page-header">
+      <h1><span>Body copy</span></h1>
+  </div>
+  <h2 id="article-copy">Article copy</h2>
+  <p>Place headlines, decks, bylines, and story copy within an <code>article</code> element. Use the class <code>.narrow-river</code> on an <code>article</code>to limit <code>p</code> elements and all headings <code>h1</code> through <code>h6</code> to a <code>max-width</code> of <strong>680px</strong>.</p>
+  <div class="bs-example">
+    <article class="narrow-river">
+      <h1>Headline</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci sapien, ullamcorper at blandit vitae, viverra sed diam. Sed id neque purus. Suspendisse potenti. Donec pretium, nunc quis cursus euismod, nibh lectus luctus sapien, vitae viverra tellus est eget enim. Nulla eu porttitor nulla. Maecenas sed dui et elit commodo interdum. Aliquam consequat ipsum ac lacus venenatis at tincidunt nunc aliquam.</p>
+    </article>
+  </div>
+  <div class="highlight">
+    <pre>
+        <code class="html">
+&lt;article class="narrow-river"&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/article&gt; 
+        </code>
+    </pre>
+  </div>
+
+  <h2 id="drop-caps">Drop caps</h2>
+  <p>A drop cap can be used at a start of a section or chapter by including <code>.drop-cap</code> on a <code>p</code> element.</p>
+  <div class="bs-example">
+    <article>
+      <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci sapien, ullamcorper at blandit vitae, viverra sed diam. Sed id neque purus. Suspendisse potenti. Donec pretium, nunc quis cursus euismod, nibh lectus luctus sapien, vitae viverra tellus est eget enim. Nulla eu porttitor nulla. Maecenas sed dui et elit commodo interdum. Aliquam consequat ipsum ac lacus venenatis at tincidunt nunc aliquam.</p>
+    </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p class="drop-cap"&gt;
+    ...
+  &lt;/p&gt; 
+&lt;/article&gt; 
+      </code>
+    </pre>
+  </div>
+  <h2 id="story-intro">Story intro</h2>
+  <p>Add <code>.lead</code> to a <code>p</code> element to increase <strong>font-size</strong> for paragraphs and drop caps.</p>
+  <div class="bs-example">
+    <article>
+      <p class="drop-cap lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci sapien, ullamcorper at blandit vitae, viverra sed diam. Sed id neque purus. Suspendisse potenti. Donec pretium, nunc quis cursus euismod, nibh lectus luctus sapien, vitae viverra tellus est eget enim. Nulla eu porttitor nulla. Maecenas sed dui et elit commodo interdum. Aliquam consequat ipsum ac lacus venenatis at tincidunt nunc aliquam.</p>
+      <p>Aliquam ac augue ac nisi ullamcorper vehicula vel eget tellus. Proin venenatis ullamcorper magna, eget rutrum nunc imperdiet nec. Donec et leo mauris. Pellentesque risus felis, mollis id facilisis at, sollicitudin sit amet augue. Phasellus lobortis ullamcorper odio, eget pharetra neque dictum eget. Morbi dignissim dictum posuere. Aliquam erat volutpat. Nam at massa turpis, et aliquet urna.</p>
+                  </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p class="drop-cap lead"&gt;
+    ...
+  &lt;/p&gt; 
+&lt;/article&gt; 
+      </code>
+    </pre>
+  </div>
+
+  <h2 id="breakout-bullets">Breakout/bullet lists within the narrative</h2>
+  <p>To separate sections of the narrative that are lists or bullets, wrap <code>p</code> element(s) in a <code>div</code> with a <code>.left-rule</code> class.</p>
+  <div class="bs-example">
+    <article>
+      <p>Aliquam ac augue ac nisi ullamcorper vehicula vel eget tellus. Proin venenatis ullamcorper magna, eget rutrum nunc imperdiet nec. Donec et leo mauris. Pellentesque risus felis, mollis id facilisis at, sollicitudin sit amet augue. Phasellus lobortis ullamcorper odio, eget pharetra neque dictum eget. Morbi dignissim dictum posuere. Aliquam erat volutpat. Nam at massa turpis, et aliquet urna.</p>
+      <div class="left-rule">
+        <p>Nunc diam lectus. molestie sit amet ultricies sed, molestie ac quam.</p> 
+        <p>Sed et aliquam eros. Etiam non urna in lorem vehicula interdum eu ac erat.</p>
+        <p>Sed mauris massa. elementum sit amet imperdiet non, suscipit id magna. </p>
+        <p>Pellentesque habitant morbi. tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      </div>
+      <p>Duis scelerisque, felis in pretium sollicitudin, ligula nibh gravida odio, sit amet pretium lorem justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam non magna metus. Sed auctor tristique condimentum. Ut non elit eget tellus vestibulum mattis.</p>
+    </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;p&gt;&lt;/p&gt;
+  &lt;div class="left-rule"&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;/p&gt; 
+&lt;/article&gt;
+      </code>
+    </pre>
+  </div>
+
+  <h3>Bullet lists</h3>
+  <p>For bullet lists, simply use the standard <code>ul</code> and <code>li</code> elements.</p>
+  <div class="bs-example">
+    <article>
+      <p>Aliquam ac augue ac nisi ullamcorper vehicula vel eget tellus. Proin venenatis ullamcorper magna, eget rutrum nunc imperdiet nec. Donec et leo mauris. Pellentesque risus felis, mollis id facilisis at, sollicitudin sit amet augue. Phasellus lobortis ullamcorper odio, eget pharetra neque dictum eget. Morbi dignissim dictum posuere. Aliquam erat volutpat. Nam at massa turpis, et aliquet urna.</p>
+      <ul>
+        <li>Nunc diam lectus. molestie sit amet ultricies sed, molestie ac quam.</li> 
+        <li>Sed et aliquam eros. Etiam non urna in lorem vehicula interdum eu ac erat.</li>
+        <li>Sed mauris massa. elementum sit amet imperdiet non, suscipit id magna. </li>
+        <li>Pellentesque habitant morbi. tristique senectus et netus et malesuada fames ac turpis egestas.</li>
+      </ul>
+      <p>Duis scelerisque, felis in pretium sollicitudin, ligula nibh gravida odio, sit amet pretium lorem justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam non magna metus. Sed auctor tristique condimentum. Ut non elit eget tellus vestibulum mattis.</p>
+    </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;p&gt;&lt;/p&gt;
+  &lt;div class="left-rule"&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;/p&gt; 
+&lt;/article&gt;
+      </code>
+    </pre>
+  </div>
+
+</section>
+
+<!-- Layout
+================================================== -->
+<section id="layout">
+  <div class="page-header">
+    <h1><span>Layout of stories and media</span></h1>
+  </div>
+  <h2 id="notched-media">Notched media</h2>
+  <p>To notch related media items into the main narrative, use <code>div.media-holder</code> to contain each item's <code>figure</code>. The story's <code>p</code> elements and <code>.media-holder</code> content should be within an <code>article</code> with a class of <code>.narrow-river</code>.</p>
+  <div class="bs-example">
+    <article class="narrow-river">
+        <p>Morbi iaculis erat egestas turpis rhoncus pharetra. Suspendisse potenti. Nunc bibendum fringilla mi, sed suscipit mi feugiat a. Vestibulum tincidunt congue ornare. Proin sit amet mi nunc. Quisque tellus quam, faucibus vitae sagittis sit amet, consequat ut quam. Vestibulum sodales lacus in ligula aliquet congue. Ut dictum, enim at consectetur ullamcorper, tellus leo convallis odio, ut tempor sem nisi at ante.</p>
+        <div class="media-holder">
+          <figure class="small-photo">
+            <img src="http://fillmurray.com/g/500/325">
+            <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+            <figcaption class="media-credit">First Last - Organization</figcaption>
+          </figure>
+        </div>
+        <p>Aliquam ac augue ac nisi ullamcorper vehicula vel eget tellus. Proin venenatis ullamcorper magna, eget rutrum nunc imperdiet nec. Donec et leo mauris. Pellentesque risus felis, mollis id facilisis at, sollicitudin sit amet augue. Phasellus lobortis ullamcorper odio, eget pharetra neque dictum eget. Morbi dignissim dictum posuere. Aliquam erat volutpat. Nam at massa turpis, et aliquet urna.</p>
+        <p>Duis scelerisque, felis in pretium sollicitudin, ligula nibh gravida odio, sit amet pretium lorem justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam non magna metus. Sed auctor tristique condimentum. Ut non elit eget tellus vestibulum mattis.</p>
+    </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p class="byline"&gt;...&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;div class="media-holder"&gt;
+      &lt;figure class="small-photo"&gt;
+        &lt;img src="..."&gt;
+        &lt;figcaption&gt;...&lt;/figcaption&gt;
+        &lt;figcaption class="media-credit"&gt;...&lt;/figcaption&gt;
+      &lt;/figure&gt;
+    &lt;/div&gt;
+    &lt;p&gt;...&lt;/p&gt;
+&lt;/article&gt;
+      </code>
+    </pre>
+  </div>
+  <h2 id="full-width-img">Edge-to-edge images</h2>
+  <p>To display an image the full width of the page, use the <code>.wide-photo</code> class on a <code>figure</code> element. You will need to include the <code>picturefill</code> JavaScript library in your page's footer. This will allow the page to load smaller images on mobile devices.</p>
+  <p>There are several image sources specified in the code below. The first is the image that is loaded on small screens. The second is the default large image, with a <code>data-media</code> attribute allowing a <code>min-width</code> to be set. Any screen over the specified <code>min-width</code> will load this image. The third image, surrounded by <code>noscript</code> tags, is the image that will load when JavaScript is disabled.</p>
+  <div class="bs-example">
+    <article class="narrow-river">
+      <h1>Headline</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci sapien, ullamcorper at blandit vitae, viverra sed diam. Sed id neque purus. Suspendisse potenti. Donec pretium, nunc quis cursus euismod, nibh lectus luctus sapien, vitae viverra tellus est eget enim. Nulla eu porttitor nulla. Maecenas sed dui et elit commodo interdum. Aliquam consequat ipsum ac lacus venenatis at tincidunt nunc aliquam.</p>
+      <figure class="wide-photo">
+        <span data-picture>
+          <span data-src="http://fillmurray.com/g/620/450"></span>
+          <span data-src="http://fillmurray.com/g/1148/651" data-media="(min-width: 600px)">
+  </span>
+          <noscript>
+            <img src="http://fillmurray.com/g/1148/651"/>
+          </noscript>
+        </span>
+        <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+      </figure>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam orci sapien, ullamcorper at blandit vitae, viverra sed diam. Sed id neque purus. Suspendisse potenti. Donec pretium, nunc quis cursus euismod, nibh lectus luctus sapien, vitae viverra tellus est eget enim. Nulla eu porttitor nulla. Maecenas sed dui et elit commodo interdum. Aliquam consequat ipsum ac lacus venenatis at tincidunt nunc aliquam.</p>
+  </article>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure class="wide-photo"&gt;
+  &lt;span data-picture&gt;
+    &lt;span data-src="http://fillmurray.com/g/620/450"&gt;&lt;/span&gt;
+    &lt;span data-src="http://fillmurray.com/g/1148/651" data-media="(min-width: 600px)"&gt;
+&lt;/span&gt;
+    &lt;noscript&gt;
+      &lt;img src="http://fillmurray.com/g/1148/651"/&gt;
+    &lt;/noscript&gt;
+  &lt;/span&gt;
+  &lt;figcaption&gt;This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.&lt;/figcaption&gt;
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+
+
+</section>
+
+<!-- Video
+================================================== -->
+<section id="video">
+  <div class="page-header">
+    <h1><span>Responsive video container</span></h1>
+  </div>
+  <p>Wrap the <strong>embedded</strong> video with <code>.video-wrapper</code> to apply a responsive container to the video. To adjust aspect ratio, increase or decrease the <code>padding-bottom</code> applied to the video's containing <code>iframe</code>, <code>object</code> or <code>embed</code>. By default, the wrapper will fit a video with an aspect ratio of 16:9. Use the class <code>.four-three</code> for video with an aspect ratio of 4:3.</p>
+  <p>For video with a custom aspect ratio, you'll need to calculate the amount of padding to apply to the bottom. Turn the ratio into a fraction and divide the numerator by the denominator and set <code>padding-bottom</code> to the resulting percentage. For instance, for the 4:3 aspect ratio, divide 4 by 3 and set <code>padding-bottom: 75%</code>.</p>
+  <div class="bs-example">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="http://www.youtube.com/embed/rnvGWHbPtZ0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;div class="video-wrapper"&gt;
+  &lt;iframe&gt;...&lt;/iframe&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</section>
+
+<!-- Related items
+================================================== -->
+<section id="related-items">
+  <div class="page-header">
+    <h1><span>Related items</span></h1>
+  </div>
+  <h2 id="photo-layout">Photo, caption, credit layout</h2>
+  <p>A <code>figure</code> element with an <code>img</code>, a caption <code>figcaption</code> and a credit line <code>.media-credit</code>. Photos are available in three sizes, outlined below.</p>
+  <h3><code>.small-photo</code></h3>
+  <p>320 x 200</p>
+  <div class="bs-example">
+    <figure class="small-photo">
+      <img src="http://fillmurray.com/g/320/200">
+      <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+      <figcaption class="media-credit">First Last - Organization</figcaption>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure class="small-photo"&gt;
+...
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+  <h3><code>.medium-photo</code></h3>
+  <p>500 x 325</p>
+  <div class="bs-example">
+    <figure class="medium-photo">
+      <img src="http://fillmurray.com/g/500/325">
+      <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra. </figcaption>
+      <figcaption class="media-credit">First Last - Organization</figcaption>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure class="medium-photo"&gt;
+  ...
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+  <h3><code>.large-photo</code></h3>
+  <p>620 x 450</p>
+  <div class="bs-example">
+    <figure class="large-photo">
+      <img src="http://fillmurray.com/g/620/450">
+      <figcaption>This is a caption. Morbi iaculis erat egestas turpis rhoncus pharetra.</figcaption>
+      <figcaption class="media-credit">First Last - Organization</figcaption>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure class="large-photo"&gt;
+  ...
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+  <h2>The <code>figure</code> element</h2>
+  <p>Not just for photos and videos, <code>figure</code> elements will apply top and bottom rules to any self-contained content.</p>
+  <div class="bs-example">
+    <figure>
+      <h4>This is media content</h4>
+    </figure>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;figure&gt;
+  &lt;h4&gt;...&lt;/h4&gt;
+&lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+
+  <h2 id="pull-quotes">Pull quotes</h2>
+  <p>Use <code>blockquote</code> tags to denote pull quotes.</p>
+  <div class="bs-example">
+    <blockquote>
+      <p>This is a pull quote. Morbi iaculis erat egestas turpis rhoncus pharetra.</p>
+      <small> First Name Last Name, Title and Organization</small>
+    </blockquote>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;blockquote&gt;
+  &lt;p&gt;...&lt;p&gt;
+  &lt;small&gt;...&lt;small&gt;
+&lt;/blockquote&gt;
+      </code>
+    </pre>
+  </div>
+  <h2 id="sidebars">Sidebars and other related content</h2>
+  <p>Use <code>aside</code> for content that is related to the main article, such as a sidebar. This will display notched in the article. The <code>.subhead</code> class can be used for additional description of the sidebar copy block.</p>
+  <div class="bs-example">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-8">
+          <aside>
+            <h3>Related headline</h3>
+            <p class="subhead">Optional subject description sublabel</p>
+            <p>This is information related to the story with more detailed information available elsewhere and that we can link to</p>
+            <p class="text-right"><a href="#" class="media-link digital-plus-icon">This link goes elsewhere</a></p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;aside&gt;
+  &lt;h3&gt;Related headline&lt;h3&gt;
+  &lt;p class="subhead"&gt;Optional subject description sublabel&lt;/p&gt;
+  &lt;p&gt;This is information ...&lt;/p&gt;
+  &lt;p class="text-right"&gt;&lt;a href="#" class="media-link digital-plus-icon"&gt;THIS LINK GOES ELSEWHERE&lt;/a&gt;&lt;/p&gt;
+&lt;/aside&gt;
+      </code>
+    </pre>
+  </div>
+  <h2 id="related-headlines">Related headlines</h2>
+  <p>For a list of related headlines, apply a <code>.nav-related</code> class to a <code>ul</code> element.</p>
+  <div class="bs-example">
+    <div class="container-fluid">
+      <div class="row">
+        <ul class="nav nav-related col-xs-4">
+          <li><a href="#">Related content</a></li>
+          <li><a href="#">Related content</a></li>
+          <li><a href="#">Related content</a></li>
+          <li><a href="#">Related content</a></li>
+          <li><a href="#">Related content</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;ul class="nav nav-related"&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+      </code>
+    </pre>
+  </div>
+  <h3>Add a descriptions and image</h3>
+  <div class="bs-example">
+    <div class="container-fluid">
+      <div class="row">
+        <ul class="nav nav-related col-xs-4">
+          <li>
+            <a href="">
+              Related content
+              <p>Content description</p>
+              <img src="http://fillmurray.com/325/200">
+            </a>
+          </li>
+          <li><a href="#">Related content</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;ul class="nav nav-related"&gt;
+  &lt;li&gt;
+    &lt;a href=""&gt;
+      Related content
+      &lt;p&gt;Content description&lt;/p&gt;
+      &lt;img src="..." /&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="..."&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+      </code>
+    </pre>
+  </div>
+
+  <h2 id="links">Standalone links</h2>
+  <p>Add the <code>.media-link</code> class to a <code>a</code> element to apply the link styles. </p>
+  <div class="bs-example">
+    <p><a href="" class="media-link">This link goes elsewhere</a></p>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;a href="..." class="media-link"&gt;...&lt;/a&gt;
+      </code>
+    </pre>
+  </div>
+
+  <p>When linking to a gallery from an image caption, use the language "See more of [topic]."</p>
+  <div class="bs-example">
+    <p><a href="" class="media-link">SEE MORE OF THE HELLO KITTY HOTEL</a></p>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;a href="..." class="media-link"&gt;...&lt;/a&gt;
+      </code>
+    </pre>
+  </div>
+
+  <h2 id="digital-plus-icon">Digital Plus icon</h2>
+  <p>If the content is part of Digital Plus, use the <code>digital-plus-icon</code> class to add the plus icon to the end of the link.</p>
+  <div class="bs-example">
+    <p><a href="" class="media-link digital-plus-icon">This link goes elsewhere</a></p>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;a href="..." class="media-link digital-plus-icon"&gt;...&lt;/a&gt;
+      </code>
+    </pre>
+  </div>
+
+
+</section>
+<!-- Icons
+================================================== -->
+<section id="icons">
+  <div class="page-header">
+      <h1><span>Iconography</span></h1>
+  </div>
+  <ul class="the-icons clearfix">
+    <li><i class="nguxicon-edit"></i> nguxicon-edit</li>
+    <li><i class="nguxicon-pintrest"></i> nguxicon-pintrest</li>
+    <li><i class="nguxicon-comment"></i> nguxicon-comment</li>
+    <li><i class="nguxicon-refresh"></i> nguxicon-refresh</li>
+    <li><i class="nguxicon-back"></i> nguxicon-back</li>
+    <li><i class="nguxicon-facebook"></i> nguxicon-facebook</li>
+    <li><i class="nguxicon-gplus"></i> nguxicon-gplus</li>
+    <li><i class="nguxicon-linkedin"></i> nguxicon-linkedin</li>
+    <li><i class="nguxicon-gear"></i> nguxicon-gear</li>
+    <li><i class="nguxicon-check"></i> nguxicon-check</li>
+    <li><i class="nguxicon-link"></i> nguxicon-link</li>
+    <li><i class="nguxicon-mail"></i> nguxicon-mail</li>
+    <li><i class="nguxicon-starburst"></i> nguxicon-starburst</li>
+    <li><i class="nguxicon-print"></i> nguxicon-print</li>
+    <li><i class="nguxicon-plusone"></i> nguxicon-plusone</li>
+    <li><i class="nguxicon-rss"></i> nguxicon-rss</li>
+    <li><i class="nguxicon-share"></i> nguxicon-share</li>
+    <li><i class="nguxicon-twitter"></i> nguxicon-twitter</li>
+    <li><i class="nguxicon-stumble"></i> nguxicon-stumble</li>
+    <li><i class="nguxicon-user"></i> nguxicon-user</li>
+    <li><i class="nguxicon-flag"></i> nguxicon-flag</li>
+    <li><i class="nguxicon-grid"></i> nguxicon-grid</li>
+    <li><i class="nguxicon-linkout"></i> nguxicon-linkout</li>
+    <li><i class="nguxicon-fullscreen"></i> nguxicon-fullscreen</li>
+    <li><i class="nguxicon-video"></i> nguxicon-video</li>
+    <li><i class="nguxicon-gallery"></i> nguxicon-gallery</li>
+    <li><i class="nguxicon-file"></i> nguxicon-file</li>
+    <li><i class="nguxicon-broadcast"></i> nguxicon-broadcast</li>
+    <li><i class="nguxicon-camera"></i> nguxicon-camera</li>
+    <li><i class="nguxicon-reddit"></i> nguxicon-reddit</li>
+    <li><i class="nguxicon-digg"></i> nguxicon-digg</li>
+    <li><i class="nguxicon-menu"></i> nguxicon-menu</li>
+    <li><i class="nguxicon-lock"></i> nguxicon-lock</li>
+    <li><i class="nguxicon-bull"></i> nguxicon-bull</li>
+
+    <li><i class="nguxicon-chevron-left"></i> nguxicon-chevron-left</li>
+    <li><i class="nguxicon-chevron-right"></i> nguxicon-chevron-right</li>
+    <li><i class="nguxicon-chevron-med-left"></i> nguxicon-chevron-med-left</li>
+    <li><i class="nguxicon-chevron-med-right"></i> nguxicon-chevron-med-right</li>
+    <li><i class="nguxicon-chevron-hair-left"></i> nguxicon-chevron-hair-left</li>
+    <li><i class="nguxicon-chevron-hair-right"></i> nguxicon-chevron-hair-right</li>
+
+    <li><i class="nguxicon-left"></i> nguxicon-left</li>
+    <li><i class="nguxicon-right"></i> nguxicon-right</li>
+    <li><i class="nguxicon-up"></i> nguxicon-up</li>
+    <li><i class="nguxicon-down"></i> nguxicon-down</li>
+
+    <li><i class="nguxicon-search"></i> nguxicon-search</li>
+    <li><i class="nguxicon-search-med"></i> nguxicon-search-med</li>
+    <li><i class="nguxicon-search-hair"></i> nguxicon-search-hair</li>
+
+    <li><i class="nguxicon-close"></i> nguxicon-close</li>
+    <li><i class="nguxicon-close-med"></i> nguxicon-close-med</li>
+    <li><i class="nguxicon-close-hair"></i> nguxicon-close-hair</li>
+
+    <li><i class="nguxicon-triangle-down"></i> nguxicon-triangle-down</li>
+    <li><i class="nguxicon-triangle-up"></i> nguxicon-triangle-up</li>
+    <li><i class="nguxicon-triangle-left"></i> nguxicon-triangle-left</li>
+    <li><i class="nguxicon-triangle-right"></i> nguxicon-triangle-right</li>
+
+    <li><i class="nguxicon-thumbs-up"></i> nguxicon-thumbs-up</li>
+    <li><i class="nguxicon-thumbs-down"></i> nguxicon-thumbs-down</li>
+
+    <li><i class="nguxicon-circle-left"></i> nguxicon-circle-left</li>
+    <li><i class="nguxicon-circle-right"></i> nguxicon-circle-right</li>
+  </ul>
+</section>
+
+<!-- Social media
+================================================== -->
+<section id="social-media">
+  <div class="page-header">
+    <h1><span>Social media buttons</span></h1>
+  </div>
+  <h2 id="horizontal-social">Horizontal social media group</h2>
+  <p>First, make sure Font Awesome is included in your project by adding a link in the <code>head</code> to <code>//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css</code>. (Font Awesome is included by default with the base Tribune template.) Put a <code>ul</code> within a <code>div</code> with class <code>.social-wrapper</code>. Use a <code>small</code> element for the buttons label and <code>.text-center</code> on the wrapping <code>div</code> to center the label and buttons.</p>
+  <div class="bs-example">
+    <div class="social-wrapper text-center">
+      <small>Share this page</small>
+      <ul>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-twitter-sign"></i> <span class="hidden">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-facebook-sign"></i> <span class="hidden">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-google-plus-sign"></i> <span class="hidden">Google+</span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-pinterest-sign"></i> <span class="hidden">Pinterest</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;div class="social-wrapper text-center"&gt;
+  &lt;small&gt;...&lt;/small&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-twitter-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Twitter&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-facebook-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Facebook&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-google-plus-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Google+&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-pinterest-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Pinterest&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+  <h2 id="vertical-social">Vertical social media group</h2>
+  <p>Add <code>.social-wrapper-vertical</code> to the wrapping <code>div</code> to align the buttons vertically and center the text. Shorten the label to "Share" so it fits neatly above the buttons.</p>
+  <div class="bs-example">
+    <div class="social-wrapper social-wrapper-vertical" style="float: none; ">
+      <small>Share</small>
+      <ul>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-twitter-sign"></i> <span class="hidden">Twitter</span>
+          </a>  
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-facebook-sign"></i> <span class="hidden">Facebook</span>
+          </a>  
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-google-plus-sign"></i> <span class="hidden">Google+</span>
+          </a>  
+        </li>
+        <li>
+          <a target="_blank" href="">
+            <i class="icon-pinterest-sign"></i> <span class="hidden">Pinterest</span>
+          </a>  
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code>
+&lt;div class="social-wrapper social-wrapper-vertical"&gt;
+  &lt;small&gt;...&lt;/small&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-twitter-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Twitter&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-facebook-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Facebook&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-google-plus-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Google+&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a target="_blank" href=""&gt;
+        &lt;i class="icon-pinterest-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Pinterest&lt;/span&gt;
+      &lt;/a&gt;  
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</section>
+
+<!-- Colors
+================================================== -->
+<section id="color">
+  <div class="page-header">
+    <h1><span>Colors</span></h1>
+  </div>
+  <h2>NGUX blues and grays</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6">
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch blue-darkest">#0D1123</td>
+              <td class="sublabel">Darkest blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-darker">#12182D</td>
+              <td class="sublabel">Darker blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-dark">#17274A</td>
+              <td class="sublabel">Dark blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue">#0D3058</td>
+              <td class="sublabel">Trib Blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-light">#144A7C</td>
+              <td class="sublabel">Light blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-lighter">#549ac4</td>
+              <td class="sublabel">Lighter blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-lightest">#C7D9E9</td>
+              <td class="sublabel">Lightest blue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-6">
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch black">#1A1A1A</td>
+              <td class="sublabel">Black</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-darker">#2b2b2b</td>
+              <td class="sublabel">Darker Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-dark">#333333</td>
+              <td class="sublabel">Dark Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray">#666666</td>
+              <td class="sublabel">Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-light">#999999</td>
+              <td class="sublabel">Light Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-lighter">#D0D0D0</td>
+              <td class="sublabel">Lighter Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch gray-very-light">#EEEEEE</td>
+              <td class="sublabel">Very Light Gray</td>
+            </tr>
+            <tr>
+              <td class="swatch white">#fbfcfc</td>
+              <td class="sublabel">White</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </div>
+  </div>
+  <h2>For information</h2>
+  <p>Use these color ramps for displaying/keying data or other information</p>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-xs-3">
+        <h4>Blues</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch blue-light">#144a7c</td>
+              <td class="sublabel">Dark Blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-lighter">#549ac4</td>
+              <td class="sublabel">Blue</td>
+            </tr>
+            <tr>
+              <td class="swatch blue-lightest">#C7D9E9</td>
+              <td class="sublabel">Light Blue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-3">
+        <h4>Greens</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch green-dark">#285014</td>
+              <td class="sublabel">Dark Green</td>
+            </tr>
+            <tr>
+              <td class="swatch green">#347235</td>
+              <td class="sublabel">Green</td>
+            </tr>
+            <tr>
+              <td class="swatch green-light">#8BB381</td>
+              <td class="sublabel">Light Green</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-3">
+        <h4>Reds</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch red-dark">#8c001a</td>
+              <td class="sublabel">Dark red</td>
+            </tr>
+            <tr>
+              <td class="swatch red">#c11b17</td>
+              <td class="sublabel">Red</td>
+            </tr>
+            <tr>
+              <td class="swatch red-light">#E8adaa</td>
+              <td class="sublabel">Light Red</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-3">
+        <h4>Other</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td class="swatch yellow">#eac117</td>
+              <td class="sublabel">Yellow</td>
+            </tr>
+            <tr>
+              <td class="swatch yellow-light">#ffdb58</td>
+              <td class="sublabel">Light Yellow</td>
+            </tr>
+            <tr>
+              <td class="swatch purple">#7E587E</td>
+              <td class="sublabel">Purple</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tarbell
+================================================== -->
+<div class="bs-docs-section">
+  <div class="page-header">
+    <h1 id="tarbell"><span>Tarbell</span></h1>
+  </div>
+
+  <p class="lead">Starting a Chicago Tribune Tarbell project</p>
+  <p>Comprehensive documentation for Tarbell, including 
+  <a href="https://tarbell.readthedocs.org/en/latest/tutorial.html">a getting-started tutorial</a>,
+  is <a href="https://tarbell.readthedocs.org/en/latest/index.html">available here</a>. This section
+  will outline what you need to know that's specific to the Chicago Tribune, but it's a good idea to
+  familiarize yourself with the above documentation if you haven't already.</p>
+
+  <p>Begin by installing Tarbell, as outlined
+  <a href="https://tarbell.readthedocs.org/en/latest/install.html">here</a>. For most users, it's as 
+  simple as running <code>pip install tarbell</code>. Once Tarbell is installed, install the Tribune
+  Tarbell templates: <code>tarbell install-template 
+  https://github.com/newsapps/tarbell-template.git</code>. Finally, to create the project itself,
+  run <code>tarbell newproject</code> and follow the prompts, as described in more detail
+  <a href="https://tarbell.readthedocs.org/en/latest/tutorial.html">here</a>.</p>
+  
+  <p>Most of the process involved in setting up a Chicago Tribune Tarbell project is exactly the
+  same as a normal Tarbell project, with only a few key differences:</p>
+
+  <p>
+    <ul>
+      <li><b>Publishing location</b>: You still want to publish to S3, but the buckets to use depend
+      on the specific project. For most projects, <code>apps.beta.tribapps.com</code> is the staging
+      bucket, and <code>apps.chicagotribune.com</code> is the production bucket, but this varies
+      widely from project to project. <a href="https://tarbell.readthedocs.org/en/latest/publish.html#configuring-s3-buckets-for-a-project">Read more about setting up your S3 buckets here.</a></li>
+      <li><b>Templates</b>: When running the newproject command, you almost certainly want to use
+      the Tribune templates, as described in more detail in the next section. They should have been
+      installed when you ran <code>tarbell install-template 
+      https://github.com/newsapps/tarbell-template.git</code> above.</li>
+    </ul>
+  </p>
+</div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="bs-docs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-docs-sidenav">
+              
+                <li>
+  <a href="#headings"><i class="glyphicon glyphicon-chevron-left"></i> Headings</a>
+  <ul class="nav bs-docs-sidenav">
+    <li><a href="#section-headers">Section headers</a></li>
+    <li><a href="#chapter-headers">Chapter headers</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#credits-bylines"><i class="glyphicon glyphicon-chevron-left"></i> Bylines, credits and sourcing</a>
+  <ul class="nav bs-docs-sidenav">
+    <li><a href="#byline-styles">Bylines</a></li>
+    <li><a href="#credits">Credits and sourceline</a></li>
+    <li><a href="#credit-box">Credit box</a></li>
+  </ul>
+</li>
+<li>
+    <a href="#body-copy"><i class="glyphicon glyphicon-chevron-left"></i> Body copy</a>
+    <ul class="nav bs-docs-sidenav">
+        <li><a href="#article-copy">Article copy</a></li>
+        <li><a href="#drop-caps">Drop caps</a></li>
+        <li><a href="#story-intro">Story intro</a></li>
+        <li><a href="#breakout-bullets">Breakouts/bullets</a></li>
+    </ul>
+</li>
+<li>
+  <a href="#layout"><i class="glyphicon glyphicon-chevron-left"></i> Layout</a>
+    <ul class="nav bs-docs-sidenav">
+        <li><a href="#notched-media">Notched media</a></li>
+        <li><a href="#full-width-img">Full-width images</a></li>
+    </ul>
+</li>
+<li>
+  <a href="#video"><i class="glyphicon glyphicon-chevron-left"></i> Video</a>
+</li>
+<li>
+  <a href="#related-items"><i class="glyphicon glyphicon-chevron-left"></i> Related items</a>
+    <ul class="nav bs-docs-sidenav">
+        <li><a href="#photo-layout">Photo, caption, credit layout</a></li>
+        <li><a href="#pull-quotes">Pull quotes</a></li>
+        <li><a href="#sidebars">Sidebars and other related content</a></li>
+        <li><a href="#related-headlines">Related headlines</a></li>
+        <li><a href="#links">Standalone links</a></li>
+        <li><a href="#digital-plus-icon">Digital Plus icon</a></li>
+    </ul>
+</li>
+<li>
+  <a href="#icons"><i class="glyphicon glyphicon-chevron-left"></i> Icons</a>
+</li>
+<li>
+  <a href="#social-media"><i class="glyphicon glyphicon-chevron-left"></i> Social media</a>
+    <ul class="nav bs-docs-sidenav">
+        <li><a href="#horizontal-social">Horizontal grouping</a></li>
+        <li><a href="#vertical-social">Vertical grouping</a></li>
+    </ul>
+</li>
+<li>
+  <a href="#color"><i class="glyphicon glyphicon-chevron-left"></i> Color</a>
+</li>
+<li>
+  <a href="#tarbell"><i class="glyphicon glyphicon-chevron-left"></i> Tarbell</a>
+</li>
+<li>
+  <a href="#ads"><i class="glyphicon glyphicon-chevron-left"></i> Ads</a>
+</li>
+<li>
+  <a href="#paywall"><i class="glyphicon glyphicon-chevron-left"></i> Paywall</a>
+</li>
+<li>
+  <a href="#comments"><i class="glyphicon glyphicon-chevron-left"></i> Comments</a>
+</li>
+<li>
+  <a href="#analytics"><i class="glyphicon glyphicon-chevron-left"></i> Analytics</a>
+</li>
+<li>
+  <a href="#charts"><i class="glyphicon glyphicon-chevron-left"></i> Charts</a>
+</li>
+<li>
+  <a href="#maps"><i class="glyphicon glyphicon-chevron-left"></i> Maps</a>
+</li>
+<li>
+  <a href="#p2p"><i class="glyphicon glyphicon-chevron-left"></i> Integrating P2P content</a>
+</li>
+
+              
+            </ul>
+            <a class="back-to-top" href="#top">
+              Back to top
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+    <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+    <p>Maintained by the <a href="https://github.com/twbs?tab=members">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>Tweaked by <a href="http://twitter.com/tribapps" target="_blank">@tribapps</a>.</p>
+    <p>Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <ul class="bs-docs-footer-links muted">
+      <li>Currently v3.1.1</li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li>&middot;</li>
+      <li><a href="../getting-started/#examples">Examples</a></li>
+      <li>&middot;</li>
+      <li><a href="../2.3.2/">v2.3.2 docs</a></li>
+      <li>&middot;</li>
+      <li><a href="../about/">About</a></li>
+      <li>&middot;</li>
+      <li><a href="http://expo.getbootstrap.com">Expo</a></li>
+      <li>&middot;</li>
+      <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+
+<script src="//media.apps.chicagotribune.com/picturefill/v1.2.1/picturefill.js"></script>
+
+
+
+<script>
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+</script>
+
+<!-- Analytics
+================================================== -->
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+  </body>
+</html>
