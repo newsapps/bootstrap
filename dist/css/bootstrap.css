@@ -6319,11 +6319,15 @@ img {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
+.navbar a.brand {
+  width: inherit;
+}
 .navbar .nav li a {
   text-shadow: 0 1px 0 #eee;
   text-transform: uppercase;
 }
 .navbar .navbar-brand {
+  width: inherit;
   font-size: 22px;
   text-shadow: 0 1px 0 #eee;
 }

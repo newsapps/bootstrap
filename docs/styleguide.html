@@ -347,7 +347,8 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   <div class="page-header">
     <h1><span>Responsive video container</span></h1>
   </div>
-  <p>Wrap the <strong>embedded</strong> video with <code>.video-wrapper</code> to apply a responsive container to the video. To adjust aspect ratio, increase or decrease the <code>margin-bottom</code> applied to the video's containing <code>iframe</code>, <code>object</code> or <code>embed</code>.</p>
+  <p>Wrap the <strong>embedded</strong> video with <code>.video-wrapper</code> to apply a responsive container to the video. To adjust aspect ratio, increase or decrease the <code>padding-bottom</code> applied to the video's containing <code>iframe</code>, <code>object</code> or <code>embed</code>. By default, the wrapper will fit a video with an aspect ratio of 16:9. Use the class <code>.four-three</code> for video with an aspect ratio of 4:3.</p>
+  <p>For video with a custom aspect ratio, you'll need to calculate the amount of padding to apply to the bottom. Turn the ratio into a fraction and divide the numerator by the denominator and set <code>padding-bottom</code> to the resulting percentage. For instance, for the 4:3 aspect ratio, divide 4 by 3 and set <code>padding-bottom: 75%</code>.</p>
   <div class="bs-example">
     <div class="video-wrapper">
       <iframe width="560" height="315" src="http://www.youtube.com/embed/rnvGWHbPtZ0" frameborder="0" allowfullscreen></iframe>
