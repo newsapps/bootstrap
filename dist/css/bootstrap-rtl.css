@@ -116,7 +116,6 @@ figure {
 hr {
   height: 0;
   -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 
@@ -177,7 +176,6 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
@@ -189,7 +187,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
           box-sizing: content-box;
   -webkit-appearance: textfield;
 }
@@ -1141,14 +1138,12 @@ th {
 
 * {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -2982,7 +2977,6 @@ label {
 
 input[type="search"] {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -7472,6 +7466,259 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important;
+  }
+}
+
+/* barkers is medium and there are sizes for small and large, and their common components */
+
+.barker {
+  position: relative;
+  min-width: 300px;
+  height: 284px;
+  padding: 16px 40px 0 0;
+  overflow: hidden;
+  color: #666;
+  background-color: #c7d9e9;
+}
+
+.barker-small {
+  height: 209px;
+}
+
+.barker-large {
+  height: 400px;
+}
+
+.barker h1 {
+  margin-top: 0;
+  font-size: 32px;
+  line-height: 1.1em;
+  color: #0d3058;
+}
+
+.barker h3 {
+  color: #0d3058;
+}
+
+.barker:before {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 10px solid #fbfcfc;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.barker-top {
+  /*styles pertaining to content in top like headline */
+  height: 100px;
+}
+
+.barker-top h1 {
+  margin-left: 120px;
+  /* don't touch the arrows */
+}
+
+.barker-small .barker-top {
+  height: 64px;
+}
+
+.barker-top-small h1 {
+  margin-top: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.barker-lead .barker-top {
+  float: right;
+  width: 200px;
+}
+
+.barker-lead .barker-top h1 {
+  margin-bottom: 10px;
+}
+
+.barker-carousel,
+.barker-body {
+  overflow: hidden;
+}
+
+.barker-lead .barker-carousel {
+  margin-top: 42px;
+}
+
+.barker-carousel-pager {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  width: 90px;
+  height: 40px;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.barker-carousel-pager a {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.page-left {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-family: trb_Icons;
+  color: #0d3058;
+}
+
+.page-right {
+  display: inline-block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  font-family: trb_Icons;
+  color: #0d3058;
+}
+
+.barker-carousel-pager .disabled {
+  opacity: .25;
+}
+
+.barker-carousel table.thumbnails {
+  margin-right: -20px;
+  overflow: hidden;
+}
+
+.barker-carousel table.thumbnails td {
+  width: 160px;
+  padding: 0 20px;
+  vertical-align: top;
+  border-left: solid 1px #999;
+}
+
+.barker-carousel table.thumbnails td img {
+  width: 100%;
+}
+
+.barker-carousel table.thumbnails td.no-image:before {
+  display: block;
+  width: 100%;
+  height: 6px;
+  content: " ";
+  background-color: #0d3058;
+}
+
+.barker-small .barker-carousel table.thumbnails h3 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.barker-small .barker-carousel table.thumbnails td {
+  height: 192px;
+}
+
+.barker-lead.barker-small .barker-carousel table.thumbnails td {
+  width: 172px;
+  height: 167px;
+}
+
+/* horizontal styles, used with left headline in row of content */
+
+/* these should be at 900 breakpoint, not above that. */
+
+.barker-lead .barker-carousel table.thumbnails td {
+  width: 225px;
+  height: 209px;
+}
+
+.barker .reader-aside {
+  margin: 0;
+  font-size: 9px;
+  color: #798ea3;
+  text-transform: uppercase;
+}
+
+.barker a.more-link {
+  margin: 0;
+  font-size: 9px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.barker-carousel .thumbnails p {
+  margin: 0;
+  line-height: 20px;
+}
+
+.barker-carousel .thumbnails h3 {
+  width: inherit;
+  margin-top: 2px;
+  font-family: Georgia;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.barker-lead .barker-carousel .thumbnails h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 18px;
+}
+
+.barker-carousel span.section,
+.barker-carousel span.section-timestamp {
+  font-size: 11px;
+  font-weight: bold;
+  color: #549ac4;
+  text-transform: uppercase;
+}
+
+.barker-carousel span.section-timestamp {
+  font: Arial;
+  font-size: 10px;
+  color: #798ea3;
+}
+
+/* media queries */
+
+@media (max-width: 900px) {
+  /* add some lead styles */
+}
+
+@media (max-width: 767px) {
+  .barker {
+    margin: 0 -20px 0 -20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .barker {
+    margin: 0 -20px 0 -20px;
+  }
+
+  .barker .barker-top h1 {
+    font-size: 25px;
+  }
+
+  .barker-lead .barker-top {
+    width: 150px;
+  }
+
+  .barker-lead.barker-small .barker-carousel table.thumbnails td {
+    width: 132px;
+  }
+}
+
+@media (max-width: 360px) {
+  .barker {
+    padding-right: 20px;
+  }
+
+  .barker:before {
+    right: 20px;
+    content: "";
   }
 }
 
