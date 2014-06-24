@@ -32,6 +32,9 @@
 }
 /* Navigation
 ================================================== */
+.navbar-inverse {
+  background-color: #12182d;
+}
 .navbar-inverse .navbar-nav > li > a {
   color: white;
 }
