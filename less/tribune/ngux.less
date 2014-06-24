@@ -51,8 +51,8 @@ img {
 
 //Navbars, etc.
 .navbar {
-  font-family: @font-family-sans-serif;
-  font-size: 12px;
+  font-family: @nav-font-family;
+  font-size: 11px;
   a.brand { width: inherit; }
   .nav {
     li a {
@@ -63,6 +63,7 @@ img {
   .navbar-brand {
     font-size: 22px;
     text-shadow: 0 1px 0 #eeeeee;
+    padding: 15.5px 15px;
     width: inherit;
   }
 
@@ -71,6 +72,15 @@ img {
     .nav > li > a {
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     }
+  }
+  .navbar-header {
+    min-height: 48px;
+  }
+  .navbar-toggle {
+    margin: 7px 15px 7px 0;
+  }
+  .navbar-nav > li > a {
+    padding: 15.5px 15px;
   }
 }
 
@@ -81,7 +91,7 @@ img {
 //Dropdowns
 .dropdown-menu {
   margin-top: 0;
-  font-family: @font-family-sans-serif;
+  font-family: @nav-font-family;
   background-color: @gray-very-light;
   box-shadow: none;
   li > a { padding: 10px; }

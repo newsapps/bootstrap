@@ -30,6 +30,15 @@
   color: #777;
   text-transform: none;
 }
+/* Navigation
+================================================== */
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #0d3058;
+}
 /* Bylines
 ================================================== */
 div.byline {

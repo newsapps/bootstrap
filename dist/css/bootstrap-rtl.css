@@ -8029,8 +8029,8 @@ img {
 }
 
 .navbar {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
 }
 
 .navbar a.brand {
@@ -8044,6 +8044,7 @@ img {
 
 .navbar .navbar-brand {
   width: inherit;
+  padding: 15.5px 15px;
   font-size: 22px;
   text-shadow: 0 1px 0 #eee;
 }
@@ -8053,13 +8054,25 @@ img {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
 }
 
+.navbar .navbar-header {
+  min-height: 48px;
+}
+
+.navbar .navbar-toggle {
+  margin: 7px 0 7px 15px;
+}
+
+.navbar .navbar-nav > li > a {
+  padding: 15.5px 15px;
+}
+
 .nav-pills > li > a {
   padding: 8px 12px;
 }
 
 .dropdown-menu {
   margin-top: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #eee;
   -webkit-box-shadow: none;
           box-shadow: none;
