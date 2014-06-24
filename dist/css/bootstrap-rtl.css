@@ -7475,14 +7475,14 @@ button.close {
   position: relative;
   min-width: 300px;
   height: 284px;
-  padding: 16px 40px 0 0;
+  padding: 20px 40px 0 0;
   overflow: hidden;
   color: #666;
   background-color: #c7d9e9;
 }
 
 .barker-small {
-  height: 209px;
+  height: 200px;
 }
 
 .barker-large {
@@ -7727,8 +7727,8 @@ button.close {
   font-style: normal;
   font-weight: normal;
 
-  src: url('../../dist/fonts/trbicons.eot');
-  src: url('../../dist/fonts/trbicons.eot?#iefix') format('embedded-opentype'), url('../../dist/fonts/trbicons.woff') format('woff'), url('../../dist/fonts/trbicons.ttf') format('truetype');
+  src: url('../fonts/trbicons.eot');
+  src: url('../fonts/trbicons.eot?#iefix') format('embedded-opentype'), url('../fonts/trbicons.woff') format('woff'), url('../fonts/trbicons.ttf') format('truetype');
 }
 
 @font-face {
@@ -7736,8 +7736,8 @@ button.close {
   font-style: normal;
   font-weight: normal;
 
-  src: url('../../dist/fonts/laiconsweather-webfont.eot');
-  src: url('../../dist/fonts/laiconsweather-webfont.eot?#iefix') format('embedded-opentype'), url('../../dist/fonts/laiconsweather-webfont.woff') format('woff'), url('../../dist/fonts/laiconsweather-webfont.ttf') format('truetype');
+  src: url('../fonts/laiconsweather-webfont.eot');
+  src: url('../fonts/laiconsweather-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/laiconsweather-webfont.woff') format('woff'), url('../fonts/laiconsweather-webfont.ttf') format('truetype');
 }
 
 /* Tribune webfont icons */

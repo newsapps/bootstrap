@@ -38,3 +38,6 @@ compileTribune: {
 To add files for a new market, just copy one of the existing rules under `files`. Edit it to match the path of your desired CSS file (which should be in `dist/css/marketname`) and the path of your LESS file (which should be in `less/tribune/marketname`).
 
 Run `grunt dist` to compile your new LESS files into CSS. Note that you must create an empty file in `dist/css` for the task to compile correctly.
+
+##Deploying static files to S3
+Once you've compiled your CSS and JS changes, you can use s3cmd to deploy your static assets to the Amazon S3 bucket. The command you will look something like this: s3cmd sync --delete-removed -P -M [folder] s3://[s3 bucket]/[bucket path]
