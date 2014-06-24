@@ -165,6 +165,12 @@ ul {
 .video-wrapper.four-three {
   padding-bottom: 75%;
 }
+/* Buttons
+================================================== */
+.btn-info {
+  background-color: #549ac4;
+  border-color: #549ac4;
+}
 /* Related items
 ================================================== */
 /* was .trib-media */

@@ -1,6 +1,6 @@
 /* barkers is medium and there are sizes for small and large, and their common components */
 
-.barker{
+.barker {
   height: 284px;
   background-color: @blue-lightest;
   color: @gray;
@@ -8,203 +8,206 @@
   overflow:hidden;
   position:relative;
   min-width:300px;
+  
+  h1 {
+    color: @blue;
+    font-size: 32px;
+    line-height: 1.1em;
+    margin-top: 0;
+  }
+  
+  h3 {
+    color: @blue;
+  }
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid @white;
+  }
+  
+  .reader-aside {
+    text-transform: uppercase;
+    font-size: 9px;
+    margin: 0;
+    color: @alt-blue-light;
+  }
+  
+  a {
+    .more-link {
+      text-transform: uppercase;
+      font-size: 9px;
+      margin: 0;
+      color: @black;
+    }
+  }
 }
 
-.barker-small{
-  height: 200px;
+.barker-small {
+  height: 220px;
+  
+  barker-top {
+    height: 64px;
+  }
+  
+  .barker-carousel {
+    table.thumbnails {
+      h3 {
+        font-size: 14px;
+        line-height: 16px;
+      }
+      
+      td {
+        height: 192px;
+      }
+    }
+  }
 }
 
 .barker-large {
   height: 400px;
 }
 
-.barker h1{
-  color: @blue;
-  font-size: 32px;
-  line-height: 1.1em;
-  margin-top: 0;
+.barker-top {
+  /*styles pertaining to content in top like headline */
+  height: 100px;
+  
+  h1 {
+    margin-right: 0px;
+  }
 }
 
-.barker h3{
-    color: @blue;
+.barker-top-small h1 {
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
-.barker:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 40px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid @white;
-}
-
-.barker-top{
-     /*styles pertaining to content in top like headline */
-    height: 100px;
-}
-
-.barker-top h1 {
-  margin-right:120px; /* don't touch the arrows */
-}
-
-.barker-small .barker-top {
-    height:64px;
-}
-
-.barker-top-small h1{
-    font-size: 15px;
-    text-transform: uppercase;
-    margin-top: 10px;
-}
-
-.barker-lead .barker-top{
+.barker-lead {
+  .barker-top {
     float: left;
     width: 200px;
-}
-
-.barker-lead .barker-top h1{
+  }
+  
+  .barker-top h1 {
     margin-bottom: 10px;
+  }
+  
+  .barker-carousel {
+    margin-top: 42px;
+    
+    table.thumbnails {
+      td {
+        height: 209px;
+        width: 225px;
+      }
+    }
+  }
 }
 
-.barker-carousel, .barker-body{
-    overflow: hidden;
-}
-
-.barker-lead .barker-carousel {
-  margin-top:42px;
+.barker-carousel, .barker-body {
+  overflow: hidden;
 }
 
 .barker-carousel-pager {
   z-index:1;
   position: absolute;
-  top: 20px;
+  top: 0px;
   cursor: pointer;
   width: 90px;
   height: 40px;
-  right: 20px;
+  right: 30px;
   font-size: 45px;
+  
+  a {
+    font-weight: normal;
+    text-decoration: none;
+  }
+  
+  .disabled {
+    color: #000;
+    opacity: .1;
+  }
 }
 
-.barker-carousel-pager a {
-    text-decoration:none;
-    font-weight:normal;
+.page-left,
+.page-right {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  font-family: trb_Icons;
+  color: #FFF;
+  
+  &:hover {
+    color: #A9B2BB;
+  }
 }
 
-.page-left{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    font-family: trb_Icons;
-    color: @blue;
+.page-right {
+  float: right;
 }
 
-.page-right{
-    display: inline-block;
-    float: right;
-    height: 40px;
-    width: 40px;
-    font-family: trb_Icons;
-    color: @blue;
-}
-
-.barker-carousel-pager .disabled{
-    opacity: 0.25;
-}
-
-.barker-carousel table.thumbnails{
+.barker-carousel {
+  table.thumbnails {
     overflow: hidden;
     margin-left: -20px;
-}
-
-.barker-carousel table.thumbnails td{
-    padding: 0 20px;
-    vertical-align: top;
-    border-right: solid 1px @gray-light;
-    width: 160px;
-}
-
-.barker-carousel table.thumbnails td img{
-  width: 100%;
-}
-
-.barker-carousel table.thumbnails td.no-image:before {
-  content:" ";
-  display:block;
-  width:100%;
-  height:6px;
-  background-color:@blue;
-}
-
-.barker-small .barker-carousel table.thumbnails h3{
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.barker-small .barker-carousel table.thumbnails td {
-    height: 192px;
+  
+    td {
+      padding: 0 20px;
+      vertical-align: top;
+      border-right: solid 1px @gray-light;
+      width: 160px;
+    
+      img {
+        width: 100%;
+      }
+    
+      .no-image:before {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 6px;
+        background-color: @blue;
+      }
+    }
+    
+    p {
+      line-height: 20px;
+      margin: 0;
+    }
+    
+    h3 {
+      font-family: Georgia;
+      font-size: 17px;
+      line-height: 22px;
+      margin: 5px;
+      width: inherit;
+    }
+    
+    span.section, span.section-timestamp {
+      color: @blue-lighter;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    span.section-timestamp {
+      color: @alt-blue-light;
+      font: Arial;
+      font-size: 10px;
+    }
+  }
 }
 
 .barker-lead.barker-small .barker-carousel table.thumbnails td {
-     width: 172px;
-     height: 167px;
-}
-
-
-/* horizontal styles, used with left headline in row of content */
-/* these should be at 900 breakpoint, not above that. */
-.barker-lead .barker-carousel table.thumbnails td{
-    width: 225px;
-    height: 209px;
-}
-
-.barker .reader-aside{
-    text-transform: uppercase;
-    font-size: 9px;
-    margin: 0;
-    color: @alt-blue-light;
-}
-
-.barker a.more-link {
-    text-transform: uppercase;
-    font-size: 9px;
-    margin: 0;
-    color: @black;
-}
-
-.barker-carousel .thumbnails p{
-    line-height: 20px;
-    margin: 0;
-}
-
-.barker-carousel .thumbnails h3{
-    font-family: Georgia;
-    font-size: 17px;
-    line-height: 22px;
-    width: inherit;
-    margin-top: 2px;
-}
-
-.barker-lead .barker-carousel .thumbnails h3{
-    line-height: 18px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.barker-carousel span.section,
-.barker-carousel span.section-timestamp {
-    color: @blue-lighter;
-    font-size: 11px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.barker-carousel span.section-timestamp {
-    color: @alt-blue-light;
-    font: Arial;
-    font-size: 10px;
+  width: 172px;
+  height: 167px;
 }
 
 /* media queries */
@@ -214,33 +217,38 @@
 }
 
 @media (max-width: 767px) {
-    .barker {
-      margin:0 -20px 0 -20px;
-    }
+  .barker {
+    margin:0 -20px 0 -20px;
+  }
 }
 
 @media (max-width: 520px) {
-    .barker {
-        margin:0 -20px 0 -20px;
+  .barker {
+    margin:0 -20px 0 -20px;
+    
+    .barker-top {
+      h1 {
+        font-size: 25px;
+      }
     }
-    .barker .barker-top h1{
-      font-size:25px;
-    }
-    .barker-lead .barker-top {
-      width:150px;
-    }
-    .barker-lead.barker-small .barker-carousel table.thumbnails td {
-      width:132px;
-    }
+  }
+
+  .barker-lead .barker-top {
+    width: 150px;
+  }
+  
+  .barker-lead.barker-small .barker-carousel table.thumbnails td {
+    width: 132px;
+  }
 }
 
 @media (max-width: 360px) {
-    .barker{
-        padding-left: 20px;
+  .barker{
+    padding-left: 20px;
+    
+    &:before {
+      content: "";
+      left: 20px;
     }
-
-    .barker:before {
-        content: "";
-        left: 20px;
-    }
+  }
 }
