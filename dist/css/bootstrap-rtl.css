@@ -7512,10 +7512,18 @@ button.close {
 }
 
 .barker a.more-link {
+  display: block;
   margin: 0;
   font-size: 9px;
-  color: #1a1a1a;
+  font-weight: bold;
+  line-height: 1.7;
+  color: #549ac4;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.barker a.more-link:hover {
+  color: #7db2cc;
 }
 
 .barker-small {
@@ -7541,35 +7549,19 @@ button.close {
 
 .barker-top {
   /*styles pertaining to content in top like headline */
+  float: right;
+  width: 200px;
   height: 100px;
 }
 
 .barker-top h1 {
-  margin-left: 0;
+  margin: 0 0 10px;
 }
 
 .barker-top-small h1 {
   margin-top: 10px;
   font-size: 15px;
   text-transform: uppercase;
-}
-
-.barker-lead .barker-top {
-  float: right;
-  width: 200px;
-}
-
-.barker-lead .barker-top h1 {
-  margin-bottom: 10px;
-}
-
-.barker-lead .barker-carousel {
-  margin-top: 42px;
-}
-
-.barker-lead .barker-carousel table.thumbnails td {
-  width: 225px;
-  height: 209px;
 }
 
 .barker-carousel,
@@ -7616,13 +7608,26 @@ button.close {
   float: left;
 }
 
+.barker-carousel {
+  margin-top: 42px;
+}
+
 .barker-carousel table.thumbnails {
-  margin-right: -20px;
+  margin-right: 0;
   overflow: hidden;
+}
+
+.barker-carousel table.thumbnails a {
+  color: #0d3058;
+}
+
+.barker-carousel table.thumbnails a:hover {
+  color: #39526c;
 }
 
 .barker-carousel table.thumbnails td {
   width: 160px;
+  height: 209px;
   padding: 0 20px;
   vertical-align: top;
   border-left: solid 1px #999;
@@ -7668,8 +7673,17 @@ button.close {
 }
 
 .barker-lead.barker-small .barker-carousel table.thumbnails td {
-  width: 172px;
-  height: 167px;
+  width: 156px;
+  height: 140px;
+  padding: 0 20px;
+}
+
+.barker-lead.barker-small .barker-carousel table.thumbnails td.item:first-child {
+  padding-right: 0;
+}
+
+.town-picker {
+  margin: -18px 40px 0 0;
 }
 
 /* media queries */
@@ -7690,15 +7704,40 @@ button.close {
   }
 
   .barker .barker-top h1 {
-    font-size: 25px;
+    margin: 0;
+    font-size: 19px;
   }
 
-  .barker-lead .barker-top {
+  .barker-top {
     width: 150px;
+    height: auto;
   }
 
-  .barker-lead.barker-small .barker-carousel table.thumbnails td {
-    width: 132px;
+  .barker-carousel {
+    margin-top: 38px;
+  }
+
+  .barker-carousel table.thumbnails h3 {
+    font-size: 12px;
+  }
+
+  .barker-small .barker-carousel table.thumbnails td {
+    width: 124px;
+    height: 125px;
+  }
+
+  .barker-small .barker-carousel table.thumbnails h3 {
+    font-size: 12px;
+  }
+
+  .town-picker {
+    margin: 4px 20px 0 0;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .barker .barker-top h1 {
+    max-width: 180px;
   }
 }
 
@@ -7710,6 +7749,10 @@ button.close {
   .barker:before {
     right: 20px;
     content: "";
+  }
+
+  .town-picker {
+    margin-right: -20px;
   }
 }
 

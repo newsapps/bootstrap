@@ -41,10 +41,18 @@
   
   a {
     &.more-link {
-      text-transform: uppercase;
+      color: @blue-lighter;
+      display: block;
       font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      line-height: 1.7;
       margin: 0;
-      color: @black;
+      text-transform: uppercase;
+      
+      &:hover {
+        color: @alt-blue-lighter;
+      }
     }
   }
 }
@@ -76,10 +84,12 @@
 
 .barker-top {
   /*styles pertaining to content in top like headline */
+  float: left;
   height: 100px;
+  width: 200px;
   
   h1 {
-    margin-right: 0px;
+    margin: 0 0 10px;
   }
 }
 
@@ -87,28 +97,6 @@
   font-size: 15px;
   text-transform: uppercase;
   margin-top: 10px;
-}
-
-.barker-lead {
-  .barker-top {
-    float: left;
-    width: 200px;
-  }
-  
-  .barker-top h1 {
-    margin-bottom: 10px;
-  }
-  
-  .barker-carousel {
-    margin-top: 42px;
-    
-    table.thumbnails {
-      td {
-        height: 209px;
-        width: 225px;
-      }
-    }
-  }
 }
 
 .barker-carousel, .barker-body {
@@ -154,14 +142,25 @@
 }
 
 .barker-carousel {
+  margin-top: 42px;
+  
   table.thumbnails {
     overflow: hidden;
-    margin-left: -20px;
+    margin-left: 0px;
+    
+    a {
+      color: @blue;
+      
+      &:hover {
+        color: @alt-blue;
+      }
+    }
   
     td {
+      border-right: solid 1px @gray-light;
+      height: 209px;
       padding: 0 20px;
       vertical-align: top;
-      border-right: solid 1px @gray-light;
       width: 160px;
     
       img {
@@ -206,8 +205,17 @@
 }
 
 .barker-lead.barker-small .barker-carousel table.thumbnails td {
-  width: 172px;
-  height: 167px;
+  height: 140px;
+  padding: 0 20px;
+  width: 156px;
+}
+
+.barker-lead.barker-small .barker-carousel table.thumbnails td.item:first-child {
+  padding-left: 0;
+}
+
+.town-picker {
+  margin: -18px 0 0 40px;
 }
 
 /* media queries */
@@ -228,17 +236,45 @@
     
     .barker-top {
       h1 {
-        font-size: 25px;
+        font-size: 19px;
+        margin: 0;
       }
     }
   }
 
-  .barker-lead .barker-top {
+  .barker-top {
+    height: auto;
     width: 150px;
   }
   
-  .barker-lead.barker-small .barker-carousel table.thumbnails td {
-    width: 132px;
+  .barker-carousel {
+    margin-top: 38px;
+  }
+  
+    
+  .barker-carousel table.thumbnails h3 {
+      font-size: 12px;
+    }
+  
+  .barker-small .barker-carousel table.thumbnails {
+    td {
+      height: 125px;
+      width: 124px;
+    }
+    
+    h3 {
+      font-size: 12px;
+    }
+  }
+  
+  .town-picker {
+    margin: 4px 0 0 20px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .barker .barker-top h1 {
+    max-width: 180px;
   }
 }
 
@@ -250,5 +286,9 @@
       content: "";
       left: 20px;
     }
+  }
+  
+  .town-picker {
+    margin-left: -20px;
   }
 }
