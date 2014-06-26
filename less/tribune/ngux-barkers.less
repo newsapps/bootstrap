@@ -14,6 +14,10 @@
     font-size: 32px;
     line-height: 1.1em;
     margin-top: 0;
+    
+    a:hover {
+      color: @alt-blue;
+    }
   }
   
   h3 {
@@ -52,6 +56,7 @@
       
       &:hover {
         color: @alt-blue-lighter;
+        text-decoration: none;
       }
     }
   }
@@ -72,7 +77,13 @@
       }
       
       td {
-        height: 192px;
+        height: 140px;
+        padding: 0 20px;
+        width: 156px;
+        
+        &.item:first-child {
+          padding-left: 0;
+        }
       }
     }
   }
@@ -115,7 +126,6 @@
   
   a {
     font-weight: normal;
-    text-decoration: none;
   }
   
   .disabled {
@@ -142,7 +152,7 @@
 }
 
 .barker-carousel {
-  margin-top: 42px;
+  margin-top: 38px;
   
   table.thumbnails {
     overflow: hidden;
@@ -153,6 +163,7 @@
       
       &:hover {
         color: @alt-blue;
+        text-decoration: none;
       }
     }
   
@@ -204,18 +215,20 @@
   }
 }
 
-.barker-lead.barker-small .barker-carousel table.thumbnails td {
-  height: 140px;
-  padding: 0 20px;
-  width: 156px;
-}
-
-.barker-lead.barker-small .barker-carousel table.thumbnails td.item:first-child {
-  padding-left: 0;
-}
-
 .town-picker {
-  margin: -18px 0 0 40px;
+  margin: -21px 0 0 -40px;
+}
+
+.drawer .nav > li > a {
+  padding: 3px 15px;
+}
+
+.drawer .btn:before {
+  content: 'v';
+  font: normal 14px trb_Icons;
+  margin-right: 2px;
+  position: relative;
+  text-transform: lowercase;
 }
 
 /* media queries */
@@ -224,31 +237,19 @@
 /* add some lead styles */
 }
 
-@media (max-width: 767px) {
-  .barker {
-    margin:0 -20px 0 -20px;
-  }
-}
-
 @media (max-width: 520px) {
-  .barker {
-    margin:0 -20px 0 -20px;
-    
-    .barker-top {
-      h1 {
-        font-size: 19px;
-        margin: 0;
-      }
-    }
-  }
-
   .barker-top {
     height: auto;
     width: 150px;
+    
+    h1 {
+      font-size: 19px;
+      margin: 0;
+    }
   }
   
   .barker-carousel {
-    margin-top: 38px;
+    margin-top: 35px;
   }
   
     
@@ -268,7 +269,7 @@
   }
   
   .town-picker {
-    margin: 4px 0 0 20px;
+    margin-top: 0px;
   }
 }
 

@@ -7488,6 +7488,10 @@ button.close {
   color: #0d3058;
 }
 
+.barker h1 a:hover {
+  color: #39526c;
+}
+
 .barker h3 {
   color: #0d3058;
 }
@@ -7524,6 +7528,7 @@ button.close {
 
 .barker a.more-link:hover {
   color: #7db2cc;
+  text-decoration: none;
 }
 
 .barker-small {
@@ -7540,7 +7545,13 @@ button.close {
 }
 
 .barker-small .barker-carousel table.thumbnails td {
-  height: 192px;
+  width: 156px;
+  height: 140px;
+  padding: 0 20px;
+}
+
+.barker-small .barker-carousel table.thumbnails td.item:first-child {
+  padding-right: 0;
 }
 
 .barker-large {
@@ -7582,7 +7593,6 @@ button.close {
 
 .barker-carousel-pager a {
   font-weight: normal;
-  text-decoration: none;
 }
 
 .barker-carousel-pager .disabled {
@@ -7609,7 +7619,7 @@ button.close {
 }
 
 .barker-carousel {
-  margin-top: 42px;
+  margin-top: 38px;
 }
 
 .barker-carousel table.thumbnails {
@@ -7623,6 +7633,7 @@ button.close {
 
 .barker-carousel table.thumbnails a:hover {
   color: #39526c;
+  text-decoration: none;
 }
 
 .barker-carousel table.thumbnails td {
@@ -7672,18 +7683,20 @@ button.close {
   color: #798ea3;
 }
 
-.barker-lead.barker-small .barker-carousel table.thumbnails td {
-  width: 156px;
-  height: 140px;
-  padding: 0 20px;
-}
-
-.barker-lead.barker-small .barker-carousel table.thumbnails td.item:first-child {
-  padding-right: 0;
-}
-
 .town-picker {
-  margin: -18px 40px 0 0;
+  margin: -21px -40px 0 0;
+}
+
+.drawer .nav > li > a {
+  padding: 3px 15px;
+}
+
+.drawer .btn:before {
+  position: relative;
+  margin-left: 2px;
+  font: normal 14px trb_Icons;
+  text-transform: lowercase;
+  content: 'v';
 }
 
 /* media queries */
@@ -7692,29 +7705,19 @@ button.close {
   /* add some lead styles */
 }
 
-@media (max-width: 767px) {
-  .barker {
-    margin: 0 -20px 0 -20px;
-  }
-}
-
 @media (max-width: 520px) {
-  .barker {
-    margin: 0 -20px 0 -20px;
-  }
-
-  .barker .barker-top h1 {
-    margin: 0;
-    font-size: 19px;
-  }
-
   .barker-top {
     width: 150px;
     height: auto;
   }
 
+  .barker-top h1 {
+    margin: 0;
+    font-size: 19px;
+  }
+
   .barker-carousel {
-    margin-top: 38px;
+    margin-top: 35px;
   }
 
   .barker-carousel table.thumbnails h3 {
@@ -7731,7 +7734,7 @@ button.close {
   }
 
   .town-picker {
-    margin: 4px 20px 0 0;
+    margin-top: 0;
   }
 }
 
