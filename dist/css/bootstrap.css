@@ -6099,7 +6099,7 @@ button.close {
   color: #798ea3;
   text-transform: uppercase;
 }
-.barker a .more-link {
+.barker a.more-link {
   margin: 0;
   font-size: 9px;
   color: #1a1a1a;
@@ -6197,7 +6197,7 @@ button.close {
 .barker-carousel table.thumbnails td img {
   width: 100%;
 }
-.barker-carousel table.thumbnails td .no-image:before {
+.barker-carousel table.thumbnails td.no-image:before {
   display: block;
   width: 100%;
   height: 6px;
