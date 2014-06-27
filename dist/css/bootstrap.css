@@ -6096,11 +6096,21 @@ button.close {
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }
+.barker h4 {
+  line-height: 20px;
+}
 .barker .reader-aside {
   margin: 0;
   font-size: 9px;
   color: #798ea3;
   text-transform: uppercase;
+}
+.barker a {
+  color: #0d3058;
+}
+.barker a:hover {
+  color: #39526c;
+  text-decoration: none;
 }
 .barker a.more-link {
   display: block;
@@ -6115,6 +6125,12 @@ button.close {
 .barker a.more-link:hover {
   color: #7db2cc;
   text-decoration: none;
+}
+.barker tr {
+  border: 0;
+}
+.barker .mobile-title {
+  display: none;
 }
 .barker-small {
   height: 220px;
@@ -6147,7 +6163,6 @@ button.close {
   margin: 0 0 10px;
 }
 .barker-top-small h1 {
-  margin-top: 10px;
   font-size: 15px;
   text-transform: uppercase;
 }
@@ -6193,13 +6208,6 @@ button.close {
 .barker-carousel table.thumbnails {
   margin-left: 0;
   overflow: hidden;
-}
-.barker-carousel table.thumbnails a {
-  color: #0d3058;
-}
-.barker-carousel table.thumbnails a:hover {
-  color: #39526c;
-  text-decoration: none;
 }
 .barker-carousel table.thumbnails td {
   width: 160px;
@@ -6250,13 +6258,50 @@ button.close {
 .drawer .btn:before {
   position: relative;
   margin-right: 2px;
-  font: normal 14px trb_Icons;
+  font: normal 11px trb_Icons;
   text-transform: lowercase;
   content: 'v';
+}
+.photo-showcase .more-link {
+  width: 175px;
+}
+.photo-showcase td {
+  vertical-align: top;
+}
+.photo-showcase td:first-child img {
+  max-width: 250px;
+}
+.photo-showcase td:last-child {
+  padding-left: 15px;
+}
+.photo-showcase h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 32px;
+}
+.photo-showcase h3.truncate {
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.photo-showcase h5 {
+  line-height: 16px;
 }
 /* media queries */
 @media (max-width: 900px) {
   /* add some lead styles */
+}
+@media (max-width: 768px) {
+  .photo-showcase h5 {
+    margin-bottom: 5px;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .photo-showcase h5 {
+    margin-bottom: 16px;
+  }
 }
 @media (max-width: 520px) {
   .barker-top {
@@ -6283,6 +6328,26 @@ button.close {
   .town-picker {
     margin-top: 0;
   }
+  .photo-showcase td:last-child {
+    position: static;
+  }
+  .photo-showcase td:first-child img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 520px;
+    height: auto;
+    opacity: .4;
+  }
+  .photo-showcase h4,
+  .photo-showcase h5 {
+    display: none;
+  }
+  .photo-showcase .calls-and-main-info {
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+  }
 }
 @media all and (max-width: 480px) {
   .barker .barker-top h1 {
@@ -6299,6 +6364,12 @@ button.close {
   }
   .town-picker {
     margin-left: -20px;
+  }
+  .photo-showcase td:first-child img {
+    min-width: 380px;
+  }
+  .photo-showcase .calls-and-main-info {
+    left: 20px;
   }
 }
 @font-face {

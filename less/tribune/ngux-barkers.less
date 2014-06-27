@@ -36,6 +36,10 @@
     border-top: 10px solid @white;
   }
   
+  h4 {
+    line-height: 20px;
+  }
+  
   .reader-aside {
     text-transform: uppercase;
     font-size: 9px;
@@ -44,6 +48,13 @@
   }
   
   a {
+    color: @blue;
+    
+    &:hover {
+      color: @alt-blue;
+      text-decoration: none;
+    }
+    
     &.more-link {
       color: @blue-lighter;
       display: block;
@@ -59,6 +70,14 @@
         text-decoration: none;
       }
     }
+  }
+  
+  tr {
+    border: 0;
+  }
+  
+  .mobile-title {
+    display: none;
   }
 }
 
@@ -107,7 +126,6 @@
 .barker-top-small h1 {
   font-size: 15px;
   text-transform: uppercase;
-  margin-top: 10px;
 }
 
 .barker-carousel, .barker-body {
@@ -157,15 +175,6 @@
   table.thumbnails {
     overflow: hidden;
     margin-left: 0px;
-    
-    a {
-      color: @blue;
-      
-      &:hover {
-        color: @alt-blue;
-        text-decoration: none;
-      }
-    }
   
     td {
       border-right: solid 1px @gray-light;
@@ -225,16 +234,64 @@
 
 .drawer .btn:before {
   content: 'v';
-  font: normal 14px trb_Icons;
+  font: normal 11px trb_Icons;
   margin-right: 2px;
   position: relative;
   text-transform: lowercase;
+}
+
+.photo-showcase {
+  .more-link {
+    width: 175px;
+  }
+  
+  td {
+    vertical-align: top;
+    
+    &:first-child img {
+      max-width: 250px;
+    }
+    
+    &:last-child {
+      padding-left: 15px;
+    }
+  }
+  
+  h3 {
+    font-size: 28px;
+    line-height: 32px;
+    margin: 0 0 10px;
+    
+    &.truncate {
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+  }
+  
+  h5 {
+    line-height: 16px;
+  }
 }
 
 /* media queries */
 
 @media (max-width: 900px) {
 /* add some lead styles */
+}
+
+@media (max-width: 768px) {
+  .photo-showcase h5 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .photo-showcase h5 {
+    margin-bottom: 16px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -271,6 +328,33 @@
   .town-picker {
     margin-top: 0px;
   }
+  
+  .photo-showcase {
+    td {
+      &:last-child {
+        position: static;
+      }
+      
+      &:first-child img {
+        height: auto;
+        left: 0;
+        min-width: 520px;
+        opacity: .4;
+        position: absolute;
+        top: 0;
+      }
+    }
+    
+    h4, h5 {
+      display: none;
+    }
+    
+    .calls-and-main-info {
+      bottom: 5px;
+      left: 40px;
+      position: absolute;
+    }
+  }
 }
 
 @media all and (max-width: 480px) {
@@ -291,5 +375,15 @@
   
   .town-picker {
     margin-left: -20px;
+  }
+  
+  .photo-showcase {
+    td:first-child img {
+      min-width: 380px;
+    }
+    
+    .calls-and-main-info {
+      left: 20px;
+    }
   }
 }
