@@ -72,12 +72,27 @@
     }
   }
   
+  .nav > li > a {
+    color: @blue;
+    padding: 3px 15px;
+    
+    &:hover,
+    &:focus {
+      background-color: @gray-very-light;
+      color: @alt-blue;
+    }
+  }
+  
   tr {
     border: 0;
   }
   
   .mobile-title {
     display: none;
+  }
+  
+  .search-input {
+    width: 175px;
   }
 }
 
@@ -158,10 +173,13 @@
   height: 40px;
   width: 40px;
   font-family: trb_Icons;
-  color: #FFF;
   
-  &:hover {
-    color: #A9B2BB;
+  a {
+    color: #FFFFFF;
+    
+    &:hover, &:focus {
+      color: #A9B2BB;
+    }
   }
 }
 
@@ -226,10 +244,10 @@
 
 .town-picker {
   margin: -21px 0 0 -40px;
-}
-
-.drawer .nav > li > a {
-  padding: 3px 15px;
+  
+  a, a:hover, a:focus {
+    color: #FFFFFF;
+  }
 }
 
 .drawer .btn:before {
@@ -271,6 +289,22 @@
   h5 {
     line-height: 16px;
   }
+}
+
+.barker-list {
+  .row {
+    height: 90%;
+  }
+  
+  .col {
+    font-size: 20px;
+    max-width: 300px;
+  }
+  
+  li {
+    line-height: 26px;
+  }
+
 }
 
 /* media queries */
@@ -379,7 +413,7 @@
   
   .photo-showcase {
     td:first-child img {
-      min-width: 380px;
+      min-width: 395px;
     }
     
     .calls-and-main-info {

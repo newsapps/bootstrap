@@ -7544,12 +7544,27 @@ button.close {
   text-decoration: none;
 }
 
+.barker .nav > li > a {
+  padding: 3px 15px;
+  color: #0d3058;
+}
+
+.barker .nav > li > a:hover,
+.barker .nav > li > a:focus {
+  color: #39526c;
+  background-color: #eee;
+}
+
 .barker tr {
   border: 0;
 }
 
 .barker .mobile-title {
   display: none;
+}
+
+.barker .search-input {
+  width: 175px;
 }
 
 .barker-small {
@@ -7626,11 +7641,17 @@ button.close {
   width: 40px;
   height: 40px;
   font-family: trb_Icons;
+}
+
+.page-left a,
+.page-right a {
   color: #fff;
 }
 
-.page-left:hover,
-.page-right:hover {
+.page-left a:hover,
+.page-right a:hover,
+.page-left a:focus,
+.page-right a:focus {
   color: #a9b2bb;
 }
 
@@ -7698,8 +7719,10 @@ button.close {
   margin: -21px -40px 0 0;
 }
 
-.drawer .nav > li > a {
-  padding: 3px 15px;
+.town-picker a,
+.town-picker a:hover,
+.town-picker a:focus {
+  color: #fff;
 }
 
 .drawer .btn:before {
@@ -7739,6 +7762,19 @@ button.close {
 
 .photo-showcase h5 {
   line-height: 16px;
+}
+
+.barker-list .row {
+  height: 90%;
+}
+
+.barker-list .col {
+  max-width: 300px;
+  font-size: 20px;
+}
+
+.barker-list li {
+  line-height: 26px;
 }
 
 /* media queries */
@@ -7840,7 +7876,7 @@ button.close {
   }
 
   .photo-showcase td:first-child img {
-    min-width: 380px;
+    min-width: 395px;
   }
 
   .photo-showcase .calls-and-main-info {
