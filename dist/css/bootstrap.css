@@ -6381,6 +6381,20 @@ a.page-right:focus {
   .barker .search-input {
     width: 225px;
   }
+  .date-header h5 {
+    margin: 0 0 2px 0;
+  }
+  .triblocal-event {
+    width: 95%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .triblocal-event h4 a {
+    font-size: 15px;
+  }
+  .event-location {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .photo-showcase h5 {
@@ -6430,6 +6444,17 @@ a.page-right:focus {
     position: absolute;
     bottom: 5px;
     left: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .date-header h5 {
+    font-size: 10px;
+  }
+  .triblocal-event {
+    float: left;
+  }
+  .triblocal-event h4 a {
+    font-size: 14px;
   }
 }
 @media (max-width: 360px) {
