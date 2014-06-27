@@ -1,5 +1,7 @@
 /* barkers is medium and there are sizes for small and large, and their common components */
 
+/* General barker styles */
+
 .barker {
   height: 284px;
   background-color: @blue-lightest;
@@ -73,13 +75,13 @@
   }
   
   .nav > li > a {
-    color: @blue;
+    color: @blue-light;
     padding: 3px 15px;
     
     &:hover,
     &:focus {
       background-color: @gray-very-light;
-      color: @alt-blue;
+      color: @alt-blue-light;
     }
   }
   
@@ -148,6 +150,8 @@
   text-transform: uppercase;
 }
 
+/* Barker Carousel */
+
 .barker-carousel, .barker-body {
   overflow: hidden;
 }
@@ -174,6 +178,7 @@
 
 a.page-left,
 a.page-right {
+  color: #FFFFFF;
   display: inline-block;
   height: 40px;
   width: 40px;
@@ -243,12 +248,19 @@ a.page-right {
   }
 }
 
+/* Town picker and drawer styles */
+
 .town-picker {
   margin: -21px 0 0 -40px;
-  
-  a, a:hover, a:focus {
-    color: #FFFFFF;
-  }
+}
+
+.drawer a,
+.drawer a:hover,
+.drawer a:focus,
+.town-picker a,
+.town-picker a:hover,
+.town-picker a:focus {
+  color: #FFFFFF;
 }
 
 .drawer .btn:before {
@@ -258,6 +270,8 @@ a.page-right {
   position: relative;
   text-transform: lowercase;
 }
+
+/* UGC barker photo div styles */
 
 .photo-showcase {
   .more-link {
@@ -292,6 +306,8 @@ a.page-right {
   }
 }
 
+/* LocalEdge barker list styles */
+
 .barker-list {
   overflow: hidden;
   
@@ -308,6 +324,41 @@ a.page-right {
     line-height: 26px;
   }
 
+}
+
+/* Event barker styles */
+
+.date-header h5 {
+  color: #567183;
+  font-family: Arial,sans-serif;
+  font-size: 11px;
+  margin: 0 0 5px 0;
+}
+
+.triblocal-event {
+  height: 200px;
+  
+  h4 {
+    display: inline;
+    float: left;
+    margin: 0;
+    
+    a {
+      font-size: 24px;
+      line-height: 1.2em;
+    }
+  }
+}
+
+.event-location {
+  clear: left;
+  color: #868A8D;
+  display: block;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  padding-top: 3px;
 }
 
 /* media queries */

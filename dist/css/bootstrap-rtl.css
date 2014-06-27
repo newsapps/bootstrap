@@ -7471,6 +7471,8 @@ button.close {
 
 /* barkers is medium and there are sizes for small and large, and their common components */
 
+/* General barker styles */
+
 .barker {
   position: relative;
   min-width: 300px;
@@ -7546,12 +7548,12 @@ button.close {
 
 .barker .nav > li > a {
   padding: 3px 15px;
-  color: #0d3058;
+  color: #144a7c;
 }
 
 .barker .nav > li > a:hover,
 .barker .nav > li > a:focus {
-  color: #39526c;
+  color: #798ea3;
   background-color: #eee;
 }
 
@@ -7615,6 +7617,8 @@ button.close {
   text-transform: uppercase;
 }
 
+/* Barker Carousel */
+
 .barker-carousel,
 .barker-body {
   overflow: hidden;
@@ -7646,6 +7650,7 @@ a.page-right {
   width: 40px;
   height: 40px;
   font-family: trb_Icons;
+  color: #fff;
 }
 
 a.page-left:hover,
@@ -7715,10 +7720,15 @@ a.page-right:focus {
   color: #798ea3;
 }
 
+/* Town picker and drawer styles */
+
 .town-picker {
   margin: -21px -40px 0 0;
 }
 
+.drawer a,
+.drawer a:hover,
+.drawer a:focus,
 .town-picker a,
 .town-picker a:hover,
 .town-picker a:focus {
@@ -7732,6 +7742,8 @@ a.page-right:focus {
   text-transform: lowercase;
   content: 'v';
 }
+
+/* UGC barker photo div styles */
 
 .photo-showcase .more-link {
   width: 175px;
@@ -7764,6 +7776,8 @@ a.page-right:focus {
   line-height: 16px;
 }
 
+/* LocalEdge barker list styles */
+
 .barker-list {
   overflow: hidden;
 }
@@ -7779,6 +7793,41 @@ a.page-right:focus {
 
 .barker-list li {
   line-height: 26px;
+}
+
+/* Event barker styles */
+
+.date-header h5 {
+  margin: 0 0 5px 0;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: #567183;
+}
+
+.triblocal-event {
+  height: 200px;
+}
+
+.triblocal-event h4 {
+  display: inline;
+  float: right;
+  margin: 0;
+}
+
+.triblocal-event h4 a {
+  font-size: 24px;
+  line-height: 1.2em;
+}
+
+.event-location {
+  display: block;
+  padding-top: 3px;
+  clear: right;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #868a8d;
 }
 
 /* media queries */
