@@ -7564,7 +7564,12 @@ button.close {
 }
 
 .barker .search-input {
+  display: inline-block;
   width: 175px;
+}
+
+.barker #search-submit {
+  vertical-align: top;
 }
 
 .barker-small {
@@ -7635,23 +7640,18 @@ button.close {
   opacity: .1;
 }
 
-.page-left,
-.page-right {
+a.page-left,
+a.page-right {
   display: inline-block;
   width: 40px;
   height: 40px;
   font-family: trb_Icons;
 }
 
-.page-left a,
-.page-right a {
-  color: #fff;
-}
-
-.page-left a:hover,
-.page-right a:hover,
-.page-left a:focus,
-.page-right a:focus {
+a.page-left:hover,
+a.page-right:hover,
+a.page-left:focus,
+a.page-right:focus {
   color: #a9b2bb;
 }
 
@@ -7764,6 +7764,10 @@ button.close {
   line-height: 16px;
 }
 
+.barker-list {
+  overflow: hidden;
+}
+
 .barker-list .row {
   height: 90%;
 }
@@ -7790,6 +7794,24 @@ button.close {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .barker-list {
+    padding-left: 25px;
+    margin-right: -15px;
+  }
+
+  .barker-list .col {
+    max-width: 33%;
+    font-size: 14px;
+  }
+
+  .barker-list li {
+    line-height: 20px;
+  }
+
+  .barker .search-input {
+    width: 225px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -7805,7 +7827,6 @@ button.close {
   }
 
   .barker-top h1 {
-    margin: 0;
     font-size: 19px;
   }
 
@@ -7852,12 +7873,6 @@ button.close {
     position: absolute;
     right: 40px;
     bottom: 5px;
-  }
-}
-
-@media all and (max-width: 480px) {
-  .barker .barker-top h1 {
-    max-width: 180px;
   }
 }
 
