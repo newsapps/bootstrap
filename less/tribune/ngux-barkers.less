@@ -1,5 +1,7 @@
 /* barkers is medium and there are sizes for small and large, and their common components */
 
+/* General barker styles */
+
 .barker {
   height: 284px;
   background-color: @blue-lightest;
@@ -14,6 +16,10 @@
     font-size: 32px;
     line-height: 1.1em;
     margin-top: 0;
+    
+    a:hover {
+      color: @alt-blue;
+    }
   }
   
   h3 {
@@ -32,6 +38,10 @@
     border-top: 10px solid @white;
   }
   
+  h4 {
+    line-height: 20px;
+  }
+  
   .reader-aside {
     text-transform: uppercase;
     font-size: 9px;
@@ -40,12 +50,56 @@
   }
   
   a {
-    .more-link {
-      text-transform: uppercase;
-      font-size: 9px;
-      margin: 0;
-      color: @black;
+    color: @blue;
+    
+    &:hover {
+      color: @alt-blue;
+      text-decoration: none;
     }
+    
+    &.more-link {
+      color: @blue-lighter;
+      display: block;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      line-height: 1.7;
+      margin: 0;
+      text-transform: uppercase;
+      
+      &:hover {
+        color: @alt-blue-lighter;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .nav > li > a {
+    color: @blue-light;
+    padding: 3px 15px;
+    
+    &:hover,
+    &:focus {
+      background-color: @gray-very-light;
+      color: @alt-blue-light;
+    }
+  }
+  
+  tr {
+    border: 0;
+  }
+  
+  .mobile-title {
+    display: none;
+  }
+  
+  .search-input {
+    display: inline-block;
+    width: 175px;
+  }
+  
+  #search-submit {
+    vertical-align: top;
   }
 }
 
@@ -64,7 +118,13 @@
       }
       
       td {
-        height: 192px;
+        height: 140px;
+        padding: 0 20px;
+        width: 156px;
+        
+        &.item:first-child {
+          padding-left: 0;
+        }
       }
     }
   }
@@ -76,40 +136,21 @@
 
 .barker-top {
   /*styles pertaining to content in top like headline */
+  float: left;
   height: 100px;
+  width: 200px;
   
   h1 {
-    margin-right: 0px;
+    margin: 0 0 10px;
   }
 }
 
 .barker-top-small h1 {
   font-size: 15px;
   text-transform: uppercase;
-  margin-top: 10px;
 }
 
-.barker-lead {
-  .barker-top {
-    float: left;
-    width: 200px;
-  }
-  
-  .barker-top h1 {
-    margin-bottom: 10px;
-  }
-  
-  .barker-carousel {
-    margin-top: 42px;
-    
-    table.thumbnails {
-      td {
-        height: 209px;
-        width: 225px;
-      }
-    }
-  }
-}
+/* Barker Carousel */
 
 .barker-carousel, .barker-body {
   overflow: hidden;
@@ -127,7 +168,6 @@
   
   a {
     font-weight: normal;
-    text-decoration: none;
   }
   
   .disabled {
@@ -136,15 +176,15 @@
   }
 }
 
-.page-left,
-.page-right {
+a.page-left,
+a.page-right {
+  color: #FFFFFF;
   display: inline-block;
   height: 40px;
   width: 40px;
   font-family: trb_Icons;
-  color: #FFF;
-  
-  &:hover {
+    
+  &:hover, &:focus {
     color: #A9B2BB;
   }
 }
@@ -154,21 +194,24 @@
 }
 
 .barker-carousel {
+  margin-top: 38px;
+  
   table.thumbnails {
     overflow: hidden;
-    margin-left: -20px;
+    margin-left: 0px;
   
     td {
+      border-right: solid 1px @gray-light;
+      height: 209px;
       padding: 0 20px;
       vertical-align: top;
-      border-right: solid 1px @gray-light;
       width: 160px;
     
       img {
         width: 100%;
       }
     
-      .no-image:before {
+      &.no-image:before {
         content: " ";
         display: block;
         width: 100%;
@@ -205,9 +248,117 @@
   }
 }
 
-.barker-lead.barker-small .barker-carousel table.thumbnails td {
-  width: 172px;
-  height: 167px;
+/* Town picker and drawer styles */
+
+.town-picker {
+  margin: -21px 0 0 -40px;
+}
+
+.drawer a,
+.drawer a:hover,
+.drawer a:focus,
+.town-picker a,
+.town-picker a:hover,
+.town-picker a:focus {
+  color: #FFFFFF;
+}
+
+.drawer .btn:before {
+  content: 'v';
+  font: normal 11px trb_Icons;
+  margin-right: 2px;
+  position: relative;
+  text-transform: lowercase;
+}
+
+/* UGC barker photo div styles */
+
+.photo-showcase {
+  .more-link {
+    width: 175px;
+  }
+  
+  td {
+    vertical-align: top;
+    
+    &:first-child img {
+      max-width: 250px;
+    }
+    
+    &:last-child {
+      padding-left: 15px;
+    }
+  }
+  
+  h3 {
+    font-size: 28px;
+    line-height: 32px;
+    margin: 0 0 10px;
+    
+    &.truncate {
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+  }
+  
+  h5 {
+    line-height: 16px;
+  }
+}
+
+/* LocalEdge barker list styles */
+
+.barker-list {
+  overflow: hidden;
+  
+  .row {
+    height: 90%;
+  }
+  
+  .col {
+    font-size: 20px;
+    max-width: 300px;
+  }
+  
+  li {
+    line-height: 26px;
+  }
+
+}
+
+/* Event barker styles */
+
+.date-header h5 {
+  color: #567183;
+  font-family: Arial,sans-serif;
+  font-size: 11px;
+  margin: 0 0 5px 0;
+}
+
+.triblocal-event {
+  height: 200px;
+  
+  h4 {
+    display: inline;
+    float: left;
+    margin: 0;
+    
+    a {
+      font-size: 24px;
+      line-height: 1.2em;
+    }
+  }
+}
+
+.event-location {
+  clear: left;
+  color: #868A8D;
+  display: block;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  padding-top: 3px;
 }
 
 /* media queries */
@@ -216,29 +367,130 @@
 /* add some lead styles */
 }
 
-@media (max-width: 767px) {
-  .barker {
-    margin:0 -20px 0 -20px;
+@media (max-width: 768px) {
+  .photo-showcase h5 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    margin-left: 0;
+  }
+  
+  .barker-list {
+    margin-left: -15px;
+    padding-right: 25px;
+    
+    .col {
+      font-size: 14px;
+      max-width: 33%;
+    }
+    
+    li {
+      line-height: 20px;
+    }
+  }
+  
+  .barker .search-input {
+    width: 225px;
+  }
+  
+  .date-header h5 {
+    margin: 0 0 2px 0;
+  }
+  
+  .triblocal-event {
+    height: auto;
+    margin-bottom: 20px;
+    width: 95%;
+    
+    h4 a {
+      font-size: 15px;
+    }
+  }
+  
+  .event-location {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .photo-showcase h5 {
+    margin-bottom: 16px;
   }
 }
 
 @media (max-width: 520px) {
-  .barker {
-    margin:0 -20px 0 -20px;
+  .barker-top {
+    height: auto;
+    width: 150px;
     
-    .barker-top {
-      h1 {
-        font-size: 25px;
-      }
+    h1 {
+      font-size: 19px;
     }
   }
-
-  .barker-lead .barker-top {
-    width: 150px;
+  
+  .barker-carousel {
+    margin-top: 35px;
   }
   
-  .barker-lead.barker-small .barker-carousel table.thumbnails td {
-    width: 132px;
+    
+  .barker-carousel table.thumbnails h3 {
+      font-size: 12px;
+    }
+  
+  .barker-small .barker-carousel table.thumbnails {
+    td {
+      height: 125px;
+      width: 124px;
+    }
+    
+    h3 {
+      font-size: 12px;
+    }
+  }
+  
+  .town-picker {
+    margin-top: 0px;
+  }
+  
+  .photo-showcase {
+    td {
+      &:last-child {
+        position: static;
+      }
+      
+      &:first-child img {
+        height: auto;
+        left: 0;
+        min-width: 520px;
+        opacity: .4;
+        position: absolute;
+        top: 0;
+      }
+    }
+    
+    h4, h5 {
+      display: none;
+    }
+    
+    .calls-and-main-info {
+      bottom: 5px;
+      left: 40px;
+      position: absolute;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .date-header h5 {
+    font-size: 10px;
+  }
+  
+  .triblocal-event {
+    float: left;
+    
+    h4 a {
+      font-size: 14px;
+    }
   }
 }
 
@@ -248,6 +500,20 @@
     
     &:before {
       content: "";
+      left: 20px;
+    }
+  }
+  
+  .town-picker {
+    margin-left: -20px;
+  }
+  
+  .photo-showcase {
+    td:first-child img {
+      min-width: 395px;
+    }
+    
+    .calls-and-main-info {
       left: 20px;
     }
   }

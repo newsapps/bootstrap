@@ -6070,6 +6070,7 @@ button.close {
   }
 }
 /* barkers is medium and there are sizes for small and large, and their common components */
+/* General barker styles */
 .barker {
   position: relative;
   min-width: 300px;
@@ -6085,6 +6086,9 @@ button.close {
   line-height: 1.1em;
   color: #0d3058;
 }
+.barker h1 a:hover {
+  color: #39526c;
+}
 .barker h3 {
   color: #0d3058;
 }
@@ -6099,17 +6103,57 @@ button.close {
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }
+.barker h4 {
+  line-height: 20px;
+}
 .barker .reader-aside {
   margin: 0;
   font-size: 9px;
   color: #798ea3;
   text-transform: uppercase;
 }
-.barker a .more-link {
+.barker a {
+  color: #0d3058;
+}
+.barker a:hover {
+  color: #39526c;
+  text-decoration: none;
+}
+.barker a.more-link {
+  display: block;
   margin: 0;
   font-size: 9px;
-  color: #1a1a1a;
+  font-weight: bold;
+  line-height: 1.7;
+  color: #549ac4;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.barker a.more-link:hover {
+  color: #7db2cc;
+  text-decoration: none;
+}
+.barker .nav > li > a {
+  padding: 3px 15px;
+  color: #144a7c;
+}
+.barker .nav > li > a:hover,
+.barker .nav > li > a:focus {
+  color: #798ea3;
+  background-color: #eee;
+}
+.barker tr {
+  border: 0;
+}
+.barker .mobile-title {
+  display: none;
+}
+.barker .search-input {
+  display: inline-block;
+  width: 175px;
+}
+.barker #search-submit {
+  vertical-align: top;
 }
 .barker-small {
   height: 220px;
@@ -6122,37 +6166,30 @@ button.close {
   line-height: 16px;
 }
 .barker-small .barker-carousel table.thumbnails td {
-  height: 192px;
+  width: 156px;
+  height: 140px;
+  padding: 0 20px;
+}
+.barker-small .barker-carousel table.thumbnails td.item:first-child {
+  padding-left: 0;
 }
 .barker-large {
   height: 400px;
 }
 .barker-top {
   /*styles pertaining to content in top like headline */
+  float: left;
+  width: 200px;
   height: 100px;
 }
 .barker-top h1 {
-  margin-right: 0;
+  margin: 0 0 10px;
 }
 .barker-top-small h1 {
-  margin-top: 10px;
   font-size: 15px;
   text-transform: uppercase;
 }
-.barker-lead .barker-top {
-  float: left;
-  width: 200px;
-}
-.barker-lead .barker-top h1 {
-  margin-bottom: 10px;
-}
-.barker-lead .barker-carousel {
-  margin-top: 42px;
-}
-.barker-lead .barker-carousel table.thumbnails td {
-  width: 225px;
-  height: 209px;
-}
+/* Barker Carousel */
 .barker-carousel,
 .barker-body {
   overflow: hidden;
@@ -6169,33 +6206,38 @@ button.close {
 }
 .barker-carousel-pager a {
   font-weight: normal;
-  text-decoration: none;
 }
 .barker-carousel-pager .disabled {
   color: #000;
   opacity: .1;
 }
-.page-left,
-.page-right {
+a.page-left,
+a.page-right {
   display: inline-block;
   width: 40px;
   height: 40px;
   font-family: trb_Icons;
   color: #fff;
 }
-.page-left:hover,
-.page-right:hover {
+a.page-left:hover,
+a.page-right:hover,
+a.page-left:focus,
+a.page-right:focus {
   color: #a9b2bb;
 }
 .page-right {
   float: right;
 }
+.barker-carousel {
+  margin-top: 38px;
+}
 .barker-carousel table.thumbnails {
-  margin-left: -20px;
+  margin-left: 0;
   overflow: hidden;
 }
 .barker-carousel table.thumbnails td {
   width: 160px;
+  height: 209px;
   padding: 0 20px;
   vertical-align: top;
   border-right: solid 1px #999;
@@ -6203,7 +6245,7 @@ button.close {
 .barker-carousel table.thumbnails td img {
   width: 100%;
 }
-.barker-carousel table.thumbnails td .no-image:before {
+.barker-carousel table.thumbnails td.no-image:before {
   display: block;
   width: 100%;
   height: 6px;
@@ -6233,31 +6275,192 @@ button.close {
   font-size: 10px;
   color: #798ea3;
 }
-.barker-lead.barker-small .barker-carousel table.thumbnails td {
-  width: 172px;
-  height: 167px;
+/* Town picker and drawer styles */
+.town-picker {
+  margin: -21px 0 0 -40px;
+}
+.drawer a,
+.drawer a:hover,
+.drawer a:focus,
+.town-picker a,
+.town-picker a:hover,
+.town-picker a:focus {
+  color: #fff;
+}
+.drawer .btn:before {
+  position: relative;
+  margin-right: 2px;
+  font: normal 11px trb_Icons;
+  text-transform: lowercase;
+  content: 'v';
+}
+/* UGC barker photo div styles */
+.photo-showcase .more-link {
+  width: 175px;
+}
+.photo-showcase td {
+  vertical-align: top;
+}
+.photo-showcase td:first-child img {
+  max-width: 250px;
+}
+.photo-showcase td:last-child {
+  padding-left: 15px;
+}
+.photo-showcase h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 32px;
+}
+.photo-showcase h3.truncate {
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.photo-showcase h5 {
+  line-height: 16px;
+}
+/* LocalEdge barker list styles */
+.barker-list {
+  overflow: hidden;
+}
+.barker-list .row {
+  height: 90%;
+}
+.barker-list .col {
+  max-width: 300px;
+  font-size: 20px;
+}
+.barker-list li {
+  line-height: 26px;
+}
+/* Event barker styles */
+.date-header h5 {
+  margin: 0 0 5px 0;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: #567183;
+}
+.triblocal-event {
+  height: 200px;
+}
+.triblocal-event h4 {
+  display: inline;
+  float: left;
+  margin: 0;
+}
+.triblocal-event h4 a {
+  font-size: 24px;
+  line-height: 1.2em;
+}
+.event-location {
+  display: block;
+  padding-top: 3px;
+  clear: left;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #868a8d;
 }
 /* media queries */
 @media (max-width: 900px) {
   /* add some lead styles */
 }
-@media (max-width: 767px) {
-  .barker {
-    margin: 0 -20px 0 -20px;
+@media (max-width: 768px) {
+  .photo-showcase h5 {
+    margin-bottom: 5px;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .barker-list {
+    padding-right: 25px;
+    margin-left: -15px;
+  }
+  .barker-list .col {
+    max-width: 33%;
+    font-size: 14px;
+  }
+  .barker-list li {
+    line-height: 20px;
+  }
+  .barker .search-input {
+    width: 225px;
+  }
+  .date-header h5 {
+    margin: 0 0 2px 0;
+  }
+  .triblocal-event {
+    width: 95%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .triblocal-event h4 a {
+    font-size: 15px;
+  }
+  .event-location {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .photo-showcase h5 {
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 520px) {
-  .barker {
-    margin: 0 -20px 0 -20px;
-  }
-  .barker .barker-top h1 {
-    font-size: 25px;
-  }
-  .barker-lead .barker-top {
+  .barker-top {
     width: 150px;
+    height: auto;
   }
-  .barker-lead.barker-small .barker-carousel table.thumbnails td {
-    width: 132px;
+  .barker-top h1 {
+    font-size: 19px;
+  }
+  .barker-carousel {
+    margin-top: 35px;
+  }
+  .barker-carousel table.thumbnails h3 {
+    font-size: 12px;
+  }
+  .barker-small .barker-carousel table.thumbnails td {
+    width: 124px;
+    height: 125px;
+  }
+  .barker-small .barker-carousel table.thumbnails h3 {
+    font-size: 12px;
+  }
+  .town-picker {
+    margin-top: 0;
+  }
+  .photo-showcase td:last-child {
+    position: static;
+  }
+  .photo-showcase td:first-child img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 520px;
+    height: auto;
+    opacity: .4;
+  }
+  .photo-showcase h4,
+  .photo-showcase h5 {
+    display: none;
+  }
+  .photo-showcase .calls-and-main-info {
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .date-header h5 {
+    font-size: 10px;
+  }
+  .triblocal-event {
+    float: left;
+  }
+  .triblocal-event h4 a {
+    font-size: 14px;
   }
 }
 @media (max-width: 360px) {
@@ -6267,6 +6470,15 @@ button.close {
   .barker:before {
     left: 20px;
     content: "";
+  }
+  .town-picker {
+    margin-left: -20px;
+  }
+  .photo-showcase td:first-child img {
+    min-width: 395px;
+  }
+  .photo-showcase .calls-and-main-info {
+    left: 20px;
   }
 }
 @font-face {

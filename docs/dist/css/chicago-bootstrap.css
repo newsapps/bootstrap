@@ -189,6 +189,14 @@ ul {
   background-color: #549ac4;
   border-color: #549ac4;
 }
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  background-color: #7db2cc;
+  border-color: #7db2cc;
+}
 /* Related items
 ================================================== */
 /* was .trib-media */
