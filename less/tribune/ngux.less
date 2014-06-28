@@ -77,7 +77,17 @@ img {
     min-height: 48px;
   }
   .navbar-toggle {
+    border: none;
     margin: 7px 15px 7px 0;
+    &:hover,
+    &:focus {
+      background-color: #000;
+    }
+    .icon-bar {
+      border-radius: 0;
+      height: 4px;
+      width: 26px;
+    }
   }
   .navbar-nav > li > a {
     padding: 15.5px 15px;
