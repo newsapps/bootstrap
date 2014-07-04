@@ -6230,7 +6230,6 @@ a.page-right:focus {
 }
 .barker-carousel table.thumbnails {
   margin-left: 0;
-  overflow: hidden;
 }
 .barker-carousel table.thumbnails td {
   width: 160px;
