@@ -7732,7 +7732,7 @@ a.page-right:focus {
 /* Town picker and drawer styles */
 
 .town-picker {
-  margin: -21px -40px 0 0;
+  margin: -20px -40px 0 0;
 }
 
 .drawer a,
@@ -7924,7 +7924,7 @@ a.page-right:focus {
   }
 
   .town-picker {
-    margin-top: 0;
+    margin-top: 1px;
   }
 
   .photo-showcase td:last-child {
