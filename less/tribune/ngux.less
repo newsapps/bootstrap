@@ -70,7 +70,19 @@ img {
     font-size: 20px;
     height: 20px;
     width: 40px;
-    a { color: @gray-darker; }
+    a {
+      color: @gray-darker;
+      &:hover,
+      &:active { color: @gray-lighter; }
+    }
+    a:hover > .nguxicon-facebook,
+    a:active > .nguxicon-facebook {
+      color: @blue-light;
+    }
+    a:hover > .nguxicon-twitter,
+    a:active > .nguxicon-twitter {
+      color: @blue-lighter;
+    }
   }
 }
 

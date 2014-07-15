@@ -6754,6 +6754,18 @@ img {
 .social-menu li a {
   color: #2b2b2b;
 }
+.social-menu li a:hover,
+.social-menu li a:active {
+  color: #d0d0d0;
+}
+.social-menu li a:hover > .nguxicon-facebook,
+.social-menu li a:active > .nguxicon-facebook {
+  color: #144a7c;
+}
+.social-menu li a:hover > .nguxicon-twitter,
+.social-menu li a:active > .nguxicon-twitter {
+  color: #549ac4;
+}
 .navbar {
   font-family: Arial, sans-serif;
   font-size: 11px;
