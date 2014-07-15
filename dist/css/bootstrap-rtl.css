@@ -116,6 +116,7 @@ figure {
 hr {
   height: 0;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 
@@ -176,6 +177,7 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
@@ -187,6 +189,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
   -webkit-appearance: textfield;
 }
@@ -1138,12 +1141,14 @@ th {
 
 * {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -2977,6 +2982,7 @@ label {
 
 input[type="search"] {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -8331,6 +8337,7 @@ img {
 .social-menu li a:hover,
 .social-menu li a:active {
   color: #d0d0d0;
+  text-decoration: none;
 }
 
 .social-menu li a:hover > .nguxicon-facebook,
