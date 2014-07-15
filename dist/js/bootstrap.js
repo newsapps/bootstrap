@@ -290,9 +290,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     });
   };
 
-  $(document).ready(function() {
-    $('.barker-carousel').barkerCarousel();
-  });
+  $('.barker-carousel').barkerCarousel();
 
 }(window.jQuery);
 /* ========================================================================
