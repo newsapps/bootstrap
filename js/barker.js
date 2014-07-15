@@ -144,8 +144,6 @@
     });
   };
 
-  $(document).ready(function() {
-    $('.barker-carousel').barkerCarousel();
-  });
+  $('.barker-carousel').barkerCarousel();
 
 }(window.jQuery);
