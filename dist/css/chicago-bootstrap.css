@@ -36,7 +36,13 @@
   font-size: 12px;
 }
 .navbar .navbar-brand {
-  padding: 13px 15px;
+  padding: 12px 15px 15px 15px;
+}
+.navbar .navbar-brand .logo {
+  display: inline-block;
+  width: auto;
+  height: 27px;
+  margin: 0;
 }
 .navbar-inverse {
   background-color: #12182d;
@@ -47,6 +53,23 @@
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   background-color: #0d3058;
+}
+.nav-project-title {
+  float: left;
+  padding-top: 18px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 17px;
+  color: #d0d0d0;
+  text-transform: uppercase;
+}
+.nav-project-title:hover {
+  color: #fbfcfc;
+  text-decoration: none;
 }
 /* Bylines
 ================================================== */

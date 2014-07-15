@@ -36,7 +36,13 @@
 .navbar {
   font-size: 12px;
   .navbar-brand {
-    padding: 13px 15px;
+    padding: 12px 15px 15px 15px;
+    .logo {
+      display: inline-block;
+      height: 27px;
+      margin: 0px;
+      width: auto;
+    }
   }
 }
 
@@ -47,6 +53,24 @@
     &:hover, &:focus {
       background-color: @blue;
     }
+  }
+}
+
+.nav-project-title {
+  font-size: 20px;
+  color: @gray-lighter;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 18px;
+  line-height: 17px;
+  float: left;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: @font-family-serif;
+  &:hover {
+    color: @white;
+    text-decoration: none;
   }
 }
 
@@ -292,6 +316,7 @@ aside {
 .twitter-follow-button { margin: 0 8px -5px 4px; }
 .twitter-first { margin-right: 1px; }
 
+//social wrappers use a deprecated-as-of-NGUX style
 .social-wrapper {
   small {
     font-family: @font-family-sans-serif;

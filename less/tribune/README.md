@@ -19,6 +19,9 @@ Note that variables with the same name will overwrite each other. The values in 
 
 
 ##Grunt tasks
+Run `grunt dist` to compile your new LESS files into CSS. (For the task to compile correctly, `dist/css` must contain files matching all expected filenames. Sometimes, this means you will need to create an empty file for Grunt to write to.)
+
+**A note about our modifications**
 Gruntfile.js has been modified to compile the files and folders in the `/tribune/` folder. You can find this under `less` task, subtask `compileTribune`. It looks like this: 
 
 ```
@@ -37,7 +40,23 @@ compileTribune: {
 ```
 To add files for a new market, just copy one of the existing rules under `files`. Edit it to match the path of your desired CSS file (which should be in `dist/css/marketname`) and the path of your LESS file (which should be in `less/tribune/marketname`).
 
-Run `grunt dist` to compile your new LESS files into CSS. Note that you must create an empty file in `dist/css` for the task to compile correctly.
+##Deploying with tribapps-assets
+Once you've compiled your CSS and JS changes, you should use the tribapps-assets repo to upload your changes to S3. (Clone the tribapps-assets repo from Unfuddle.)
 
-##Deploying static files to S3
-Once you've compiled your CSS and JS changes, you can use s3cmd to deploy your static assets to the Amazon S3 bucket. The command you will look something like this: s3cmd sync --delete-removed -P -M [folder] s3://[s3 bucket]/[bucket path]
+You will need to copy the *entire* `_gh_pages` folder and the *contents* of the `dist` folder. You'll run something like this on the command line (assuming you are inside your Bootstrap directory):
+
+```
+cp -r _gh_pages ~/Projects/tribapps-assets/assets/bootstrap/v3.1.1 
+cp -r dist/* ~/Projects/tribapps-assets/assets/bootstrap/v3.1.1/
+```
+
+To deploy, make sure you have `s3cmd` installed and configured:
+```
+brew install s3cmd
+s3cmd --configure
+```
+
+Then deploy to staging:
+`./deploy.sh media-beta.tribapps.com`
+
+Check S3 to make sure the changes look right. If so, go ahead and deploy to media.apps.chicagotribune.com.

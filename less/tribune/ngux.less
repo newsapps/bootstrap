@@ -50,6 +50,30 @@ img {
   }
 }
 
+.page-footer {
+  padding: 10px 0 8px;
+  margin: 20px 0;
+  text-align: center;
+  border-top: 1px solid @gray-lighter;
+  .nav-pills {
+    display: inline-block;
+    margin: auto;
+  }
+}
+
+.social-menu {
+  display: block;
+  margin: 20px 0 0 0;
+  padding-left: 0;
+  li {
+    display: inline-block;
+    font-size: 20px;
+    height: 20px;
+    width: 40px;
+    a { color: @gray-darker; }
+  }
+}
+
 //Navbars, etc.
 .navbar {
   font-family: @nav-font-family;
@@ -82,6 +106,9 @@ img {
     margin: 7px 15px 7px 0;
     &:hover,
     &:focus {
+      background-color: #12182d;
+    }
+    &.collapsed {
       background-color: #000;
     }
     .icon-bar {
