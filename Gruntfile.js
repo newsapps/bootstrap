@@ -91,6 +91,7 @@ module.exports = function (grunt) {
         src: [
           'js/transition.js',
           'js/alert.js',
+          'js/barker.js',
           'js/button.js',
           'js/carousel.js',
           'js/collapse.js',

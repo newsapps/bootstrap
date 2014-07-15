@@ -7680,7 +7680,6 @@ a.page-right:focus {
 
 .barker-carousel table.thumbnails {
   margin-right: 0;
-  overflow: hidden;
 }
 
 .barker-carousel table.thumbnails td {
@@ -8316,6 +8315,23 @@ img {
 .page-footer .nav-pills {
   display: inline-block;
   margin: auto;
+}
+
+.social-menu {
+  display: block;
+  padding-right: 0;
+  margin: 20px 0 0 0;
+}
+
+.social-menu li {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.social-menu li a {
+  color: #2b2b2b;
 }
 
 .navbar {
