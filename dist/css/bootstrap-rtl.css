@@ -116,7 +116,6 @@ figure {
 hr {
   height: 0;
   -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 
@@ -177,7 +176,6 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
@@ -189,7 +187,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
           box-sizing: content-box;
   -webkit-appearance: textfield;
 }
@@ -1141,14 +1138,12 @@ th {
 
 * {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -2982,7 +2977,6 @@ label {
 
 input[type="search"] {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -7702,6 +7696,19 @@ a.page-right:focus {
   background-color: #0d3058;
 }
 
+.barker-carousel table.thumbnails td.event {
+  min-width: 300px;
+}
+
+.barker-carousel table.thumbnails td.event h4 {
+  font-size: 24px;
+  line-height: 1.2em;
+}
+
+.barker-carousel table.thumbnails td.event .event-location {
+  padding-top: 0;
+}
+
 .barker-carousel table.thumbnails p {
   margin: 0;
   line-height: 20px;
@@ -7887,6 +7894,14 @@ a.page-right:focus {
 
   .event-location {
     display: none;
+  }
+
+  td.event h4 {
+    font-size: 22px;
+  }
+
+  td.event .event-location {
+    display: inline;
   }
 }
 

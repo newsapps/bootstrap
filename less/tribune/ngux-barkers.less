@@ -221,6 +221,19 @@ a.page-right {
         height: 6px;
         background-color: @blue;
       }
+      
+      &.event {
+        min-width: 300px;
+      
+        h4 {
+          font-size: 24px;
+          line-height: 1.2em;
+        }
+        
+        .event-location {
+          padding-top: 0;
+        }
+      }
     }
     
     p {
@@ -412,6 +425,16 @@ a.page-right {
   
   .event-location {
     display: none;
+  }
+  
+  td.event {
+    h4 {
+      font-size: 22px;
+    }
+    
+    .event-location {
+      display: inline;
+    }
   }
 }
 
