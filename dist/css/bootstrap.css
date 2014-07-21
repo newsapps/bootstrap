@@ -6367,10 +6367,10 @@ a.page-right:focus {
   color: #868a8d;
 }
 /* media queries */
-@media (max-width: 900px) {
+@media all and (max-width: 900px) {
   /* add some lead styles */
 }
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
   .photo-showcase h5 {
     margin-bottom: 5px;
     margin-left: 0;
@@ -6412,12 +6412,12 @@ a.page-right:focus {
     display: inline;
   }
 }
-@media (max-width: 600px) {
+@media all and (max-width: 600px) {
   .photo-showcase h5 {
     margin-bottom: 16px;
   }
 }
-@media (max-width: 520px) {
+@media all and (max-width: 520px) {
   .barker-top {
     width: 150px;
     height: auto;
@@ -6463,7 +6463,7 @@ a.page-right:focus {
     left: 40px;
   }
 }
-@media (max-width: 480px) {
+@media all and (max-width: 480px) {
   .date-header h5 {
     font-size: 10px;
   }
@@ -6474,7 +6474,7 @@ a.page-right:focus {
     font-size: 14px;
   }
 }
-@media (max-width: 360px) {
+@media all and (max-width: 360px) {
   .barker {
     padding-left: 20px;
   }
