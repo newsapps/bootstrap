@@ -6249,14 +6249,12 @@ a.page-right:focus {
   background-color: #0d3058;
 }
 .barker-carousel table.thumbnails td.event {
-  min-width: 300px;
+  min-width: 280px;
 }
 .barker-carousel table.thumbnails td.event h4 {
+  margin: 0;
   font-size: 24px;
   line-height: 1.2em;
-}
-.barker-carousel table.thumbnails td.event .event-location {
-  padding-top: 0;
 }
 .barker-carousel table.thumbnails p {
   margin: 0;
