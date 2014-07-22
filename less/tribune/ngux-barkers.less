@@ -375,7 +375,7 @@ a.page-right {
 
 /* media queries */
 
-@media all and (max-width: 768px), screen and (max-device-width: 768px) {
+@media all and (max-width: 768px), screen and (orientation: portrait) and (max-device-width: 768px) {
   .photo-showcase h5 {
     font-size: 14px;
     line-height: 20px;
@@ -521,6 +521,10 @@ a.page-right {
       content: "";
       left: 20px;
     }
+  }
+  
+  .barker-carousel-pager {
+    right: 5px;
   }
   
   .town-picker {

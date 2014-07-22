@@ -6366,7 +6366,7 @@ a.page-right:focus {
   color: #868a8d;
 }
 /* media queries */
-@media all and (max-width: 768px), screen and (max-device-width: 768px) {
+@media all and (max-width: 768px), screen and (orientation: portrait) and (max-device-width: 768px) {
   .photo-showcase h5 {
     margin-bottom: 5px;
     margin-left: 0;
@@ -6477,6 +6477,9 @@ a.page-right:focus {
   .barker:before {
     left: 20px;
     content: "";
+  }
+  .barker-carousel-pager {
+    right: 5px;
   }
   .town-picker {
     margin-left: -20px;

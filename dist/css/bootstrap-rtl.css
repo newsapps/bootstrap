@@ -7844,7 +7844,7 @@ a.page-right:focus {
 
 /* media queries */
 
-@media all and (max-width: 768px), screen and (max-device-width: 768px) {
+@media all and (max-width: 768px), screen and (orientation: portrait) and (max-device-width: 768px) {
   .photo-showcase h5 {
     margin-right: 0;
     margin-bottom: 5px;
@@ -7982,6 +7982,10 @@ a.page-right:focus {
   .barker:before {
     right: 20px;
     content: "";
+  }
+
+  .barker-carousel-pager {
+    left: 5px;
   }
 
   .town-picker {
