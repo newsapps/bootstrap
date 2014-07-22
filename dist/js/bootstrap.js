@@ -251,7 +251,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
         var $pageLeft = $('.page-left');
         var $pageRight = $('.page-right');
 
-        //TODO if page loads with items scrolled to left and class disabled
+        // TODO if page loads with items scrolled to left and class disabled
         // it's unusable: $('.barker-carousel-pager .page-left').addClass('disabled');
         // TODO: throttle this call
         $carousel.scroll(function scroll_carousel() {
@@ -291,6 +291,13 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   };
 
   $('.barker-carousel').barkerCarousel();
+  
+  // If we're scrolling on mobile, we need to make some width adjustments
+  // because iOS handles iframes differently
+  var new_width = parent.window.screen.width;
+  if (new_width < 769) {
+    $('html').css('width', new_width);
+  }
 
 }(window.jQuery);
 /* ========================================================================
