@@ -6210,7 +6210,6 @@ button.close {
 }
 a.page-left,
 a.page-right {
-  display: inline-block;
   width: 40px;
   height: 40px;
   font-family: trb_Icons;

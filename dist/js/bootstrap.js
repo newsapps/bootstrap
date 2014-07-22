@@ -291,13 +291,6 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   };
 
   $('.barker-carousel').barkerCarousel();
-  
-  // If we're scrolling on mobile, we need to make some width adjustments
-  // because iOS handles iframes differently
-  var new_width = parent.window.screen.width;
-  if (new_width < 769) {
-    $('html').css('width', new_width);
-  }
 
 }(window.jQuery);
 /* ========================================================================
