@@ -7923,15 +7923,15 @@ a.page-right:focus {
 
   .barker-small .barker-carousel table.thumbnails td {
     width: 124px;
-    height: 125px;
+    height: 100px;
   }
 
-  .barker-small .barker-carousel table.thumbnails h3 {
-    font-size: 12px;
+  .barker-small .barker-carousel table.thumbnails td img {
+    display: none;
   }
 
   .town-picker {
-    margin-top: 1px;
+    margin-top: 24px;
   }
 
   .photo-showcase td:last-child {
