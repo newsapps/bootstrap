@@ -260,18 +260,18 @@ a.page-right {
   }
 }
 
-/* Town picker and drawer styles */
+/* Drawer and drawer button styles */
 
-.town-picker {
+.drawer-button {
   margin: -20px 0 0 -40px;
 }
 
 .drawer a,
 .drawer a:hover,
 .drawer a:focus,
-.town-picker a,
-.town-picker a:hover,
-.town-picker a:focus {
+.drawer-button a,
+.drawer-button a:hover,
+.drawer-button a:focus {
   color: #FFFFFF;
 }
 
@@ -281,6 +281,17 @@ a.page-right {
   margin-right: 2px;
   position: relative;
   text-transform: lowercase;
+}
+
+.drawer {
+  form {
+    margin: 2em 1em;
+    
+    .search-input, button#search-submit {
+      margin-top: 1em;
+      width: 280px;
+    }
+  }
 }
 
 /* UGC barker photo div styles */
@@ -419,13 +430,19 @@ a.page-right {
     display: none;
   }
   
-  td.event {
-    h4 {
-      font-size: 22px;
-    }
-    
-    .event-location {
-      display: inline;
+  .barker-carousel {
+    table.thumbnails {
+      td.event {
+        height: 100px;
+        
+        h4 {
+          font-size: 20px;
+        }
+
+        .event-location {
+          display: inline;
+        }
+      }
     }
   }
 }
@@ -463,10 +480,14 @@ a.page-right {
       img {
         display: none;
       }
+      
+      &.no-image:before {
+        height: 0;
+      }
     }
   }
   
-  .town-picker {
+  .drawer-button {
     margin-top: 24px;
   }
   
@@ -527,7 +548,7 @@ a.page-right {
     right: 5px;
   }
   
-  .town-picker {
+  .drawer-button {
     margin-left: -20px;
   }
   

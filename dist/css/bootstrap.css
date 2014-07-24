@@ -6278,16 +6278,16 @@ a.page-right:focus {
   font-size: 10px;
   color: #798ea3;
 }
-/* Town picker and drawer styles */
-.town-picker {
+/* Drawer and drawer button styles */
+.drawer-button {
   margin: -20px 0 0 -40px;
 }
 .drawer a,
 .drawer a:hover,
 .drawer a:focus,
-.town-picker a,
-.town-picker a:hover,
-.town-picker a:focus {
+.drawer-button a,
+.drawer-button a:hover,
+.drawer-button a:focus {
   color: #fff;
 }
 .drawer .btn:before {
@@ -6296,6 +6296,14 @@ a.page-right:focus {
   font: normal 11px trb_Icons;
   text-transform: lowercase;
   content: 'v';
+}
+.drawer form {
+  margin: 2em 1em;
+}
+.drawer form .search-input,
+.drawer form button#search-submit {
+  width: 280px;
+  margin-top: 1em;
 }
 /* UGC barker photo div styles */
 .photo-showcase .more-link {
@@ -6401,10 +6409,13 @@ a.page-right:focus {
   .event-location {
     display: none;
   }
-  td.event h4 {
-    font-size: 22px;
+  .barker-carousel table.thumbnails td.event {
+    height: 100px;
   }
-  td.event .event-location {
+  .barker-carousel table.thumbnails td.event h4 {
+    font-size: 20px;
+  }
+  .barker-carousel table.thumbnails td.event .event-location {
     display: inline;
   }
 }
@@ -6434,7 +6445,10 @@ a.page-right:focus {
   .barker-small .barker-carousel table.thumbnails td img {
     display: none;
   }
-  .town-picker {
+  .barker-small .barker-carousel table.thumbnails td.no-image:before {
+    height: 0;
+  }
+  .drawer-button {
     margin-top: 24px;
   }
   .photo-showcase td:last-child {
@@ -6481,7 +6495,7 @@ a.page-right:focus {
   .barker-carousel-pager {
     right: 5px;
   }
-  .town-picker {
+  .drawer-button {
     margin-left: -20px;
   }
   .photo-showcase td:first-child img {
