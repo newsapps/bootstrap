@@ -673,127 +673,39 @@ lead: "All the bits and pieces that go into making a Tribune news app that aren'
   <div class="page-header">
     <h1><span>Social media buttons</span></h1>
   </div>
-  <h2 id="horizontal-social">Horizontal social media group</h2>
-  <p>First, make sure Font Awesome is included in your project by adding a link in the <code>head</code> to <code>//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css</code>. (Font Awesome is included by default with the base Tribune template.) Put a <code>ul</code> within a <code>div</code> with class <code>.social-wrapper</code>. Use a <code>small</code> element for the buttons label and <code>.text-center</code> on the wrapping <code>div</code> to center the label and buttons.</p>
+  <p>Inside a <code>ul</code>with class <code>.social-menu</code>, use <code>li</code> elements to hold Facebook, Twitter, Google Plus and Pinterest icons. Social media icons should be located just above the page's main headline.</p>
+  <p><strong>Note:</strong> Font Awesome is no longer included by default in the Tribune Tarbell blueprint. If you need it, add a link in your project's <code>head</code> to <code>//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css</code>.</p>
   <div class="bs-example">
-    <div class="social-wrapper text-center">
-      <small>Share this page</small>
-      <ul>
+      <ul class="social-menu">
         <li>
           <a target="_blank" href="">
-            <i class="icon-twitter-sign"></i> <span class="hidden">Twitter</span>
+            <i class="nguxicon-twitter"></i> <span class="hidden">Twitter</span>
           </a>
         </li>
         <li>
           <a target="_blank" href="">
-            <i class="icon-facebook-sign"></i> <span class="hidden">Facebook</span>
+            <i class="nguxicon-facebook"></i> <span class="hidden">Facebook</span>
           </a>
         </li>
         <li>
           <a target="_blank" href="">
-            <i class="icon-google-plus-sign"></i> <span class="hidden">Google+</span>
+            <i class="nguxicon-gplus"></i> <span class="hidden">Google+</span>
           </a>
         </li>
         <li>
           <a target="_blank" href="">
-            <i class="icon-pinterest-sign"></i> <span class="hidden">Pinterest</span>
+            <i class="nguxicon-pintrest"></i> <span class="hidden">Pinterest</span>
           </a>
         </li>
       </ul>
-    </div>
   </div>
   <div class="highlight">
     <pre>
       <code>
-&lt;div class="social-wrapper text-center"&gt;
-  &lt;small&gt;...&lt;/small&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a target="_blank" href=""&gt;
-        &lt;i class="icon-twitter-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Twitter&lt;/span&gt;
-      &lt;/a&gt;  
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a target="_blank" href=""&gt;
-        &lt;i class="icon-facebook-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Facebook&lt;/span&gt;
-      &lt;/a&gt;  
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a target="_blank" href=""&gt;
-        &lt;i class="icon-google-plus-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Google+&lt;/span&gt;
-      &lt;/a&gt;  
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a target="_blank" href=""&gt;
-        &lt;i class="icon-pinterest-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Pinterest&lt;/span&gt;
-      &lt;/a&gt;  
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
+
       </code>
     </pre>
   </div>
-  <h2 id="vertical-social">Vertical social media group</h2>
-  <p>Add <code>.social-wrapper-vertical</code> to the wrapping <code>div</code> to align the buttons vertically and center the text. Shorten the label to "Share" so it fits neatly above the buttons.</p>
-  <div class="bs-example">
-    <div class="social-wrapper social-wrapper-vertical" style="float: none; ">
-      <small>Share</small>
-      <ul>
-        <li>
-          <a target="_blank" href="">
-            <i class="icon-twitter-sign"></i> <span class="hidden">Twitter</span>
-          </a>  
-        </li>
-        <li>
-          <a target="_blank" href="">
-            <i class="icon-facebook-sign"></i> <span class="hidden">Facebook</span>
-          </a>  
-        </li>
-        <li>
-          <a target="_blank" href="">
-            <i class="icon-google-plus-sign"></i> <span class="hidden">Google+</span>
-          </a>  
-        </li>
-        <li>
-          <a target="_blank" href="">
-            <i class="icon-pinterest-sign"></i> <span class="hidden">Pinterest</span>
-          </a>  
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="highlight">
-    <pre>
-      <code>
-&lt;div class="social-wrapper social-wrapper-vertical"&gt;
-  &lt;small&gt;...&lt;/small&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a target="_blank" href=""&gt;
-        &lt;i class="icon-twitter-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Twitter&lt;/span&gt;
-      &lt;/a&gt;  
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a target="_blank" href=""&gt;
-        &lt;i class="icon-facebook-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Facebook&lt;/span&gt;
-      &lt;/a&gt;  
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a target="_blank" href=""&gt;
-        &lt;i class="icon-google-plus-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Google+&lt;/span&gt;
-      &lt;/a&gt;  
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a target="_blank" href=""&gt;
-        &lt;i class="icon-pinterest-sign"&gt;&lt;/i&gt;&lt;span class="hidden"&gt;Pinterest&lt;/span&gt;
-      &lt;/a&gt;  
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-      </code>
-    </pre>
-  </div>
-</section>
 
 <!-- Colors
 ================================================== -->
