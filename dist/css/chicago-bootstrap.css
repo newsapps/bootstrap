@@ -485,6 +485,9 @@ td.sublabel {
     font-size: 17.75px;
     line-height: 22px;
   }
+  .nav-project-title {
+    display: none;
+  }
 }
 @media only screen and (max-width: 480px) {
   article.narrow-river p {
