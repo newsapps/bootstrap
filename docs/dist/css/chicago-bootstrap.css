@@ -95,9 +95,10 @@ div.byline .organization {
 div.byline .pub-date {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
-  font-weight: bold;
   line-height: 13px;
-  color: #999;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: .5px;
 }
 .credits,
 figcaption {
