@@ -36,12 +36,12 @@
   font-size: 12px;
 }
 .navbar .navbar-brand {
-  padding: 12px 15px 15px 15px;
+  padding: 11px 15px 15px 5px;
 }
 .navbar .navbar-brand .logo {
   display: inline-block;
   width: auto;
-  height: 27px;
+  height: 21px;
   margin: 0;
 }
 .navbar-inverse {
@@ -56,7 +56,7 @@
 }
 .nav-project-title {
   float: left;
-  padding-top: 18px;
+  padding-top: 13px;
   padding-right: 15px;
   padding-bottom: 12px;
   padding-left: 15px;
@@ -459,6 +459,11 @@ td.sublabel {
 }
 /* Responsive magicks
 ================================================== */
+@media all and (min-width: 960px) {
+  .nav-project-title {
+    font-size: 16px;
+  }
+}
 @media all and (max-width: 500px) {
   .section-header > small {
     margin-top: 3px;

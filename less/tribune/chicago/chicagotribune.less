@@ -36,10 +36,10 @@
 .navbar {
   font-size: 12px;
   .navbar-brand {
-    padding: 12px 15px 15px 15px;
+    padding: 11px 15px 15px 5px;
     .logo {
       display: inline-block;
-      height: 27px;
+      height: 21px;
       margin: 0px;
       width: auto;
     }
@@ -62,7 +62,7 @@
   padding-bottom: 12px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 18px;
+  padding-top: 13px;
   line-height: 17px;
   float: left;
   margin: 0;
@@ -402,6 +402,12 @@ td.sublabel { padding-left: 15px; }
 
 /* Responsive magicks
 ================================================== */
+@media all and (min-width: 960px) {
+    .nav-project-title {
+        font-size: 16px;
+    }
+}
+
 @media all and (max-width: 500px) {
   .section-header > small{ margin-top: 3px; }
   .byline {

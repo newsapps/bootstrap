@@ -100,10 +100,6 @@ img {
   }
   a.brand { width: inherit; }
   .nav {
-    &.nav-compact i {
-      font-size: 18px;
-      line-height: 16px;
-    }
     li a {
       text-transform: uppercase;
       text-shadow: 0 1px 0 #eeeeee;
@@ -123,11 +119,14 @@ img {
     }
   }
   .navbar-header {
-    min-height: 48px;
+    min-height: 40px;
   }
-  .navbar-toggle {
+  /* NOTE: navbar-toggle is deprecated. Use dropdown-toggle. */
+  .navbar-toggle,
+  .dropdown-toggle {
+    float: left;
     border: none;
-    margin: 7px 15px 7px 0;
+    margin: 2px 0 0 15px;
     &:hover,
     &:focus {
       background-color: #12182d;
@@ -143,8 +142,6 @@ img {
   }
   .navbar-nav > li > a {
     padding: 15.5px 15px;
-    &:hover,
-    &:active { background-color: @blue-dark; }
   }
 }
 
@@ -370,14 +367,7 @@ small,
 // Media queries
 
 @media all and (min-width: 960px) {
-    // Need to add to the docs navbars that use "sections" label w/hamburger
-    // (products like UGC) and "nav-project-title" (ed projects like crime)
     .dropdown-toggle {
-        // "sections" label
-        span {
-            font-size: 11px;
-            display: block;
-        }
         //todo: make dropdown not shitty full-width
     }
     .navbar {
@@ -389,7 +379,7 @@ small,
 
 @media all and (min-width: 768px) {
   .navbar {
-    .navbar-nav > li > a { padding: 10px 15px 10px; }
+    .navbar-nav > li > a { padding: 11.5px 15px; }
   }
   .dropdown-toggle span { display: none; }
   .carousel-control .nguxicon-chevron-med-left,

@@ -8389,6 +8389,7 @@ img {
   min-height: 48px;
   font-family: Arial, sans-serif;
   font-size: 11px;
+  /* NOTE: navbar-toggle is deprecated. Use dropdown-toggle. */
 }
 
 .navbar .container-fluid {
@@ -8398,11 +8399,6 @@ img {
 
 .navbar a.brand {
   width: inherit;
-}
-
-.navbar .nav.nav-compact i {
-  font-size: 18px;
-  line-height: 16px;
 }
 
 .navbar .nav li a {
@@ -8423,24 +8419,30 @@ img {
 }
 
 .navbar .navbar-header {
-  min-height: 48px;
+  min-height: 40px;
 }
 
-.navbar .navbar-toggle {
-  margin: 7px 0 7px 15px;
+.navbar .navbar-toggle,
+.navbar .dropdown-toggle {
+  float: right;
+  margin: 2px 15px 0 0;
   border: none;
 }
 
 .navbar .navbar-toggle:hover,
-.navbar .navbar-toggle:focus {
+.navbar .dropdown-toggle:hover,
+.navbar .navbar-toggle:focus,
+.navbar .dropdown-toggle:focus {
   background-color: #12182d;
 }
 
-.navbar .navbar-toggle.collapsed {
+.navbar .navbar-toggle.collapsed,
+.navbar .dropdown-toggle.collapsed {
   background-color: #000;
 }
 
-.navbar .navbar-toggle .icon-bar {
+.navbar .navbar-toggle .icon-bar,
+.navbar .dropdown-toggle .icon-bar {
   width: 26px;
   height: 4px;
   border-radius: 0;
@@ -8448,11 +8450,6 @@ img {
 
 .navbar .navbar-nav > li > a {
   padding: 15.5px 15px;
-}
-
-.navbar .navbar-nav > li > a:hover,
-.navbar .navbar-nav > li > a:active {
-  background-color: #17274a;
 }
 
 .nav-pills > li > a {
@@ -8698,11 +8695,6 @@ small,
 }
 
 @media all and (min-width: 960px) {
-  .dropdown-toggle span {
-    display: block;
-    font-size: 11px;
-  }
-
   .navbar .brand {
     float: right;
   }
@@ -8710,7 +8702,7 @@ small,
 
 @media all and (min-width: 768px) {
   .navbar .navbar-nav > li > a {
-    padding: 10px 15px 10px;
+    padding: 11.5px 15px;
   }
 
   .dropdown-toggle span {
