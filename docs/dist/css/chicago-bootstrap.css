@@ -459,7 +459,7 @@ td.sublabel {
 }
 /* Responsive magicks
 ================================================== */
-@media all and (min-width: 960px) {
+@media all and (max-width: 960px) {
   .nav-project-title {
     font-size: 16px;
   }
