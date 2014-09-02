@@ -8386,7 +8386,7 @@ img {
 }
 
 .navbar {
-  min-height: 48px;
+  min-height: 40px;
   font-family: Arial, sans-serif;
   font-size: 11px;
   /* NOTE: navbar-toggle is deprecated. Use dropdown-toggle. */
