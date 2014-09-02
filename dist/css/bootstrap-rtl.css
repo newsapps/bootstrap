@@ -8386,12 +8386,23 @@ img {
 }
 
 .navbar {
+  min-height: 48px;
   font-family: Arial, sans-serif;
   font-size: 11px;
 }
 
+.navbar .container-fluid {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .navbar a.brand {
   width: inherit;
+}
+
+.navbar .nav.nav-compact i {
+  font-size: 18px;
+  line-height: 16px;
 }
 
 .navbar .nav li a {
@@ -8437,6 +8448,11 @@ img {
 
 .navbar .navbar-nav > li > a {
   padding: 15.5px 15px;
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:active {
+  background-color: #17274a;
 }
 
 .nav-pills > li > a {
@@ -8681,9 +8697,24 @@ small,
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+@media all and (min-width: 960px) {
+  .dropdown-toggle span {
+    display: block;
+    font-size: 11px;
+  }
+
+  .navbar .brand {
+    float: right;
+  }
+}
+
 @media all and (min-width: 768px) {
-  .navbar.navbar-nav > li > a {
-    padding: 11.5px 15px;
+  .navbar .navbar-nav > li > a {
+    padding: 10px 15px 10px;
+  }
+
+  .dropdown-toggle span {
+    display: none;
   }
 
   .carousel-control .nguxicon-chevron-med-left,
